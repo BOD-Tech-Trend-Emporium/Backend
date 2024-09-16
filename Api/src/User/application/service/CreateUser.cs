@@ -17,6 +17,7 @@ namespace backend.src.User.application.service
         }
         public async Task<UserEntity> Run(UserEntity user)
         {
+            Console.WriteLine(user);
             await _context.User.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
