@@ -8347,19 +8347,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jobuitrago\\.nuget\\packages\\": {}
+    "C:\\Users\\jome\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\jobuitrago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Test\\obj\\",
+      "projectPath": "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\jome\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jobuitrago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jome\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8374,8 +8374,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj"
+            "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Api.csproj": {
+              "projectPath": "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Api.csproj"
             }
           }
         }
@@ -8428,7 +8428,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
