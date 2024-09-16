@@ -19,7 +19,6 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
-LICENSE
 !**/.gitignore
 !.git/HEAD
 !.git/config
