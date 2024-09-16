@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5F89hxR1dBo=",
+  "dgSpecHash": "BIkDWyXudSQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jobuitrago\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jobuitrago\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

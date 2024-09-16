@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj": {}
+    "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj": {
+    "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj",
         "packagesPath": "C:\\Users\\jobuitrago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\obj\\",
+        "outputPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jobuitrago\\AppData\\Roaming\\NuGet\\NuGet.Config",
