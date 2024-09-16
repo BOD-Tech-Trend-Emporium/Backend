@@ -137,3 +137,4 @@ C:\Users\jobuitrago\OneDrive - ENDAVA\Documentos\Proyectos\TechTrendEmporium\Bac
 C:\Users\jobuitrago\OneDrive - ENDAVA\Documentos\Proyectos\TechTrendEmporium\Backend\Api\obj\Debug\net8.0\Api.pdb
 C:\Users\jobuitrago\OneDrive - ENDAVA\Documentos\Proyectos\TechTrendEmporium\Backend\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\jobuitrago\OneDrive - ENDAVA\Documentos\Proyectos\TechTrendEmporium\Backend\Api\obj\Debug\net8.0\ref\Api.dll
+c:\Users\jobuitrago\OneDrive - ENDAVA\Documentos\Proyectos\TechTrendEmporium\Backend\Api\obj\Debug\net8.0\Api.sourcelink.json
