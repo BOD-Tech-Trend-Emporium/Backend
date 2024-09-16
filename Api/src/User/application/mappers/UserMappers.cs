@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using backend.src.User.domain.dto;
 using backend.src.User.domain.entity;
+using backend.src.User.domain.enums;
 
 namespace backend.src.User.application.mappers
 {
@@ -15,8 +16,11 @@ namespace backend.src.User.application.mappers
             {
                 Id = user.Id,
                 Name = user.Name,
-                Age = user.Age
-            };
+                Email = user.Email,
+                UserName = user.Name,
+                Role = user.Role,
+                Status = user.Status,
+    };
         }
 
         public static UserEntity ToUserModelForCreate(this CreateUserDto user)
@@ -24,7 +28,11 @@ namespace backend.src.User.application.mappers
             return new UserEntity
             {
                 Name = user.Name,
-                Age = user.Age
+                Email = user.Email,
+                UserName = user.Name,
+                Password = user.Password,
+                Role = user.Role,
+                Status = user.Status,
             };
         }
 
@@ -33,7 +41,10 @@ namespace backend.src.User.application.mappers
             return new UserEntity
             {
                 Name = user.Name,
-                Age = user.Age
+                Email = user.Email,
+                UserName = user.Name,
+                Role = user.Role,
+                Status = user.Status,
             };
         }
     }

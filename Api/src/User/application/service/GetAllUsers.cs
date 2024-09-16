@@ -18,7 +18,9 @@ namespace backend.src.User.application.service
         }
         public async Task<List<UserEntity>> Run()
         {
+
             return await _context.User.ToListAsync();
+
         }
     }
 }
