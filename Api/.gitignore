@@ -1,2 +1,5 @@
 .vs
 .fake
+# Ignorar archivos y carpetas generados por .NET
+**/obj/
+**/bin/
