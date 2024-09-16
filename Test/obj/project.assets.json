@@ -8333,8 +8333,8 @@
     },
     "Api/1.0.0": {
       "type": "project",
-      "path": "../Api/Api.csproj",
-      "msbuildProject": "../Api/Api.csproj"
+      "path": "../api/Api.csproj",
+      "msbuildProject": "../api/Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8374,8 +8374,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\Api\\Api.csproj"
+            "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj": {
+              "projectPath": "C:\\Users\\jobuitrago\\OneDrive - ENDAVA\\Documentos\\Proyectos\\TechTrendEmporium\\Backend\\api\\Api.csproj"
             }
           }
         }
