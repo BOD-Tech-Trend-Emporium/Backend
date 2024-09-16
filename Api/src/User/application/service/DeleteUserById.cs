@@ -18,7 +18,7 @@ namespace backend.src.User.application.service
             _context = context;
             getUserByIdService = new GetUserById(context);
         }
-        public async Task<UserEntity?> Run(int id)
+        public async Task<UserEntity?> Run(Guid id)
         {
             var user = await getUserByIdService.Run(id);
             

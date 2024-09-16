@@ -10,10 +10,10 @@ namespace backend.src.User.domain.repository
     public interface UserRepository
     {
         Task<List<UserEntity>> GetAllAsync();
-        Task<UserEntity?> GetByIdAsync(int id);
+        Task<UserEntity?> GetByIdAsync(Guid id);
         Task<UserEntity> CreateAsync(UserEntity user);
-        Task<UserEntity?> DeleteByIdAsync(int id);
-        Task<UserEntity?> UpdateByIdAsync(int id, UpdateUserDto user);
+        Task<UserEntity?> DeleteByIdAsync(Guid id);
+        Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user);
 
     }
 }

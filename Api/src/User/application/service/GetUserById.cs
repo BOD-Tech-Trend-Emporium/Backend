@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using backend.Data;
 using backend.src.User.domain.entity;
+using backend.src.User.domain.enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.src.User.application.service
@@ -16,7 +17,7 @@ namespace backend.src.User.application.service
         {
             _context = context;
         }
-        public async Task<UserEntity?> Run(int id)
+        public async Task<UserEntity?> Run(Guid id)
         {
             return await _context.User.FindAsync(id);
         }

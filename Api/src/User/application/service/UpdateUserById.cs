@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using backend.Data;
@@ -21,7 +22,7 @@ namespace backend.src.User.application.service
             getUserByIdService = new GetUserById(context);
 
         }
-        public async Task<UserEntity?> Run(int id, UpdateUserDto user)
+        public async Task<UserEntity?> Run(Guid id, UpdateUserDto user)
         {
             var userModel = await getUserByIdService.Run(id);
             
@@ -31,7 +32,11 @@ namespace backend.src.User.application.service
             }
 
             userModel.Name = user.Name;
-            userModel.Age = user.Age;
+            userModel.Email = user.Email;
+            userModel.Password = user.Password;
+            userModel.UserName = user.Name;
+            userModel.Role = user.Role;
+            userModel.Status = user.Status;
 
             await _context.SaveChangesAsync();
 
