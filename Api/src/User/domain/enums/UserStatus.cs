@@ -2,9 +2,7 @@
 {
     public enum UserStatus
     {
-        ToCreate,
         Created,
-        ToRemove,
         Removed,
     }
 }
