@@ -33,7 +33,7 @@ namespace backend.src.User.infraestructure.api
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var user = await _userService.GetByIdAsync(id);
             if(user == null)
@@ -54,7 +54,7 @@ namespace backend.src.User.infraestructure.api
 
         [HttpDelete]
         [Route("{id}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var user = await _userService.DeleteByIdAsync(id);
 
@@ -68,7 +68,7 @@ namespace backend.src.User.infraestructure.api
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateUserDto user)
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateUserDto user)
         {
             var userModel = await _userService.UpdateByIdAsync(id, user);
 

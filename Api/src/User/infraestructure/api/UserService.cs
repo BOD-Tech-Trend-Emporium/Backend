@@ -33,7 +33,7 @@ namespace backend.src.User.infraestructure.api
             return await getAllUsersService.Run();
         }
 
-        public async Task<UserEntity?> GetByIdAsync(int id)
+        public async Task<UserEntity?> GetByIdAsync(Guid id)
         {
             return await getUserByIdService.Run(id);
         }
@@ -43,12 +43,12 @@ namespace backend.src.User.infraestructure.api
             return await createUserService.Run(user);
         }
 
-        public async Task<UserEntity?> DeleteByIdAsync(int id)
+        public async Task<UserEntity?> DeleteByIdAsync(Guid id)
         {
             return await deleteUserByIdService.Run(id);
         }
 
-        public async Task<UserEntity?> UpdateByIdAsync(int id, UpdateUserDto user)
+        public async Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user)
         {
             return await updateUserByIdService.Run(id, user);
         }
