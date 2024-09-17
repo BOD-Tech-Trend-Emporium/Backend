@@ -16,8 +16,7 @@ namespace Api.src.Favorite.domain.entity
         [Required]
         public UserEntity User { get; set; }
 
-        [Required]
-        public CouponEntity Coupon { get; set; }
+        public CouponEntity? Coupon { get; set; }
 
         [Required, Column(TypeName = "FLOAT")]
         public float ShippingCost { get; set; }
