@@ -11,7 +11,7 @@ jobs:
             PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
             HOSTNAME: ${{secrets.SSH_HOST}}
             USER_NAME: ${{secrets.USER_NAME}}
-      - name: stop the container
+      - name: download the image
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.SSH_HOST}}
@@ -19,6 +19,13 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             docker pull oswe/tech-trend-emporium-api-prod:latest
+      - name: stop the container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.USER_NAME}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: |
             docker stop tech-trend-emporium-api-prod
       - name: delete the container
         uses: appleboy/ssh-action@master
