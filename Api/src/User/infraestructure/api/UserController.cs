@@ -6,12 +6,14 @@ using backend.Data;
 using backend.src.User.application.mappers;
 using backend.src.User.application.service;
 using backend.src.User.domain.dto;
+using backend.src.User.domain.entity;
 using backend.src.User.domain.repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace backend.src.User.infraestructure.api
 {
-    [Route("api/users")]
+    [Route("api/user")]
     [ApiController]
     public class UserController: ControllerBase
     {
@@ -24,6 +26,7 @@ namespace backend.src.User.infraestructure.api
         }
 
         [HttpGet]
+        [ProducesResponseType(200, Type = typeof(List<UserDto>))]
         public async Task<IActionResult> GetAll()
         {
             var users = await _userService.GetAllAsync();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using backend.Data;
 using backend.src.User.domain.entity;
+using backend.src.User.domain.enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.src.User.application.service
@@ -18,9 +19,7 @@ namespace backend.src.User.application.service
         }
         public async Task<List<UserEntity>> Run()
         {
-
-            return await _context.User.ToListAsync();
-
+            return await _context.User.Where(user => user.Role != UserRole.Admin).ToListAsync();
         }
     }
 }
