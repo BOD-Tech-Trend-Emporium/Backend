@@ -22,7 +22,6 @@ jobs:
             docker pull oswe/tech-trend-emporium-api-develop:latest
             docker stop tech-trend-emporium-api-develop
       - name: delete containers
-        id: deployDev
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.SSH_HOST}}
