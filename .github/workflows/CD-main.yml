@@ -21,7 +21,6 @@ jobs:
             docker pull oswe/tech-trend-emporium-api-prod:latest
             docker stop tech-trend-emporium-api-prod
       - name: delete the container
-        id: deployMain
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.SSH_HOST}}
