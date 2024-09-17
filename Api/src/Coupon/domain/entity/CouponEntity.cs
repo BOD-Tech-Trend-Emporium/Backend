@@ -11,7 +11,7 @@ namespace Api.src.Coupon.domain.entity
         public Guid Id { get; set; }
 
         [Required]
-        public int Code { get; set; }
+        public string Code { get; set; }
 
         [Required, Column(TypeName = "FLOAT")]
         public float Discount { get; set; }

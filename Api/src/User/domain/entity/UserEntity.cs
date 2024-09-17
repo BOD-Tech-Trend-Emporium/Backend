@@ -29,7 +29,7 @@ namespace backend.src.User.domain.entity
         [StringLength(50, ErrorMessage = "UserName cannot be longer than 50 characters"), Column(TypeName = "VARCHAR"), Required]
         public string UserName { get; set; }
 
-        [StringLength(60, ErrorMessage = "Password cannot be longer than 60 characters"), Column(TypeName = "CHAR"), Required]
+        [Required]
         public string Password { get; set; }
 
         [Required]
