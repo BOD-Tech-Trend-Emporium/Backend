@@ -11,7 +11,7 @@ jobs:
             PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
             HOSTNAME: ${{secrets.SSH_HOST}}
             USER_NAME: ${{secrets.USER_NAME}}
-      - name: stop the container
+      - name: download the image
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.SSH_HOST}}
@@ -19,7 +19,23 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             docker pull oswe/tech-trend-emporium-api-prod:latest
+      - name: stop the container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.USER_NAME}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: |
             docker stop tech-trend-emporium-api-prod
+      - name: delete the container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.USER_NAME}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: |
+            docker rm tech-trend-emporium-api-prod
+
       - name: run the container
         id: deployMain
         uses: appleboy/ssh-action@master
@@ -28,7 +44,7 @@ jobs:
           username: ${{secrets.USER_NAME}}
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
-            docker run --rm -d -p 8080:8080 --name tech-trend-emporium-api-prod oswe/tech-trend-emporium-api-prod:latest
+            docker run --restart always -d -p 8080:8080 --name tech-trend-emporium-api-prod oswe/tech-trend-emporium-api-prod:latest
             docker images -q | grep -v -e $(docker images -q --filter "reference=oswe/tech-trend-emporium-api-develop:latest") -e $(docker images -q --filter "reference=oswe/tech-trend-emporium-api-prod:latest") -e $(docker images -q --filter "reference=mcr.microsoft.com/mssql/server:2022-latest") | xargs -r docker rmi
       - name: Send mail
         if: always()

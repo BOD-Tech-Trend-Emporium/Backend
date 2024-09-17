@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="appsettings.Local.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,6 +44,10 @@
     <Folder Include="src\Review\infraestructure\" />
     <Folder Include="src\Cart\application\" />
     <Folder Include="src\Cart\infraestructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.Local.json" />
   </ItemGroup>
 
 </Project>
