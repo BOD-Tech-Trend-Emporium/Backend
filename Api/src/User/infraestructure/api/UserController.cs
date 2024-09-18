@@ -39,11 +39,6 @@ namespace backend.src.User.infraestructure.api
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var user = await _userService.GetByIdAsync(id);
-            if(user == null)
-            {
-                return NotFound($"User with id {id} not found");
-            }
-
             return Ok(user);
         }
 
@@ -57,15 +52,10 @@ namespace backend.src.User.infraestructure.api
 
         [HttpDelete]
         [Route("{id}")]
+        [ProducesResponseType(204)]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var user = await _userService.DeleteByIdAsync(id);
-
-            if(user == null)
-            {
-                return NotFound($"User with id {id} not found");
-            }
-
             return NoContent();
         }
 
@@ -74,13 +64,15 @@ namespace backend.src.User.infraestructure.api
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateUserDto user)
         {
             var userModel = await _userService.UpdateByIdAsync(id, user);
-
-            if(userModel == null)
-            {
-                return NotFound($"User with id {id} not found");
-            }
-
             return Ok(userModel);
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(204)]
+        public async Task<IActionResult> DeleteUsers([FromBody] List<string> userEmails)
+        {
+            var user = await _userService.DeleteUsers(userEmails);
+            return StatusCode(204);
         }
     }
 }

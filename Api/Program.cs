@@ -1,3 +1,4 @@
+using Api.src.Common.middleware;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.repository;
@@ -24,6 +25,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
 builder.Services.AddScoped<UserRepository, UserService>();
 
 var app = builder.Build();
+
+//Middleware for exceptions
+app.UseMiddleware<ErrorhandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
