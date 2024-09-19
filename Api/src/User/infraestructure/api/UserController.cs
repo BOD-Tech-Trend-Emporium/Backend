@@ -9,7 +9,6 @@ using backend.src.User.domain.dto;
 using backend.src.User.domain.entity;
 using backend.src.User.domain.repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
 namespace backend.src.User.infraestructure.api
 {
@@ -71,7 +70,7 @@ namespace backend.src.User.infraestructure.api
         [ProducesResponseType(204)]
         public async Task<IActionResult> DeleteUsers([FromBody] List<string> userEmails)
         {
-            var user = await _userService.DeleteUsers(userEmails);
+            await _userService.DeleteUsers(userEmails);
             return StatusCode(204);
         }
     }
