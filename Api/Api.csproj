@@ -1,12 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>.</DockerfileContext>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>.</DockerfileContext>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <Content Remove="appsettings.Local.json" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
@@ -26,8 +31,6 @@
   <ItemGroup>
     <Folder Include="src\Price\application\" />
     <Folder Include="src\Price\infraestructure\" />
-    <Folder Include="src\Category\application\" />
-    <Folder Include="src\Category\infraestructure\" />
     <Folder Include="src\Coupon\application\" />
     <Folder Include="src\Coupon\infraestructure\" />
     <Folder Include="src\CartToProduct\application\" />
@@ -40,6 +43,10 @@
     <Folder Include="src\Review\infraestructure\" />
     <Folder Include="src\Cart\application\" />
     <Folder Include="src\Cart\infraestructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.Local.json" />
   </ItemGroup>
 
 </Project>

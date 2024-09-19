@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.src.Common.exceptions;
 using backend.Data;
 using backend.src.User.application.mappers;
 using backend.src.User.domain.dto;
@@ -25,10 +26,10 @@ namespace backend.src.User.application.service
         public async Task<UserEntity?> Run(Guid id, UpdateUserDto user)
         {
             var userModel = await getUserByIdService.Run(id);
-            
-            if(userModel == null)
+
+            if (userModel == null)
             {
-                return null;
+                throw new NotFoundException($"User with id {id} not found");
             }
 
             userModel.Name = user.Name;

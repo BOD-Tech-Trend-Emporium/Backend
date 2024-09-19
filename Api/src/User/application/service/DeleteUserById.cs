@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Api.src.Common.exceptions;
+using Api.src.User.domain.enums;
 using backend.Data;
 using backend.src.User.domain.entity;
 using Microsoft.EntityFrameworkCore;
@@ -11,23 +9,21 @@ namespace backend.src.User.application.service
     public class DeleteUserById
     {
         private readonly ApplicationDBContext _context;
-        private GetUserById getUserByIdService;
 
         public DeleteUserById(ApplicationDBContext context)
         {
             _context = context;
-            getUserByIdService = new GetUserById(context);
         }
         public async Task<UserEntity?> Run(Guid id)
         {
-            var user = await getUserByIdService.Run(id);
-            
-            if(user == null)
+            var user = await _context.User.FindAsync(id);
+            Console.WriteLine(user);
+            if(user == null || user.Status == UserStatus.Removed)
             {
-                return null;
+                throw new NotFoundException($"User with id {id} not found");
             }
 
-            _context.User.Remove(user);
+            user.Status = UserStatus.Removed;
             await _context.SaveChangesAsync();
 
             return user;

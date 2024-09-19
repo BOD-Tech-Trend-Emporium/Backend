@@ -1,3 +1,12 @@
+using System.Text.Json.Serialization;
+using Api.src.Auth.application.validations;
+using Api.src.Auth.domain.repository;
+using Api.src.Auth.infraestructure;
+using Api.src.Category.domain.repository;
+using Api.src.Category.infraestructure.api;
+using Api.src.Common.middleware;
+using Api.src.Product.domain.repository;
+using Api.src.Product.infraestructure.api;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.repository;
@@ -8,7 +17,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -17,8 +30,14 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
 });
 
 builder.Services.AddScoped<UserRepository, UserService>();
+builder.Services.AddScoped<AuthRepository, AuthService>();
+builder.Services.AddScoped<CategoryRepository, CategoryService>();
+builder.Services.AddScoped<ProductRepository, ProductService>();
 
 var app = builder.Build();
+
+//Middleware for exceptions
+app.UseMiddleware<ErrorhandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

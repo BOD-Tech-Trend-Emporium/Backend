@@ -36,9 +36,6 @@ namespace backend.Data
             modelBuilder.Entity<UserEntity>()
                 .Property(u => u.CreatedAt)
                 .HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<UserEntity>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
 
 
             modelBuilder.Entity<CartEntity>()
