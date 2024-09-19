@@ -15,6 +15,6 @@ namespace backend.src.User.domain.repository
         Task<UserEntity> CreateAsync(UserEntity user);
         Task<UserEntity?> DeleteByIdAsync(Guid id);
         Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user);
-        Task<List<UserEntity>> DeleteUsers(List<string> userEmails);
+        Task DeleteUsers(List<string> userEmails);
     }
 }

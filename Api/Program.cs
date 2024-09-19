@@ -2,6 +2,8 @@ using System.Text.Json.Serialization;
 using Api.src.Auth.application.validations;
 using Api.src.Auth.domain.repository;
 using Api.src.Auth.infraestructure;
+using Api.src.Category.domain.repository;
+using Api.src.Category.infraestructure.api;
 using Api.src.Common.middleware;
 using backend.Data;
 using backend.src.User.application.service;
@@ -27,6 +29,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
 
 builder.Services.AddScoped<UserRepository, UserService>();
 builder.Services.AddScoped<AuthRepository, AuthService>();
+builder.Services.AddScoped<CategoryRepository, CategoryService>();
 
 var app = builder.Build();
 

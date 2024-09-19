@@ -62,8 +62,8 @@ namespace backend.src.User.infraestructure.api
         {
             return await getUserByEmailService.Run(email);
         }
-        public async Task<List<UserEntity>> DeleteUsers(List<string> userEmails) { 
-            return await deleteUsers.Run(userEmails);
+        public async Task DeleteUsers(List<string> userEmails) { 
+            await deleteUsers.Run(userEmails);
         }
     }
 }

@@ -4,6 +4,7 @@ using backend.Data;
 using backend.src.User.domain.entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Linq;
 using System.Text.Json;
 
 namespace Api.src.User.application.service
@@ -17,19 +18,16 @@ namespace Api.src.User.application.service
             _context = context;
         }
 
-        public async Task<List<UserEntity>> Run(List<string> userEmails)
+        public async Task Run(List<string> userEmails)
         {
             var usersToDelete = await _context.User.Where(user => userEmails.Contains(user.Email) && user.Status != UserStatus.Removed).ToListAsync();
-            
-            if (userEmails.IsNullOrEmpty() || usersToDelete.IsNullOrEmpty())
-            {
-                throw new NotFoundException("Users/emails do not exist: {0}", String.Join(" ", userEmails));
-            }
-            if (usersToDelete.Count() != userEmails.Count())
-            {
-                return null;
-            }
 
+            if (userEmails.IsNullOrEmpty() || usersToDelete.IsNullOrEmpty() || usersToDelete.Count() != userEmails.Count())
+            {
+                var notFoundUsers = userEmails.Where(userEmails => !usersToDelete.Any(userToDelete => userEmails == userToDelete.Email));
+
+                throw new NotFoundException("Users/emails do not exist: {0}", String.Join(" ", notFoundUsers));
+            }
 
             var result=usersToDelete.Select(userToDelete => {
                 userToDelete.Status = UserStatus.Removed;
@@ -38,7 +36,6 @@ namespace Api.src.User.application.service
 
             await _context.SaveChangesAsync();
 
-            return result;
         }
     }
 }

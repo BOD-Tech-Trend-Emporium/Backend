@@ -30,6 +30,9 @@ namespace Api.src.Common.middleware
                     case NotFoundException e:
                         response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
+                    case DuplicateException e:
+                        response.StatusCode = (int)HttpStatusCode.Conflict;
+                        break;
                     case ValidationException e:
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
