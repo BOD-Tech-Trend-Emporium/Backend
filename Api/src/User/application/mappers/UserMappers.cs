@@ -15,12 +15,10 @@ namespace backend.src.User.application.mappers
         {
             return new UserDto
             {
-                Id = user.Id,
                 Name = user.Name,
                 Email = user.Email,
                 UserName = user.UserName,
                 Role = user.Role,
-                Status = user.Status,
             };
         }
 

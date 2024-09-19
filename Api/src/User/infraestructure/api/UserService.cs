@@ -20,6 +20,7 @@ namespace backend.src.User.infraestructure.api
         private GetUserById getUserByIdService;
         private GetUserByEmail getUserByEmailService;
         private UpdateUserById updateUserByIdService;
+        private DeleteUsers deleteUsers;
 
         public UserService(ApplicationDBContext context)
         {
@@ -29,6 +30,7 @@ namespace backend.src.User.infraestructure.api
             getUserByIdService = new GetUserById(context);
             getUserByEmailService = new GetUserByEmail(context);
             updateUserByIdService = new UpdateUserById(context);
+            deleteUsers = new DeleteUsers(context);
         }
 
         public async Task<List<UserEntity>> GetAllAsync()
@@ -59,6 +61,9 @@ namespace backend.src.User.infraestructure.api
         public async Task<UserEntity?> GetByEmailAsync(string email)
         {
             return await getUserByEmailService.Run(email);
+        }
+        public async Task<List<UserEntity>> DeleteUsers(List<string> userEmails) { 
+            return await deleteUsers.Run(userEmails);
         }
     }
 }
