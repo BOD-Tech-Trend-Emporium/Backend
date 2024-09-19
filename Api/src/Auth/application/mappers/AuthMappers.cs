@@ -9,12 +9,13 @@ namespace Api.src.Auth.application.mappers
 {
     public static class AuthMappers
     {
-        public static UserEntity ToUserModelForLogin(this LoginUserDto user)
+        public static LoggedUserDto ToLoggedUser(UserEntity user, string token)
         {
-            return new UserEntity
+            return new LoggedUserDto
             {
+                Token = token,
                 Email = user.Email,
-                Password = user.Password,
+                UserName = user.UserName
             };
         }
     }

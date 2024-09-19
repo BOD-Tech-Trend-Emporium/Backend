@@ -20,7 +20,7 @@ namespace Api.src.Auth.application.service
 
         public async Task<UserEntity?> Run(UserEntity user)
         {
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(user.Password, "test");
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(user.Password);
             user.Password = passwordHash;
             await _context.User.AddAsync(user);
             await _context.SaveChangesAsync();

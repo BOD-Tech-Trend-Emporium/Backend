@@ -19,63 +19,24 @@ namespace Api.src.Auth.infraestructure.api
     public class AuthController: ControllerBase
     {
         private AuthRepository _authService;
-        private UserRepository _userService;
-        private AuthValidations _authValidations;
         
-        public AuthController(AuthRepository authRepository, UserRepository userRepository, AuthValidations authValidations)
+        public AuthController(AuthRepository authRepository)
         {
             _authService = authRepository;
-            _userService = userRepository;
-            _authValidations = authValidations;
         }
 
         [HttpPost("admin/auth")]
         public async Task<IActionResult> SignUpUser([FromBody] CreateUserDto user)
         {
             var userModel = user.ToUserModelForCreate();
-            bool isEmailValid = _authValidations.IsEmailValid(userModel.Email);
-            bool emailExists = _authValidations.EmailExists(userModel.Email);
-            bool isRoleValid = _authValidations.IsRoleValid(userModel.Role);
-            bool UserNameExists = _authValidations.UserNameExists(userModel.UserName);
-
-            if(!isEmailValid){
-                return BadRequest("Email not valid");
-            }
-
-            if(emailExists)
-            {
-                return Conflict("A user with this email alreay exists");
-            }
-
-            if(!isRoleValid)
-            {
-                return BadRequest("Role not valid");
-            }
-
-            if(UserNameExists)
-            {
-                return Conflict("A user with this user name alreay exists");
-            }
-            
             await _authService.SignUpUser(userModel);
             return Created($"/api/user/{userModel.Id}", userModel.ToUserDto());
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> LoginUser([FromBody] LoginUserDto user)
+        public async Task<IActionResult> LoginUser([FromBody] UserLoginDto user)
         {
-            var userModel = await _userService.GetByEmailAsync(user.Email);
-            var passwordsMatch = false;
-            if(userModel != null)
-            {
-                passwordsMatch = BCrypt.Net.BCrypt.Verify(user.Password, userModel.Password);
-            }
-
-            if(userModel == null || !passwordsMatch)
-            {
-                return BadRequest("Wrong email or password");
-            } 
-
+            var userModel = await _authService.LoginUser(user);
             return Ok(userModel);
         }
     }

@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Api.src.Auth.domain.dto
 {
-    public class LoginUserDto
+    public class LoggedUserDto
     {
+        public string Token { get; set; }
         public string Email { get; set; }
-        public string Password {get; set;}
+        public string UserName { get; set; }
     }
 }

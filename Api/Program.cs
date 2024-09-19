@@ -27,7 +27,6 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
 
 builder.Services.AddScoped<UserRepository, UserService>();
 builder.Services.AddScoped<AuthRepository, AuthService>();
-builder.Services.AddScoped<AuthValidations>();
 
 var app = builder.Build();
 

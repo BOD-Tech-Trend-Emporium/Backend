@@ -33,6 +33,9 @@ namespace Api.src.Common.middleware
                     case ValidationException e:
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
+                    case AlreadyExistsException e:
+                        response.StatusCode = (int)HttpStatusCode.Conflict;
+                        break;
                     default:
                         response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
