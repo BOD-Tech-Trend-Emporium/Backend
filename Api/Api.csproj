@@ -26,8 +26,6 @@
   <ItemGroup>
     <Folder Include="src\Price\application\" />
     <Folder Include="src\Price\infraestructure\" />
-    <Folder Include="src\Category\application\" />
-    <Folder Include="src\Category\infraestructure\" />
     <Folder Include="src\Coupon\application\" />
     <Folder Include="src\Coupon\infraestructure\" />
     <Folder Include="src\CartToProduct\application\" />
