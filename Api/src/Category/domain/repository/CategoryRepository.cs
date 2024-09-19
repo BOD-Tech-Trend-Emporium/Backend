@@ -1,5 +1,4 @@
 ﻿using Api.src.Category.domain.entity;
-
 namespace Api.src.Category.domain.repository
 {
     public interface CategoryRepository

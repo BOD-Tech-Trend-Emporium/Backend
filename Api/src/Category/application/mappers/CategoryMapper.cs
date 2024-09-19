@@ -14,5 +14,14 @@ namespace Api.src.Category.application.mappers
 
             };
         }
+
+        public static CategoryEntity ToCategoryModelForCreate(this CreateCategoryDto category)
+        {
+            return new CategoryEntity
+            {
+                Name = category.Name,
+            };
+        }
+
     }
 }

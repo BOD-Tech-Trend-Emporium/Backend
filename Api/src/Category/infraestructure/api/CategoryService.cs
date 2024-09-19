@@ -8,20 +8,22 @@ namespace Api.src.Category.infraestructure.api
     public class CategoryService : CategoryRepository
     {
         private GetAllApprovedCategories getAllApprovedCategories;
-
+        private CreateCategory createCategory;
         public CategoryService(ApplicationDBContext context)
         {
             getAllApprovedCategories = new GetAllApprovedCategories(context);
+            createCategory = new CreateCategory(context);
         }
 
-        public Task<CategoryEntity> CreateAsync(CategoryEntity category)
+        public async Task<CategoryEntity> CreateAsync(CategoryEntity category)
         {
-            throw new NotImplementedException();
+            return await createCategory.Run(category);
         }
 
         public async Task<List<CategoryEntity>> GetAllApprovedAsync()
         {
             return await getAllApprovedCategories.Run();
         }
+
     }
 }

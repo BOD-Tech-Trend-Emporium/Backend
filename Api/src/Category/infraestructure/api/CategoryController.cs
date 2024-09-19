@@ -24,5 +24,12 @@ namespace Api.src.Category.infraestructure.api
             var categoriesList = categories.Select(i => i.ToCategoryDto());
             return Ok(categoriesList);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateCategoryDto category)
+        {
+            var result = await _categoryService.CreateAsync(category.ToCategoryModelForCreate());
+            return Created($"/api/category/{result.Id}", result.ToCategoryDto());
+        }
     }
 }
