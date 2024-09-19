@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using backend.src.User.domain.entity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Api.src.Auth.application.Utils
@@ -15,11 +16,13 @@ namespace Api.src.Auth.application.Utils
         public static string CreateToken(UserEntity user, string tokenKey)
         {
             List<Claim> claims = new List<Claim>{
-                new Claim(ClaimTypes.Name, user.UserName)
+                new Claim("userId", user.Id.ToString()),
+                new Claim("Email", user.Email),
+                new Claim("Role", user.Role.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken (
                 claims: claims,

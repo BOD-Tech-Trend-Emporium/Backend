@@ -74,7 +74,7 @@ namespace Api.src.Auth.infraestructure
                 throw new ValidationException("Wrong email or password");
             }
 
-            string tokenKey = _configuration.GetSection("AppSettings:Token").Value!;
+            string tokenKey = _configuration.GetSection("AppSettings:TokenKey").Value!;
             string token = Token.CreateToken(userModel, tokenKey);
 
             var loggedUser = AuthMappers.ToLoggedUser(userModel, token);
