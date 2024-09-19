@@ -1,3 +1,5 @@
+using Api.src.Product.domain.repository;
+using Api.src.Product.infraestructure.api;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.repository;
@@ -17,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => {
 });
 
 builder.Services.AddScoped<UserRepository, UserService>();
+builder.Services.AddScoped<ProductRepository, ProductService>();
 
 var app = builder.Build();
 

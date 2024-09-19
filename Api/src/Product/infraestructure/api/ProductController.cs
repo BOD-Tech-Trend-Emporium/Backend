@@ -1,4 +1,5 @@
-﻿using Api.src.Product.domain.repository;
+﻿using Api.src.Product.application.mappers;
+using Api.src.Product.domain.repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.src.Product.infraestructure.api

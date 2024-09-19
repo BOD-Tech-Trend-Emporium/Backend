@@ -1,4 +1,7 @@
-﻿using Api.src.Product.domain.entity;
+﻿using Api.src.Product.application.mappers;
+using Api.src.Product.domain.dto;
+using Api.src.Product.domain.entity;
+using Api.src.Product.domain.enums;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,9 +15,34 @@ namespace Api.src.Product.application.service
         {
             _context = context;
         }
-        public async Task<List<ProductEntity>> Run()
+        public async Task<List<ProductDto>> Run()
         {
-            return await _context.Product.ToListAsync();
+            // only select active products
+            var products = await _context.Product
+                .Where(pr => pr.Status.Equals(ProductStatus.Created))
+                .Include(p => p.Category) // Cargar la categoría relacionada
+                .Include(p => p.Prices) // Cargar los precios relacionados
+                .Include(p => p.Reviews) // Cargar las reseñas relacionadas
+                .ToListAsync();
+            var productsView = products.Select(product =>
+            {
+                var currentPrice = product.Prices?.Where(pr => pr.Current).Select(pr => pr.Price).FirstOrDefault() ?? 5f;
+                var numberOfRatings = product.Reviews?.Count ?? 6;
+                var avgRating = product.Reviews?.Count == 0 ? 0f : product.Reviews.Average(rev => rev.Rating) ?? 0f;
+                var categoryName = product.Category?.Name ?? "Unknown";
+
+                return product.ToProductDto(
+                    // select the current price
+                    currentPrice,
+                    // select the number of rattings
+                    numberOfRatings,
+                    // Calculate the average (in case of no ratings, send 0)
+                    avgRating,
+                    // Select the name of the category
+                    categoryName
+                    );
+            }).ToList();
+            return productsView;
         }
     }
 }

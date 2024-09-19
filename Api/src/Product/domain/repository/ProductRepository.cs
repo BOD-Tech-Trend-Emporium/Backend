@@ -1,10 +1,11 @@
-﻿using Api.src.Product.domain.entity;
+﻿using Api.src.Product.domain.dto;
+using Api.src.Product.domain.entity;
 
 namespace Api.src.Product.domain.repository
 {
     public interface ProductRepository
     {
-        Task<List<ProductEntity>> GetAllAsync();
+        Task<List<ProductDto>> GetAllAsync();
         Task<ProductEntity> GetByIdAsync(Guid id);
         Task<ProductEntity> CreateAsync(ProductEntity entity);
         Task<ProductEntity> DeleteByIdAsync(Guid id);

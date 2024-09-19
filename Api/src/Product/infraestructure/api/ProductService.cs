@@ -1,4 +1,5 @@
 ﻿using Api.src.Product.application.service;
+using Api.src.Product.domain.dto;
 using Api.src.Product.domain.entity;
 using Api.src.Product.domain.repository;
 using backend.Data;
@@ -13,7 +14,7 @@ namespace Api.src.Product.infraestructure.api
             getAllProductsService = new GetAllProducts(context);
         }
 
-        public async Task<List<ProductEntity>> GetAllAsync()
+        public async Task<List<ProductDto>> GetAllAsync()
         {
             return await getAllProductsService.Run();
         }
