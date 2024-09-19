@@ -11,6 +11,7 @@ namespace backend.src.User.domain.repository
     {
         Task<List<UserEntity>> GetAllAsync();
         Task<UserEntity?> GetByIdAsync(Guid id);
+        Task<UserEntity?> GetByEmailAsync(string email);
         Task<UserEntity> CreateAsync(UserEntity user);
         Task<UserEntity?> DeleteByIdAsync(Guid id);
         Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user);

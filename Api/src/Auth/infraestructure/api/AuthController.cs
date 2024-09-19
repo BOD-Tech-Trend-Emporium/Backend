@@ -8,6 +8,8 @@ using Api.src.Auth.domain.dto;
 using Api.src.Auth.domain.repository;
 using backend.src.User.application.mappers;
 using backend.src.User.domain.dto;
+using backend.src.User.domain.repository;
+using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.src.Auth.infraestructure.api
@@ -17,11 +19,13 @@ namespace Api.src.Auth.infraestructure.api
     public class AuthController: ControllerBase
     {
         private AuthRepository _authService;
+        private UserRepository _userService;
         private AuthValidations _authValidations;
         
-        public AuthController(AuthRepository authRepository, AuthValidations authValidations)
+        public AuthController(AuthRepository authRepository, UserRepository userRepository, AuthValidations authValidations)
         {
             _authService = authRepository;
+            _userService = userRepository;
             _authValidations = authValidations;
         }
 
@@ -30,19 +34,15 @@ namespace Api.src.Auth.infraestructure.api
         {
             var userModel = user.ToUserModelForCreate();
             bool isEmailValid = _authValidations.IsEmailValid(userModel.Email);
-            bool isEmailUnique = _authValidations.EmailExists(userModel);
+            bool emailExists = _authValidations.EmailExists(userModel.Email);
             bool isRoleValid = _authValidations.IsRoleValid(userModel.Role);
-            bool isUserNameUnique = _authValidations.UsernameExists(userModel);
-
-            Console.WriteLine(userModel);
-            Console.WriteLine(isEmailUnique);
-            Console.WriteLine(isUserNameUnique);
+            bool UserNameExists = _authValidations.UserNameExists(userModel.UserName);
 
             if(!isEmailValid){
                 return BadRequest("Email not valid");
             }
 
-            if(!isEmailUnique)
+            if(emailExists)
             {
                 return Conflict("A user with this email alreay exists");
             }
@@ -52,7 +52,7 @@ namespace Api.src.Auth.infraestructure.api
                 return BadRequest("Role not valid");
             }
 
-            if(!isUserNameUnique)
+            if(UserNameExists)
             {
                 return Conflict("A user with this user name alreay exists");
             }
@@ -61,6 +61,22 @@ namespace Api.src.Auth.infraestructure.api
             return Created($"/api/user/{userModel.Id}", userModel.ToUserDto());
         }
 
-        
+        [HttpPost("login")]
+        public async Task<IActionResult> LoginUser([FromBody] LoginUserDto user)
+        {
+            var userModel = await _userService.GetByEmailAsync(user.Email);
+            var passwordsMatch = false;
+            if(userModel != null)
+            {
+                passwordsMatch = BCrypt.Net.BCrypt.Verify(user.Password, userModel.Password);
+            }
+
+            if(userModel == null || !passwordsMatch)
+            {
+                return BadRequest("Wrong email or password");
+            } 
+
+            return Ok(userModel);
+        }
     }
 }

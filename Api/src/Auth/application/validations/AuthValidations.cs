@@ -16,14 +16,14 @@ namespace Api.src.Auth.application.validations
         public AuthValidations(ApplicationDBContext context){
             _context = context;
         }
-        public bool EmailExists(UserEntity user)
+        public bool EmailExists(string email)
         {
-            return !_context.User.Any(x => x.Email == user.Email && x.Status == UserStatus.Created);
+            return _context.User.Any(x => x.Email == email && x.Status == UserStatus.Created);
         }
 
-        public bool UsernameExists(UserEntity user)
+        public bool UserNameExists(string userName)
         {
-            return !_context.User.Any(x => x.UserName == user.UserName && x.Status == UserStatus.Created);
+            return _context.User.Any(x => x.UserName == userName && x.Status == UserStatus.Created);
         }
 
         public bool IsEmailValid(string email)
@@ -32,7 +32,8 @@ namespace Api.src.Auth.application.validations
             return Regex.IsMatch(email, EmailRegex, RegexOptions.IgnoreCase);
         }
 
-        public bool IsRoleValid(UserRole role){
+        public bool IsRoleValid(UserRole role)
+        {
             return Enum.IsDefined(typeof(UserRole), role);
         }
     }

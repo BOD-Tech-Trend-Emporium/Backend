@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.src.User.application.service;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.dto;
@@ -17,6 +18,7 @@ namespace backend.src.User.infraestructure.api
         private CreateUser createUserService;
         private DeleteUserById deleteUserByIdService;
         private GetUserById getUserByIdService;
+        private GetUserByEmail getUserByEmailService;
         private UpdateUserById updateUserByIdService;
 
         public UserService(ApplicationDBContext context)
@@ -25,6 +27,7 @@ namespace backend.src.User.infraestructure.api
             createUserService = new CreateUser(context);
             deleteUserByIdService = new DeleteUserById(context);
             getUserByIdService = new GetUserById(context);
+            getUserByEmailService = new GetUserByEmail(context);
             updateUserByIdService = new UpdateUserById(context);
         }
 
@@ -51,6 +54,11 @@ namespace backend.src.User.infraestructure.api
         public async Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user)
         {
             return await updateUserByIdService.Run(id, user);
+        }
+
+        public async Task<UserEntity?> GetByEmailAsync(string email)
+        {
+            return await getUserByEmailService.Run(email);
         }
     }
 }
