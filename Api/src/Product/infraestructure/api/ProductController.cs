@@ -1,4 +1,5 @@
 ﻿using Api.src.Product.application.mappers;
+using Api.src.Product.domain.dto;
 using Api.src.Product.domain.repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,11 +15,21 @@ namespace Api.src.Product.infraestructure.api
         {
             _productService = productService;
         }
+        
         [HttpGet]
-        public async Task<IActionResult>GetAll()
+        [ProducesResponseType(200, Type =typeof(List<ProductDto>))]
+        public async Task<IActionResult> GetAll()
         {
             var products = await _productService.GetAllAsync();
             return Ok(products);
+        }
+
+        // TODO Implement
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateProductDto product)
+        {
+            var created = await _productService.CreateAsync(product);
+            return Ok(created);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Api.src.Product.infraestructure.api
             return await getAllProductsService.Run();
         }
 
-        public Task<ProductEntity> CreateAsync(ProductEntity entity)
+        public Task<bool> CreateAsync(CreateProductDto givenProduct)
         {
             throw new NotImplementedException();
         }
