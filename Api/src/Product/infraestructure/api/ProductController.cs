@@ -2,6 +2,7 @@
 using Api.src.Product.domain.dto;
 using Api.src.Product.domain.repository;
 using backend.src.User.domain.enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,6 +30,7 @@ namespace Api.src.Product.infraestructure.api
         }
 
         [HttpPost]
+        [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
         public async Task<IActionResult> Create([FromBody] CreateProductDto product)
         {   
             // TODO CHANGE DEFAULT ADMIN ROLE TO JWT ROLE

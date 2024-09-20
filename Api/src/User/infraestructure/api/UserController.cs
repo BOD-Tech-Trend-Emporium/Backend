@@ -55,6 +55,7 @@ namespace backend.src.User.infraestructure.api
         [HttpDelete]
         [Route("{id}")]
         [ProducesResponseType(204)]
+        [Authorize]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var user = await _userService.DeleteByIdAsync(id);
@@ -71,6 +72,7 @@ namespace backend.src.User.infraestructure.api
 
         [HttpDelete]
         [ProducesResponseType(204)]
+        [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> DeleteUsers([FromBody] List<string> userEmails)
         {
             await _userService.DeleteUsers(userEmails);
