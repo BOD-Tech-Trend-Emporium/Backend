@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Api.src.Auth.application.Utils;
+using Api.src.Auth.domain.dto;
 using backend.Data;
 using backend.src.User.application.mappers;
 using backend.src.User.application.service;
@@ -31,6 +35,12 @@ namespace backend.src.User.infraestructure.api
         [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> GetAll()
         {
+            TokenDto tokenPayload = Token.GetTokenPayload(Request);
+
+            Console.WriteLine(tokenPayload.UserId);
+            Console.WriteLine(tokenPayload.Email);
+            Console.WriteLine(tokenPayload.Role);
+                
             var users = await _userService.GetAllAsync();
             var usersList = users.Select(i => i.ToUserDto());
             return Ok(usersList);
