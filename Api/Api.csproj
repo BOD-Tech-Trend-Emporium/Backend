@@ -35,7 +35,6 @@
     <Folder Include="src\Coupon\infraestructure\" />
     <Folder Include="src\CartToProduct\application\" />
     <Folder Include="src\CartToProduct\infraestructure\" />
-    <Folder Include="src\Product\application\" />
     <Folder Include="src\Product\infraestructure\" />
     <Folder Include="src\Favorite\application\" />
     <Folder Include="src\Favorite\infraestructure\" />
