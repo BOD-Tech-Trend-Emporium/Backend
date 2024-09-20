@@ -38,22 +38,22 @@ namespace Api.src.Auth.infraestructure
             bool UserNameExists = authValidations.UserNameExists(user.UserName);
 
             if(!isEmailValid){
-                throw new ValidationException("Email not valid");
+                throw new BadRequestException("Email not valid");
             }
 
             if(emailExists)
             {
-                throw new AlreadyExistsException("A user with this email alreay exists");
+                throw new ConflictException("A user with this email alreay exists");
             }
 
             if(!isRoleValid)
             {
-                throw new ValidationException("Role not valid");
+                throw new BadRequestException("Role not valid");
             }
 
             if(UserNameExists)
             {
-                throw new AlreadyExistsException("A user with this username alreay exists");
+                throw new ConflictException("A user with this username alreay exists");
             }
 
             return await signUpUserService.Run(user);
@@ -71,7 +71,7 @@ namespace Api.src.Auth.infraestructure
 
             if(userModel == null || !passwordsMatch)
             {
-                throw new ValidationException("Wrong email or password");
+                throw new BadRequestException("Wrong email or password");
             }
 
             string tokenKey = _configuration.GetSection("AppSettings:TokenKey").Value!;
