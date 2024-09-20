@@ -26,7 +26,7 @@ namespace backend.src.User.application.mappers
         {
             return new UserEntity
             {
-                Name = string.Empty,
+                Name = user.Name,
                 Email = user.Email,
                 UserName = user.UserName,
                 Password = user.Password,

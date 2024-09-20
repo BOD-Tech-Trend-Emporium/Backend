@@ -17,7 +17,7 @@ namespace Api.src.Category.application.service
         {
 
             if (_context.Category.Any(c => c.Name == category.Name)) {
-                throw new DuplicateException("User already exists");
+                throw new ConflictException("User already exists");
             }
             category.Status = domain.enums.CategoryStatus.Created;
             await _context.Category.AddAsync(category);

@@ -11,6 +11,8 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <Content Remove="appsettings.Local.json" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,7 +37,6 @@
     <Folder Include="src\Coupon\infraestructure\" />
     <Folder Include="src\CartToProduct\application\" />
     <Folder Include="src\CartToProduct\infraestructure\" />
-    <Folder Include="src\Product\application\" />
     <Folder Include="src\Product\infraestructure\" />
     <Folder Include="src\Favorite\application\" />
     <Folder Include="src\Favorite\infraestructure\" />
