@@ -10,12 +10,14 @@ namespace Api.src.Session.domain.entity
 {
     public class SessionEntity
     {
-        [Key, ForeignKey("User")]
         public Guid UserId { get; set; }
 
         public bool IsActive { get; set; }
 
         [Required]
         public UserEntity User { get; set; }
+
+        [Required, Column(TypeName = "datetime2(7)")]
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -80,10 +80,14 @@ namespace backend.Data
                .WithMany(c => c.CartToProducts)
                .HasForeignKey(f => f.CartId);
 
-            modelBuilder.Entity<UserEntity>()
-                .HasOne(u => u.Session)
-                .WithOne(s => s.User)
-                .HasForeignKey<SessionEntity>(s => s.UserId);
+            modelBuilder.Entity<SessionEntity>()
+                .Property(r => r.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<SessionEntity>()
+                .HasKey(f => new { f.UserId });
+            modelBuilder.Entity<SessionEntity>()
+               .HasOne(f => f.User)
+               .WithOne(f => f.Session);
         }
     }
 }
