@@ -39,8 +39,6 @@ namespace Api.src.Product.application.mappers
             if (category == null)
             {
                 throw new NotFoundException($"Category '{product.Category}' not found");
-                
-                
             }
             // Create product
             var productEntity = new ProductEntity
