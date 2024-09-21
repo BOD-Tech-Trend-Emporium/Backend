@@ -1,9 +1,13 @@
-﻿using Api.src.Category.application.mappers;
+﻿using Api.src.Auth.application.Utils;
+using Api.src.Auth.domain.dto;
+using Api.src.Category.application.mappers;
 using Api.src.Category.domain.dto;
 using Api.src.Category.domain.repository;
+using backend.src.User.domain.entity;
 using backend.src.User.domain.enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Api.src.Category.infraestructure.api
 {
@@ -31,7 +35,12 @@ namespace Api.src.Category.infraestructure.api
         [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
         public async Task<IActionResult> Create([FromBody] CreateCategoryDto category)
         {
-            var result = await _categoryService.CreateAsync(category.ToCategoryModelForCreate());
+            var role=Token.GetTokenPayload(Request).Role;
+            Console.WriteLine(role);
+            Console.WriteLine((UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
+            var result = await _categoryService.CreateAsync(
+                category.ToCategoryModelForCreate(),
+                (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
             return Created($"/api/category/{result.Id}", result.ToCategoryDto());
         }
     }

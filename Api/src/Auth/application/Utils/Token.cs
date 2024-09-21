@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Api.src.Auth.domain.dto;
 using backend.src.User.domain.entity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -32,6 +33,26 @@ namespace Api.src.Auth.application.Utils
 
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
             return jwt;
+        }
+    
+        public static TokenDto GetTokenPayload(HttpRequest request)
+        {
+            var authHeader = request.Headers.Authorization.ToString();
+
+            var token = authHeader.StartsWith("Bearer ") ? authHeader[7..] : authHeader;
+    
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadJwtToken(token);
+    
+            var userId = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            var email = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            var role = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+            
+            return new TokenDto{
+                UserId = userId!,
+                Email = email!,
+                Role = role!
+            };
         }
     }
 }

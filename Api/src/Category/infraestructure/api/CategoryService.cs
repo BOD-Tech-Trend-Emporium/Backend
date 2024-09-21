@@ -2,6 +2,7 @@
 using Api.src.Category.domain.entity;
 using Api.src.Category.domain.repository;
 using backend.Data;
+using backend.src.User.domain.enums;
 
 namespace Api.src.Category.infraestructure.api
 {
@@ -15,9 +16,9 @@ namespace Api.src.Category.infraestructure.api
             createCategory = new CreateCategory(context);
         }
 
-        public async Task<CategoryEntity> CreateAsync(CategoryEntity category)
+        public async Task<CategoryEntity> CreateAsync(CategoryEntity category, UserRole role)
         {
-            return await createCategory.Run(category);
+            return await createCategory.Run(category, role);
         }
 
         public async Task<List<CategoryEntity>> GetAllApprovedAsync()
