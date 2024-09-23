@@ -34,13 +34,11 @@ namespace Api.src.Product.application.mappers
         {
             // search category Id
             var category = await _context.Category
-                .FirstOrDefaultAsync(cat => cat.Name == product.Category);
+                .FirstOrDefaultAsync(cat => cat.Id == product.Category);
 
             if (category == null)
             {
                 throw new NotFoundException($"Category '{product.Category}' not found");
-                
-                
             }
             // Create product
             var productEntity = new ProductEntity
@@ -64,6 +62,29 @@ namespace Api.src.Product.application.mappers
             productEntity.Prices.Add(priceEntity);
 
             return productEntity;
+        }
+        public static ProductByIdDto toProductByIdDto(this ProductEntity product, float price, int reviewCount, float rate, string category, int stock, int available )
+        {
+            return new ProductByIdDto
+            {
+                Id = product.Id,
+                Title = product.Title,
+                Description = product.Description,
+                Category = category,
+                Image = product.Image,
+                Price = price,
+                Rating = new ProductRatingDto
+                {
+                    Count = reviewCount,
+                    Rate = rate
+                },
+                Inventory = new InventoryAuxDto
+                {
+                    Available = available,
+                    Total = stock
+                }
+            };
+
         }
 
     }

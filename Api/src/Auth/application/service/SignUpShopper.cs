@@ -6,20 +6,18 @@ using Api.src.Auth.application.validations;
 using Api.src.Common.exceptions;
 using Api.src.Session.application.mappers;
 using Api.src.Session.application.service;
-using Azure.Core;
 using backend.Data;
 using backend.src.User.domain.entity;
-using BCrypt.Net;
 
 namespace Api.src.Auth.application.service
 {
-    public class SignUpUser
+    public class SignUpShopper
     {
         private readonly ApplicationDBContext _context;
         private AuthValidations authValidations;
         private CreateSession createSessionService;
 
-        public SignUpUser(ApplicationDBContext context)
+        public SignUpShopper(ApplicationDBContext context)
         {
             _context = context;
             authValidations = new AuthValidations(context);
@@ -30,7 +28,6 @@ namespace Api.src.Auth.application.service
         {
             bool isEmailValid = authValidations.IsEmailValid(user.Email);
             bool emailExists = await authValidations.EmailExists(user.Email);
-            bool isRoleValid = authValidations.IsRoleValid(user.Role);
             bool UserNameExists = await authValidations.UserNameExists(user.UserName);
 
             if(!isEmailValid){
@@ -40,11 +37,6 @@ namespace Api.src.Auth.application.service
             if(emailExists)
             {
                 throw new ConflictException("A user with this email alreay exists");
-            }
-
-            if(!isRoleValid)
-            {
-                throw new BadRequestException("Role not valid");
             }
 
             if(UserNameExists)

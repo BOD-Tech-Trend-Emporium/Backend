@@ -1,5 +1,6 @@
 using Api.src.Favorite.domain.entity;
 using Api.src.Review.domain.entity;
+using Api.src.Session.domain.entity;
 using Api.src.User.domain.enums;
 using backend.src.User.domain.enums;
 using Microsoft.EntityFrameworkCore;
@@ -40,7 +41,8 @@ namespace backend.src.User.domain.entity
 
         [Required, Column(TypeName = "datetime2(7)")]
         public DateTime CreatedAt { get; set; }
-
+        [Required]
+        public SessionEntity Session { get; set; }
         public ICollection<CartEntity> Carts { get; set; }
         public ICollection<ReviewEntity> Reviews { get; set; }
         public ICollection<FavoriteEntity> Favorites { get; set; }

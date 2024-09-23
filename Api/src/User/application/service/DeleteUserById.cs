@@ -1,3 +1,4 @@
+using Api.src.Auth.application.service;
 using Api.src.Common.exceptions;
 using Api.src.User.domain.enums;
 using backend.Data;
@@ -9,10 +10,12 @@ namespace backend.src.User.application.service
     public class DeleteUserById
     {
         private readonly ApplicationDBContext _context;
+        private readonly LogoutUser _logoutUser;
 
         public DeleteUserById(ApplicationDBContext context)
         {
             _context = context;
+            _logoutUser = new LogoutUser(context);
         }
         public async Task<UserEntity?> Run(Guid id)
         {
@@ -25,7 +28,7 @@ namespace backend.src.User.application.service
 
             user.Status = UserStatus.Removed;
             await _context.SaveChangesAsync();
-
+            await _logoutUser.Run(id.ToString());
             return user;
         }
     }

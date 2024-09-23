@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Api.src.Auth.application.Utils;
+using Api.src.Auth.domain.dto;
 using backend.Data;
 using backend.src.User.application.mappers;
 using backend.src.User.application.service;
@@ -53,12 +57,12 @@ namespace backend.src.User.infraestructure.api
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("delete/self")]
         [ProducesResponseType(204)]
         [Authorize]
-        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        public async Task<IActionResult> Delete()
         {
-            var user = await _userService.DeleteByIdAsync(id);
+            var user = await _userService.DeleteByIdAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
             return NoContent();
         }
 
