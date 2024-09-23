@@ -30,6 +30,7 @@ namespace Api.src.Product.application.service
                 throw new NotFoundException($"Product with Id {productId} not found");
             }
             // Updating values
+            // TODO: Validate the availability and the stock
             productEntity.Stock = product.Stock;
             productEntity.Title = product.Title;
             productEntity.Description = product.Description;

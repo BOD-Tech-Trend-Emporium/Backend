@@ -41,10 +41,11 @@ namespace Api.src.Product.infraestructure.api
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> UpdateById([FromBody]CreateProductDto, [FromRoute] Guid productId)
+        [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
+        public async Task<IActionResult> UpdateById([FromBody]CreateProductDto updatedDto, [FromRoute] Guid id)
         {
-
-            return Ok();
+            var updatedEntity = await _productService.UpdateByIdAsync(updatedDto, id);
+            return Ok(updatedEntity.Id);
         }
     }
 }
