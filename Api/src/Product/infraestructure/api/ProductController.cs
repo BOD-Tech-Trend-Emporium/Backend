@@ -47,5 +47,14 @@ namespace Api.src.Product.infraestructure.api
             var product = await _productService.GetByIdAsync(id);
             return Ok(product);
         }
+
+        [HttpPut]
+        [Route("{id}")]
+        [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
+        public async Task<IActionResult> UpdateById([FromBody]CreateProductDto updatedDto, [FromRoute] Guid id)
+        {
+            var updatedEntity = await _productService.UpdateByIdAsync(updatedDto, id);
+            return Ok(updatedEntity.Id);
+        }
     }
 }

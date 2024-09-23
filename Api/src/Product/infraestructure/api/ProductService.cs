@@ -12,11 +12,13 @@ namespace Api.src.Product.infraestructure.api
         private GetAllProducts getAllProductsService;
         private CreateProduct createProductService;
         private GetProductById getProductByIdService;
+        private UpdateProduct updateProductService;
         public ProductService(ApplicationDBContext context) 
         {
             getAllProductsService = new GetAllProducts(context);
             createProductService = new CreateProduct(context);
             getProductByIdService = new GetProductById(context);
+            updateProductService = new UpdateProduct(context);
         }
 
         public async Task<List<ProductDto>> GetAllAsync()
@@ -39,9 +41,9 @@ namespace Api.src.Product.infraestructure.api
             return await getProductByIdService.Run(id);
         }
 
-        public Task<ProductEntity> UpdateByIdAsync(Guid id)
+        public async Task<ProductEntity> UpdateByIdAsync(CreateProductDto product, Guid id)
         {
-            throw new NotImplementedException();
+            return await updateProductService.Run(product, id);
         }
     }
 }
