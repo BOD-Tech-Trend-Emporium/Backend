@@ -9,6 +9,7 @@ using Api.src.Favorite.domain.entity;
 using Api.src.Price.domain.entity;
 using Api.src.Product.domain.entity;
 using Api.src.Review.domain.entity;
+using Api.src.Session.domain.entity;
 using backend.src.User.domain.entity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ namespace backend.Data
 
         }
         public DbSet<UserEntity> User { get; set; }
+        public DbSet<SessionEntity> Session { get; set; }
         public DbSet<CartEntity> Cart { get; set; }
         public DbSet<CouponEntity> Coupon { get; set; }
         public DbSet<FavoriteEntity> Favorite { get; set; }
@@ -36,10 +38,6 @@ namespace backend.Data
             modelBuilder.Entity<UserEntity>()
                 .Property(u => u.CreatedAt)
                 .HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<UserEntity>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-
 
             modelBuilder.Entity<CartEntity>()
                 .Property(f => f.CreatedAt)
@@ -76,13 +74,20 @@ namespace backend.Data
             modelBuilder.Entity<CartToProductEntity>()
                 .HasOne(cp => cp.Price)
                 .WithMany(p => p.CartToProducts)
-                .HasForeignKey(cp => cp.PriceId);
+                .HasForeignKey(cp => cp.PriceId);       
             modelBuilder.Entity<CartToProductEntity>()
                .HasOne(cp => cp.Cart)
                .WithMany(c => c.CartToProducts)
                .HasForeignKey(f => f.CartId);
 
-
+            modelBuilder.Entity<SessionEntity>()
+                .Property(r => r.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<SessionEntity>()
+                .HasKey(f => new { f.UserId });
+            modelBuilder.Entity<SessionEntity>()
+               .HasOne(f => f.User)
+               .WithOne(f => f.Session);
         }
     }
 }
