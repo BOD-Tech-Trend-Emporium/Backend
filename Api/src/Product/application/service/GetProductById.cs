@@ -41,31 +41,18 @@ namespace Api.src.Product.application.service
                 throw new NotFoundException($"product with id {id.ToString()} not available");
             }
             // Obtain metrics of the product
-            // TODO: obtain availability
             var currentPrice = product.Prices?.Where(pr => pr.Current).Select(pr => pr.Price).FirstOrDefault() ?? 0f;
             var numberOfRatings = product.Reviews?.Count ?? 0;
             var avgRating = product.Reviews?.Count == 0 ? 0f : product.Reviews.Average(rev => rev.Rating) ?? 0f;
             var categoryName = product.Category?.Name ?? "Unknown";
             // Calculating availability
-            /*
-            var pendingProducts = product.Prices
-                .Where(price => price.CartToProducts != null)
-                .SelectMany(price => price.CartToProducts)  // Obtain all conections with CartToProduct
-                .Where(ctp => ctp.Cart != null && ctp.Cart.State == CartState.Pending)  // Filter carts on pending state
-                .Sum(ctp => (int?) ctp.Quantity ?? 7);  // Sum quantity of products
-            */
-            var count = 0;
             var pendingProducts = product.Prices
                 .SelectMany(price => price.CartToProducts ?? new List<CartToProductEntity>())
                 .Where(ctp => ctp.Cart != null && ctp.Cart.State == CartState.Approved)
                 .Sum(ctp => (int?)ctp.Quantity ?? 0);
-            Debug.WriteLine(count);
             // Calculate available products
             var stock = product.Stock;
             var availableProducts = stock - pendingProducts;
-            Debug.WriteLine($"Stock: {product.Stock}");
-            Debug.WriteLine($"Pending Products: {pendingProducts}");
-            Debug.WriteLine($"Available Products: {availableProducts}");
 
             return product.toProductByIdDto(currentPrice, numberOfRatings, avgRating, categoryName, stock, availableProducts);
         }
