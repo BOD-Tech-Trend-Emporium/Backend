@@ -11,7 +11,7 @@ namespace Api.src.Auth.domain.repository
     public interface AuthRepository
     {
         Task<UserEntity?> SignUpUser(UserEntity user);
-
+        Task<UserEntity?> SignUpShopper(UserEntity user);
         Task<LoggedUserDto?> LoginUser(UserLoginDto user);
         Task<SessionEntity?> LogoutUser(string id);
     }

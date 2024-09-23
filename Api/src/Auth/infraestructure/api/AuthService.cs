@@ -21,17 +21,24 @@ namespace Api.src.Auth.infraestructure
         private SignUpUser signUpUserService;
         private LoginUser loginUserService;
         private LogoutUser logoutUserService;
+        private SignUpShopper signUpShopperService;
 
         public AuthService(ApplicationDBContext context, IConfiguration configuration)
         {
             signUpUserService = new SignUpUser(context);
             loginUserService = new LoginUser(context, configuration);
             logoutUserService = new LogoutUser(context);
+            signUpShopperService = new SignUpShopper(context);
         }
 
         public async Task<UserEntity?> SignUpUser(UserEntity user)
         {
             return await signUpUserService.Run(user);
+        }
+
+        public async Task<UserEntity?> SignUpShopper(UserEntity user)
+        {
+            return await signUpShopperService.Run(user);
         }
     
         public async Task<LoggedUserDto?> LoginUser(UserLoginDto user)

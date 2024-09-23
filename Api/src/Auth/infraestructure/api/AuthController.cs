@@ -7,8 +7,10 @@ using Api.src.Auth.application.Utils;
 using Api.src.Auth.application.validations;
 using Api.src.Auth.domain.dto;
 using Api.src.Auth.domain.repository;
+using Api.src.User.domain.dto;
 using backend.src.User.application.mappers;
 using backend.src.User.domain.dto;
+using backend.src.User.domain.enums;
 using backend.src.User.domain.repository;
 using BCrypt.Net;
 using Microsoft.AspNetCore.Authorization;
@@ -27,11 +29,20 @@ namespace Api.src.Auth.infraestructure.api
             _authService = authRepository;
         }
 
-        [HttpPost("admin/auth")]
-        public async Task<IActionResult> SignUpUser([FromBody] CreateUserDto user)
+        [HttpPost("auth")]
+        public async Task<IActionResult> SignUpShopper([FromBody] CreateShopperDto user)
         {
-            var userModel = user.ToUserModelForCreate();
+            var userModel = user.ToUserModelForCreateShopper();
             await _authService.SignUpUser(userModel);
+            return Created($"/api/user/{userModel.Id}", userModel.ToUserDto());
+        }
+
+        [HttpPost("admin/auth")]
+        [Authorize(Roles = nameof(UserRole.Admin))]
+        public async Task<IActionResult> SignUpUser([FromBody] CreateUserDto user)
+        {   
+            var userModel = user.ToUserModelForCreate();
+            await _authService.SignUpShopper(userModel);
             return Created($"/api/user/{userModel.Id}", userModel.ToUserDto());
         }
 
