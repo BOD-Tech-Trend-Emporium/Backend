@@ -35,12 +35,6 @@ namespace backend.src.User.infraestructure.api
         [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> GetAll()
         {
-            TokenDto tokenPayload = Token.GetTokenPayload(Request);
-
-            Console.WriteLine(tokenPayload.UserId);
-            Console.WriteLine(tokenPayload.Email);
-            Console.WriteLine(tokenPayload.Role);
-                
             var users = await _userService.GetAllAsync();
             var usersList = users.Select(i => i.ToUserDto());
             return Ok(usersList);
