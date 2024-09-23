@@ -1,10 +1,12 @@
 ﻿using Api.src.Cart.domain.enums;
+using Api.src.CartToProduct.domain.entity;
 using Api.src.Common.exceptions;
 using Api.src.Product.application.mappers;
 using Api.src.Product.domain.dto;
 using Api.src.Product.domain.enums;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Api.src.Product.application.service
 {
@@ -24,8 +26,8 @@ namespace Api.src.Product.application.service
                 .Where(pr => pr.Status.Equals(ProductStatus.Created) && pr.Id == id)
                 .Include(p => p.Category) // Load related category
                 .Include(p => p.Prices) // Load related prices
-                // .ThenInclude(price => price.CartToProducts) // Load carts (helper table) related
-                // .ThenInclude(priceToProducts => priceToProducts.Cart) // Load cart information related
+                    .ThenInclude(price => price.CartToProducts) // Load carts (helper table) related
+                        .ThenInclude(priceToProducts => priceToProducts.Cart) // Load cart information related
                 .Include(p => p.Reviews) // Load reviews related 
                 .FirstOrDefaultAsync();
             
@@ -45,13 +47,25 @@ namespace Api.src.Product.application.service
             var avgRating = product.Reviews?.Count == 0 ? 0f : product.Reviews.Average(rev => rev.Rating) ?? 0f;
             var categoryName = product.Category?.Name ?? "Unknown";
             // Calculating availability
+            /*
             var pendingProducts = product.Prices
+                .Where(price => price.CartToProducts != null)
                 .SelectMany(price => price.CartToProducts)  // Obtain all conections with CartToProduct
-                .Where(ctp => ctp.Cart.State == CartState.Pending)  // Filter carts on pending state
-                .Sum(ctp => ctp.Quantity);  // Sum quantity of products
+                .Where(ctp => ctp.Cart != null && ctp.Cart.State == CartState.Pending)  // Filter carts on pending state
+                .Sum(ctp => (int?) ctp.Quantity ?? 7);  // Sum quantity of products
+            */
+            var count = 0;
+            var pendingProducts = product.Prices
+                .SelectMany(price => price.CartToProducts ?? new List<CartToProductEntity>())
+                .Where(ctp => ctp.Cart != null && ctp.Cart.State == CartState.Approved)
+                .Sum(ctp => (int?)ctp.Quantity ?? 0);
+            Debug.WriteLine(count);
             // Calculate available products
             var stock = product.Stock;
             var availableProducts = stock - pendingProducts;
+            Debug.WriteLine($"Stock: {product.Stock}");
+            Debug.WriteLine($"Pending Products: {pendingProducts}");
+            Debug.WriteLine($"Available Products: {availableProducts}");
 
             return product.toProductByIdDto(currentPrice, numberOfRatings, avgRating, categoryName, stock, availableProducts);
         }
