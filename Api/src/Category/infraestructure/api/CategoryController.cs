@@ -35,9 +35,6 @@ namespace Api.src.Category.infraestructure.api
         [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
         public async Task<IActionResult> Create([FromBody] CreateCategoryDto category)
         {
-            var role=Token.GetTokenPayload(Request).Role;
-            Console.WriteLine(role);
-            Console.WriteLine((UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
             var result = await _categoryService.CreateAsync(
                 category.ToCategoryModelForCreate(),
                 (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
