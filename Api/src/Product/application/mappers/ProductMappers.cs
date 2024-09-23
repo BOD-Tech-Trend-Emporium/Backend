@@ -63,6 +63,29 @@ namespace Api.src.Product.application.mappers
 
             return productEntity;
         }
+        public static ProductByIdDto toProductByIdDto(this ProductEntity product, float price, int reviewCount, float rate, string category, int stock, int available )
+        {
+            return new ProductByIdDto
+            {
+                Id = product.Id,
+                Title = product.Title,
+                Description = product.Description,
+                Category = category,
+                Image = product.Image,
+                Price = price,
+                Rating = new ProductRatingDto
+                {
+                    Count = reviewCount,
+                    Rate = rate
+                },
+                Inventory = new InventoryAuxDto
+                {
+                    Available = available,
+                    Total = stock
+                }
+            };
+
+        }
 
     }
 }
