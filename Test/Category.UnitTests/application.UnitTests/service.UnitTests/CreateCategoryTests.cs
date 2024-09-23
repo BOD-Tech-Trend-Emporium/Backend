@@ -54,6 +54,7 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             CreateCategory createCategory = new CreateCategory(dbContext);
 
             //ACT
+
             CategoryEntity result = await createCategory.Run(category, role);
 
             //Assert

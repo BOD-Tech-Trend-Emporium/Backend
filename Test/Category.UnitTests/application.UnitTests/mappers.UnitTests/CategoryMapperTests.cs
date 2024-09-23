@@ -22,7 +22,7 @@ namespace Test.Category.UnitTests.application.UnitTests.mappers.UnitTests
             //Assert
             result.Should().NotBeNull();
             result.Should().BeOfType<CategoryDto>();
-            result.Equals(expected);
+            result.Should().BeEquivalentTo(expected);
 
         }
         [Fact]
@@ -38,7 +38,7 @@ namespace Test.Category.UnitTests.application.UnitTests.mappers.UnitTests
             //Assert
             result.Should().NotBeNull();
             result.Should().BeOfType<CategoryDto>();
-            result.Equals(expected);
+            result.Should().BeEquivalentTo(expected);
 
         }
 
@@ -54,7 +54,7 @@ namespace Test.Category.UnitTests.application.UnitTests.mappers.UnitTests
             //Assert
             result.Should().NotBeNull();
             result.Should().BeOfType<CategoryEntity>();
-            result.Equals(expected);
+            result.Should().BeEquivalentTo(expected);
 
         }
 
@@ -62,15 +62,15 @@ namespace Test.Category.UnitTests.application.UnitTests.mappers.UnitTests
         public void Given_CreateCategoryDto_When_NoAllFieldsMatch_Then_CategoryEntity()
         {
             //Arrange
-            var createCategoryDto = new CreateCategoryDto() { Name = "Music" };
+            var createCategoryDto = new CreateCategoryDto();
             //ACT
             var result = CategoryMapper.ToCategoryModelForCreate(createCategoryDto);
-            CategoryEntity expected = new() { Id = Guid.NewGuid(), Name = "Music", Status = CategoryStatus.Created };
+            CategoryEntity expected = new();
 
             //Assert
             result.Should().NotBeNull();
             result.Should().BeOfType<CategoryEntity>();
-            result.Equals(expected);
+            result.Should().BeEquivalentTo(expected);
 
         }
 
