@@ -18,7 +18,7 @@ namespace Api.src.Product.application.service
             _context = context;
         }
 
-        public async Task<ProductDto> Run(Guid id)
+        public async Task<ProductByIdDto> Run(Guid id)
         {
             var product = await _context.Product
                 .Where(pr => pr.Status.Equals(ProductStatus.Created) && pr.Id == id)
@@ -50,9 +50,10 @@ namespace Api.src.Product.application.service
                 .Where(ctp => ctp.Cart.State == CartState.Pending)  // Filter carts on pending state
                 .Sum(ctp => ctp.Quantity);  // Sum quantity of products
             // Calculate available products
-            var availableProducts = product.Stock - pendingProducts;
+            var stock = product.Stock;
+            var availableProducts = stock - pendingProducts;
 
-            return product.ToProductDto(currentPrice, numberOfRatings, avgRating, categoryName);
+            return product.toProductByIdDto(currentPrice, numberOfRatings, avgRating, categoryName, stock, availableProducts);
         }
     }
 }
