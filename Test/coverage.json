@@ -1,0 +1,3993 @@
+{
+  "Api.dll": {
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Program.cs": {
+      "Program": {
+        "System.Void Program::<Main>$(System.String[])": {
+          "Lines": {
+            "21": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "64": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "87": 0
+          },
+          "Branches": [
+            {
+              "Line": 67,
+              "Offset": 311,
+              "EndOffset": 313,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 311,
+              "EndOffset": 331,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 349,
+              "EndOffset": 351,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 349,
+              "EndOffset": 369,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\DeleteUsers.cs": {
+      "Api.src.User.application.service.DeleteUsers": {
+        "System.Void Api.src.User.application.service.DeleteUsers::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.User.application.service.DeleteUsers/<>c": {
+        "backend.src.User.domain.entity.UserEntity Api.src.User.application.service.DeleteUsers/<>c::<Run>b__2_0(backend.src.User.domain.entity.UserEntity)": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.User.application.service.DeleteUsers/<>c__DisplayClass2_0": {
+        "System.Boolean Api.src.User.application.service.DeleteUsers/<>c__DisplayClass2_0::<Run>b__2(System.String)": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.User.application.service.DeleteUsers/<Run>d__2": {
+        "System.Void Api.src.User.application.service.DeleteUsers/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "29": 0,
+            "37": 0,
+            "39": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 422,
+              "EndOffset": 424,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 440,
+              "EndOffset": 442,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 422,
+              "EndOffset": 481,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 440,
+              "EndOffset": 481,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 486,
+              "EndOffset": 488,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 486,
+              "EndOffset": 564,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\GetUserByEmail.cs": {
+      "Api.src.User.application.service.GetUserByEmail": {
+        "System.Void Api.src.User.application.service.GetUserByEmail::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.User.application.service.GetUserByEmail/<Run>d__2": {
+        "System.Void Api.src.User.application.service.GetUserByEmail/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\domain\\entity\\SessionEntity.cs": {
+      "Api.src.Session.domain.entity.SessionEntity": {
+        "System.Guid Api.src.Session.domain.entity.SessionEntity::get_UserId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Api.src.Session.domain.entity.SessionEntity::get_IsActive()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity Api.src.Session.domain.entity.SessionEntity::get_User()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Session.domain.entity.SessionEntity::get_CreatedAt()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\domain\\dto\\CreateSessionDto.cs": {
+      "Api.src.Session.domain.dto.CreateSessionDto": {
+        "System.Guid Api.src.Session.domain.dto.CreateSessionDto::get_UserId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Api.src.Session.domain.dto.CreateSessionDto::get_IsActive()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\application\\validations\\SessionValidations.cs": {
+      "Api.src.Session.application.validations.SessionValidations": {
+        "System.Void Api.src.Session.application.validations.SessionValidations::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Session.application.validations.SessionValidations/<IsUserLoggedIn>d__2": {
+        "System.Void Api.src.Session.application.validations.SessionValidations/<IsUserLoggedIn>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\application\\service\\CreateSession.cs": {
+      "Api.src.Session.application.service.CreateSession": {
+        "System.Void Api.src.Session.application.service.CreateSession::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Session.application.service.CreateSession/<Run>d__2": {
+        "System.Void Api.src.Session.application.service.CreateSession/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\application\\service\\UpdateSession.cs": {
+      "Api.src.Session.application.service.UpdateSession": {
+        "System.Void Api.src.Session.application.service.UpdateSession::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Session.application.service.UpdateSession/<Run>d__2": {
+        "System.Void Api.src.Session.application.service.UpdateSession/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 198,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Session\\application\\mappers\\SessionMappers.cs": {
+      "Api.src.Session.application.mappers.SessionMappers": {
+        "Api.src.Session.domain.entity.SessionEntity Api.src.Session.application.mappers.SessionMappers::ToSessionModelForCreate(backend.src.User.domain.entity.UserEntity)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Review\\domain\\entity\\ReviewEntity.cs": {
+      "Api.src.Review.domain.entity.ReviewEntity": {
+        "System.Guid Api.src.Review.domain.entity.ReviewEntity::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Product.domain.entity.ProductEntity Api.src.Review.domain.entity.ReviewEntity::get_Product()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity Api.src.Review.domain.entity.ReviewEntity::get_User()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Review.domain.entity.ReviewEntity::get_Comment()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Single> Api.src.Review.domain.entity.ReviewEntity::get_Rating()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Review.domain.entity.ReviewEntity::get_CreatedAt()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\infraestructure\\api\\ProductController.cs": {
+      "Api.src.Product.infraestructure.api.ProductController": {
+        "System.Void Api.src.Product.infraestructure.api.ProductController::.ctor(Api.src.Product.domain.repository.ProductRepository)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.infraestructure.api.ProductController/<Create>d__3": {
+        "System.Void Api.src.Product.infraestructure.api.ProductController/<Create>d__3::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.infraestructure.api.ProductController/<GetAll>d__2": {
+        "System.Void Api.src.Product.infraestructure.api.ProductController/<GetAll>d__2::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\infraestructure\\api\\ProductService.cs": {
+      "Api.src.Product.infraestructure.api.ProductService": {
+        "System.Threading.Tasks.Task`1<Api.src.Product.domain.entity.ProductEntity> Api.src.Product.infraestructure.api.ProductService::DeleteByIdAsync(System.Guid)": {
+          "Lines": {
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<Api.src.Product.domain.entity.ProductEntity> Api.src.Product.infraestructure.api.ProductService::GetByIdAsync(System.Guid)": {
+          "Lines": {
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<Api.src.Product.domain.entity.ProductEntity> Api.src.Product.infraestructure.api.ProductService::UpdateByIdAsync(System.Guid)": {
+          "Lines": {
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Product.infraestructure.api.ProductService::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.infraestructure.api.ProductService/<CreateAsync>d__4": {
+        "System.Void Api.src.Product.infraestructure.api.ProductService/<CreateAsync>d__4::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.infraestructure.api.ProductService/<GetAllAsync>d__3": {
+        "System.Void Api.src.Product.infraestructure.api.ProductService/<GetAllAsync>d__3::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\domain\\entity\\ProductEntity.cs": {
+      "Api.src.Product.domain.entity.ProductEntity": {
+        "System.Guid Api.src.Product.domain.entity.ProductEntity::get_Id()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Category.domain.entity.CategoryEntity Api.src.Product.domain.entity.ProductEntity::get_Category()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.entity.ProductEntity::get_Title()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Product.domain.entity.ProductEntity::get_Price()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.entity.ProductEntity::get_Description()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.entity.ProductEntity::get_Image()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Api.src.Product.domain.entity.ProductEntity::get_Stock()": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Product.domain.enums.ProductStatus Api.src.Product.domain.entity.ProductEntity::get_Status()": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Product.domain.entity.ProductEntity::get_CreatedAt()": {
+          "Lines": {
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Review.domain.entity.ReviewEntity> Api.src.Product.domain.entity.ProductEntity::get_Reviews()": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Favorite.domain.entity.FavoriteEntity> Api.src.Product.domain.entity.ProductEntity::get_Favorites()": {
+          "Lines": {
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Price.domain.entity.PriceEntity> Api.src.Product.domain.entity.ProductEntity::get_Prices()": {
+          "Lines": {
+            "44": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\domain\\dto\\CreateProductDto.cs": {
+      "Api.src.Product.domain.dto.CreateProductDto": {
+        "System.String Api.src.Product.domain.dto.CreateProductDto::get_Title()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Product.domain.dto.CreateProductDto::get_Price()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.CreateProductDto::get_Description()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.CreateProductDto::get_Category()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.CreateProductDto::get_Image()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Api.src.Product.domain.dto.CreateProductDto::get_Stock()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\domain\\dto\\ProductDto.cs": {
+      "Api.src.Product.domain.dto.ProductDto": {
+        "System.Guid Api.src.Product.domain.dto.ProductDto::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.ProductDto::get_Title()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Product.domain.dto.ProductDto::get_Price()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.ProductDto::get_Description()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.ProductDto::get_Category()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Product.domain.dto.ProductDto::get_Image()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Product.domain.dto.ProductRatingDto Api.src.Product.domain.dto.ProductDto::get_Rating()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.domain.dto.ProductRatingDto": {
+        "System.Single Api.src.Product.domain.dto.ProductRatingDto::get_Rate()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Api.src.Product.domain.dto.ProductRatingDto::get_Count()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\application\\service\\CreateProduct.cs": {
+      "Api.src.Product.application.service.CreateProduct": {
+        "System.Void Api.src.Product.application.service.CreateProduct::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.application.service.CreateProduct/<Run>d__2": {
+        "System.Void Api.src.Product.application.service.CreateProduct/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\application\\service\\GetAllProducts.cs": {
+      "Api.src.Product.application.service.GetAllProducts": {
+        "System.Void Api.src.Product.application.service.GetAllProducts::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.application.service.GetAllProducts/<>c": {
+        "Api.src.Product.domain.dto.ProductDto Api.src.Product.application.service.GetAllProducts/<>c::<Run>b__2_0(Api.src.Product.domain.entity.ProductEntity)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 8,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 103,
+              "EndOffset": 105,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 103,
+              "EndOffset": 109,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 122,
+              "EndOffset": 124,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 122,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 136,
+              "EndOffset": 138,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 136,
+              "EndOffset": 191,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 204,
+              "EndOffset": 206,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 204,
+              "EndOffset": 210,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 216,
+              "EndOffset": 218,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 216,
+              "EndOffset": 224,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Api.src.Product.application.service.GetAllProducts/<Run>d__2": {
+        "System.Void Api.src.Product.application.service.GetAllProducts/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "33": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Product\\application\\mappers\\ProductMappers.cs": {
+      "Api.src.Product.application.mappers.ProductMappers": {
+        "Api.src.Product.domain.dto.ProductDto Api.src.Product.application.mappers.ProductMappers::ToProductDto(Api.src.Product.domain.entity.ProductEntity,System.Single,System.Int32,System.Single,System.String)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Product.application.mappers.ProductMappers/<ToProductModelForCreate>d__1": {
+        "System.Void Api.src.Product.application.mappers.ProductMappers/<ToProductModelForCreate>d__1::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 318,
+              "EndOffset": 320,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 318,
+              "EndOffset": 358,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 463,
+              "EndOffset": 465,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 463,
+              "EndOffset": 468,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Price\\domain\\entity\\PriceEntity.cs": {
+      "Api.src.Price.domain.entity.PriceEntity": {
+        "System.Guid Api.src.Price.domain.entity.PriceEntity::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Product.domain.entity.ProductEntity Api.src.Price.domain.entity.PriceEntity::get_Product()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Price.domain.entity.PriceEntity::get_Price()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Api.src.Price.domain.entity.PriceEntity::get_Current()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Price.domain.entity.PriceEntity::get_CreatedAt()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> Api.src.Price.domain.entity.PriceEntity::get_CartToProducts()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Coupon\\domain\\entity\\CouponEntity.cs": {
+      "Api.src.Coupon.domain.entity.CouponEntity": {
+        "System.Guid Api.src.Coupon.domain.entity.CouponEntity::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Coupon.domain.entity.CouponEntity::get_Code()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Coupon.domain.entity.CouponEntity::get_Discount()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Coupon.domain.enums.CouponStatus Api.src.Coupon.domain.entity.CouponEntity::get_Status()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Favorite.domain.entity.CartEntity> Api.src.Coupon.domain.entity.CouponEntity::get_Carts()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Common\\middleware\\ErrorhandlingMiddleware.cs": {
+      "Api.src.Common.middleware.ErrorhandlingMiddleware": {
+        "System.Void Api.src.Common.middleware.ErrorhandlingMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Common.middleware.ErrorhandlingMiddleware/<Invoke>d__2": {
+        "System.Void Api.src.Common.middleware.ErrorhandlingMiddleware/<Invoke>d__2::MoveNext()": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 305,
+              "EndOffset": 307,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 330,
+              "EndOffset": 332,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 305,
+              "EndOffset": 361,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 330,
+              "EndOffset": 382,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 355,
+              "EndOffset": 403,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 355,
+              "EndOffset": 422,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Common\\exceptions\\BadRequestException.cs": {
+      "Api.src.Common.exceptions.BadRequestException": {
+        "System.Void Api.src.Common.exceptions.BadRequestException::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.BadRequestException::.ctor(System.String)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.BadRequestException::.ctor(System.String,System.Object[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Common\\exceptions\\ConflictException.cs": {
+      "Api.src.Common.exceptions.ConflictException": {
+        "System.Void Api.src.Common.exceptions.ConflictException::.ctor()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.ConflictException::.ctor(System.String)": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "19": 1
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.ConflictException::.ctor(System.String,System.Object[])": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Common\\exceptions\\NotFoundException.cs": {
+      "Api.src.Common.exceptions.NotFoundException": {
+        "System.Void Api.src.Common.exceptions.NotFoundException::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.NotFoundException::.ctor(System.String)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Common.exceptions.NotFoundException::.ctor(System.String,System.Object[])": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\infraestructure\\api\\CategoryController.cs": {
+      "Api.src.Category.infraestructure.api.CategoryController": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryController::.ctor(Api.src.Category.domain.repository.CategoryRepository)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.infraestructure.api.CategoryController/<>c": {
+        "Api.src.Category.domain.dto.CategoryDto Api.src.Category.infraestructure.api.CategoryController/<>c::<GetAll>b__2_0(Api.src.Category.domain.entity.CategoryEntity)": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.infraestructure.api.CategoryController/<Create>d__3": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryController/<Create>d__3::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.infraestructure.api.CategoryController/<GetAll>d__2": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryController/<GetAll>d__2::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\infraestructure\\api\\CategoryService.cs": {
+      "Api.src.Category.infraestructure.api.CategoryService": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryService::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.infraestructure.api.CategoryService/<CreateAsync>d__3": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryService/<CreateAsync>d__3::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.infraestructure.api.CategoryService/<GetAllApprovedAsync>d__4": {
+        "System.Void Api.src.Category.infraestructure.api.CategoryService/<GetAllApprovedAsync>d__4::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\domain\\entity\\CategoryEntity.cs": {
+      "Api.src.Category.domain.entity.CategoryEntity": {
+        "System.Guid Api.src.Category.domain.entity.CategoryEntity::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Category.domain.entity.CategoryEntity::get_Name()": {
+          "Lines": {
+            "14": 2
+          },
+          "Branches": []
+        },
+        "Api.src.Category.domain.enums.CategoryStatus Api.src.Category.domain.entity.CategoryEntity::get_Status()": {
+          "Lines": {
+            "17": 1
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Product.domain.entity.ProductEntity> Api.src.Category.domain.entity.CategoryEntity::get_Products()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\domain\\dto\\CategoryDto.cs": {
+      "Api.src.Category.domain.dto.CategoryDto": {
+        "System.Guid Api.src.Category.domain.dto.CategoryDto::get_Id()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Category.domain.dto.CategoryDto::get_Name()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\domain\\dto\\CreateCategoryDto.cs": {
+      "Api.src.Category.domain.dto.CreateCategoryDto": {
+        "System.String Api.src.Category.domain.dto.CreateCategoryDto::get_Name()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\application\\service\\CreateCategory.cs": {
+      "Api.src.Category.application.service.CreateCategory": {
+        "System.Void Api.src.Category.application.service.CreateCategory::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.application.service.CreateCategory/<Run>d__2": {
+        "System.Void Api.src.Category.application.service.CreateCategory/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 21,
+              "Offset": 198,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 219,
+              "EndOffset": 221,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 219,
+              "EndOffset": 224,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\application\\service\\GetAllApprovedCategories.cs": {
+      "Api.src.Category.application.service.GetAllApprovedCategories": {
+        "System.Void Api.src.Category.application.service.GetAllApprovedCategories::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Category.application.service.GetAllApprovedCategories/<Run>d__2": {
+        "System.Void Api.src.Category.application.service.GetAllApprovedCategories/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Category\\application\\mappers\\CategoryMapper.cs": {
+      "Api.src.Category.application.mappers.CategoryMapper": {
+        "Api.src.Category.domain.dto.CategoryDto Api.src.Category.application.mappers.CategoryMapper::ToCategoryDto(Api.src.Category.domain.entity.CategoryEntity)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Category.domain.entity.CategoryEntity Api.src.Category.application.mappers.CategoryMapper::ToCategoryModelForCreate(Api.src.Category.domain.dto.CreateCategoryDto)": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Cart\\domain\\entity\\CartEntity.cs": {
+      "Api.src.Favorite.domain.entity.CartEntity": {
+        "System.Guid Api.src.Favorite.domain.entity.CartEntity::get_Id()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity Api.src.Favorite.domain.entity.CartEntity::get_User()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Coupon.domain.entity.CouponEntity Api.src.Favorite.domain.entity.CartEntity::get_Coupon()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Single Api.src.Favorite.domain.entity.CartEntity::get_ShippingCost()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Cart.domain.enums.CartState Api.src.Favorite.domain.entity.CartEntity::get_State()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Favorite.domain.entity.CartEntity::get_CreatedAt()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> Api.src.Favorite.domain.entity.CartEntity::get_CartToProducts()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Favorite\\domain\\entity\\FavoriteEntity.cs": {
+      "Api.src.Favorite.domain.entity.FavoriteEntity": {
+        "System.Guid Api.src.Favorite.domain.entity.FavoriteEntity::get_ProductId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Api.src.Favorite.domain.entity.FavoriteEntity::get_UserId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Product.domain.entity.ProductEntity Api.src.Favorite.domain.entity.FavoriteEntity::get_Product()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity Api.src.Favorite.domain.entity.FavoriteEntity::get_User()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Api.src.Favorite.domain.entity.FavoriteEntity::get_CreatedAt()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\CartToProduct\\domain\\entity\\CartToProductEntity.cs": {
+      "Api.src.CartToProduct.domain.entity.CartToProductEntity": {
+        "System.Guid Api.src.CartToProduct.domain.entity.CartToProductEntity::get_PriceId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Api.src.CartToProduct.domain.entity.CartToProductEntity::get_CartId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Price.domain.entity.PriceEntity Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Price()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Favorite.domain.entity.CartEntity Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Cart()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Quantity()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\infraestructure\\AuthService.cs": {
+      "Api.src.Auth.infraestructure.AuthService": {
+        "System.Void Api.src.Auth.infraestructure.AuthService::.ctor(backend.Data.ApplicationDBContext,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.AuthService/<LoginUser>d__5": {
+        "System.Void Api.src.Auth.infraestructure.AuthService/<LoginUser>d__5::MoveNext()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.AuthService/<LogoutUser>d__6": {
+        "System.Void Api.src.Auth.infraestructure.AuthService/<LogoutUser>d__6::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.AuthService/<SignUpUser>d__4": {
+        "System.Void Api.src.Auth.infraestructure.AuthService/<SignUpUser>d__4::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\infraestructure\\api\\AuthController.cs": {
+      "Api.src.Auth.infraestructure.api.AuthController": {
+        "System.Void Api.src.Auth.infraestructure.api.AuthController::.ctor(Api.src.Auth.domain.repository.AuthRepository)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.api.AuthController/<LoginUser>d__3": {
+        "System.Void Api.src.Auth.infraestructure.api.AuthController/<LoginUser>d__3::MoveNext()": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.api.AuthController/<Logout>d__4": {
+        "System.Void Api.src.Auth.infraestructure.api.AuthController/<Logout>d__4::MoveNext()": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.infraestructure.api.AuthController/<SignUpUser>d__2": {
+        "System.Void Api.src.Auth.infraestructure.api.AuthController/<SignUpUser>d__2::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\domain\\dto\\LoggedUserDto.cs": {
+      "Api.src.Auth.domain.dto.LoggedUserDto": {
+        "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Token()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Email()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_UserName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\domain\\dto\\TokenDto.cs": {
+      "Api.src.Auth.domain.dto.TokenDto": {
+        "System.String Api.src.Auth.domain.dto.TokenDto::get_UserId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Auth.domain.dto.TokenDto::get_Email()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Auth.domain.dto.TokenDto::get_Role()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\domain\\dto\\UserLoginDto.cs": {
+      "Api.src.Auth.domain.dto.UserLoginDto": {
+        "System.String Api.src.Auth.domain.dto.UserLoginDto::get_Email()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Api.src.Auth.domain.dto.UserLoginDto::get_Password()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\validations\\AuthValidations.cs": {
+      "Api.src.Auth.application.validations.AuthValidations": {
+        "System.Boolean Api.src.Auth.application.validations.AuthValidations::IsEmailValid(System.String)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Api.src.Auth.application.validations.AuthValidations::IsRoleValid(backend.src.User.domain.enums.UserRole)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.src.Auth.application.validations.AuthValidations::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.application.validations.AuthValidations/<EmailExists>d__2": {
+        "System.Void Api.src.Auth.application.validations.AuthValidations/<EmailExists>d__2::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.application.validations.AuthValidations/<UserNameExists>d__3": {
+        "System.Void Api.src.Auth.application.validations.AuthValidations/<UserNameExists>d__3::MoveNext()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\Utils\\Token.cs": {
+      "Api.src.Auth.application.Utils.Token": {
+        "System.String Api.src.Auth.application.Utils.Token::CreateToken(backend.src.User.domain.entity.UserEntity,System.String)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Auth.domain.dto.TokenDto Api.src.Auth.application.Utils.Token::GetTokenPayload(Microsoft.AspNetCore.Http.HttpRequest)": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0
+          },
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 39,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 122,
+              "EndOffset": 124,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 122,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 178,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 178,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 234,
+              "EndOffset": 236,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 234,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\service\\LoginUser.cs": {
+      "Api.src.Auth.application.service.LoginUser": {
+        "System.Void Api.src.Auth.application.service.LoginUser::.ctor(backend.Data.ApplicationDBContext,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.application.service.LoginUser/<Run>d__6": {
+        "System.Void Api.src.Auth.application.service.LoginUser/<Run>d__6::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 201,
+              "EndOffset": 203,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 201,
+              "EndOffset": 240,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 246,
+              "EndOffset": 248,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 246,
+              "EndOffset": 259,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 264,
+              "EndOffset": 266,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 264,
+              "EndOffset": 278,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 425,
+              "EndOffset": 427,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 425,
+              "EndOffset": 439,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\service\\LogoutUser.cs": {
+      "Api.src.Auth.application.service.LogoutUser": {
+        "System.Void Api.src.Auth.application.service.LogoutUser::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.application.service.LogoutUser/<Run>d__4": {
+        "System.Void Api.src.Auth.application.service.LogoutUser/<Run>d__4::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 185,
+              "EndOffset": 187,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 185,
+              "EndOffset": 199,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\service\\SignUpUser.cs": {
+      "Api.src.Auth.application.service.SignUpUser": {
+        "System.Void Api.src.Auth.application.service.SignUpUser::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "Api.src.Auth.application.service.SignUpUser/<Run>d__4": {
+        "System.Void Api.src.Auth.application.service.SignUpUser/<Run>d__4::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 411,
+              "EndOffset": 413,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 411,
+              "EndOffset": 425,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 435,
+              "EndOffset": 437,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 435,
+              "EndOffset": 449,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 462,
+              "EndOffset": 464,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 462,
+              "EndOffset": 476,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 486,
+              "EndOffset": 488,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 486,
+              "EndOffset": 500,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\Auth\\application\\mappers\\AuthMappers.cs": {
+      "Api.src.Auth.application.mappers.AuthMappers": {
+        "Api.src.Auth.domain.dto.LoggedUserDto Api.src.Auth.application.mappers.AuthMappers::ToLoggedUser(backend.src.User.domain.entity.UserEntity,System.String)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Migrations\\20240921174414_InitialCreate.cs": {
+      "Api.Migrations.InitialCreate": {
+        "System.Void Api.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "262": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0
+          },
+          "Branches": []
+        },
+        "System.Void Api.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "276": 0,
+            "277": 0,
+            "279": 0,
+            "280": 0,
+            "282": 0,
+            "283": 0,
+            "285": 0,
+            "286": 0,
+            "288": 0,
+            "289": 0,
+            "291": 0,
+            "292": 0,
+            "294": 0,
+            "295": 0,
+            "297": 0,
+            "298": 0,
+            "300": 0,
+            "301": 0,
+            "302": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Migrations\\20240921174414_InitialCreate.Designer.cs": {
+      "Api.Migrations.InitialCreate": {
+        "System.Void Api.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "238": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "253": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "262": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "275": 0,
+            "276": 0,
+            "277": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "281": 0,
+            "282": 0,
+            "283": 0,
+            "284": 0,
+            "285": 0,
+            "286": 0,
+            "287": 0,
+            "288": 0,
+            "289": 0,
+            "290": 0,
+            "291": 0,
+            "292": 0,
+            "293": 0,
+            "294": 0,
+            "295": 0,
+            "296": 0,
+            "297": 0,
+            "299": 0,
+            "300": 0,
+            "301": 0,
+            "302": 0,
+            "303": 0,
+            "304": 0,
+            "305": 0,
+            "306": 0,
+            "307": 0,
+            "308": 0,
+            "309": 0,
+            "310": 0,
+            "311": 0,
+            "312": 0,
+            "313": 0,
+            "314": 0,
+            "315": 0,
+            "316": 0,
+            "318": 0,
+            "319": 0,
+            "320": 0,
+            "321": 0,
+            "322": 0,
+            "323": 0,
+            "324": 0,
+            "325": 0,
+            "326": 0,
+            "327": 0,
+            "328": 0,
+            "329": 0,
+            "330": 0,
+            "331": 0,
+            "332": 0,
+            "333": 0,
+            "335": 0,
+            "336": 0,
+            "337": 0,
+            "338": 0,
+            "339": 0,
+            "340": 0,
+            "341": 0,
+            "342": 0,
+            "343": 0,
+            "344": 0,
+            "345": 0,
+            "346": 0,
+            "347": 0,
+            "348": 0,
+            "349": 0,
+            "350": 0,
+            "351": 0,
+            "352": 0,
+            "354": 0,
+            "355": 0,
+            "356": 0,
+            "357": 0,
+            "358": 0,
+            "359": 0,
+            "360": 0,
+            "361": 0,
+            "362": 0,
+            "363": 0,
+            "365": 0,
+            "366": 0,
+            "367": 0,
+            "368": 0,
+            "369": 0,
+            "370": 0,
+            "371": 0,
+            "372": 0,
+            "373": 0,
+            "374": 0,
+            "376": 0,
+            "377": 0,
+            "378": 0,
+            "379": 0,
+            "380": 0,
+            "381": 0,
+            "382": 0,
+            "383": 0,
+            "384": 0,
+            "385": 0,
+            "386": 0,
+            "387": 0,
+            "388": 0,
+            "389": 0,
+            "390": 0,
+            "391": 0,
+            "392": 0,
+            "393": 0,
+            "395": 0,
+            "396": 0,
+            "397": 0,
+            "398": 0,
+            "399": 0,
+            "400": 0,
+            "401": 0,
+            "402": 0,
+            "403": 0,
+            "404": 0,
+            "406": 0,
+            "407": 0,
+            "408": 0,
+            "409": 0,
+            "411": 0,
+            "412": 0,
+            "413": 0,
+            "414": 0,
+            "416": 0,
+            "417": 0,
+            "418": 0,
+            "419": 0,
+            "421": 0,
+            "422": 0,
+            "423": 0,
+            "424": 0,
+            "426": 0,
+            "427": 0,
+            "428": 0,
+            "429": 0,
+            "430": 0,
+            "431": 0,
+            "432": 0,
+            "433": 0,
+            "435": 0,
+            "436": 0,
+            "437": 0,
+            "438": 0,
+            "439": 0,
+            "440": 0,
+            "441": 0,
+            "442": 0,
+            "443": 0,
+            "444": 0,
+            "445": 0,
+            "447": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Migrations\\ApplicationDBContextModelSnapshot.cs": {
+      "Api.Migrations.ApplicationDBContextModelSnapshot": {
+        "System.Void Api.Migrations.ApplicationDBContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "237": 0,
+            "238": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "253": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "262": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "275": 0,
+            "276": 0,
+            "277": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0,
+            "281": 0,
+            "282": 0,
+            "283": 0,
+            "284": 0,
+            "285": 0,
+            "286": 0,
+            "287": 0,
+            "288": 0,
+            "289": 0,
+            "290": 0,
+            "291": 0,
+            "292": 0,
+            "293": 0,
+            "294": 0,
+            "296": 0,
+            "297": 0,
+            "298": 0,
+            "299": 0,
+            "300": 0,
+            "301": 0,
+            "302": 0,
+            "303": 0,
+            "304": 0,
+            "305": 0,
+            "306": 0,
+            "307": 0,
+            "308": 0,
+            "309": 0,
+            "310": 0,
+            "311": 0,
+            "312": 0,
+            "313": 0,
+            "315": 0,
+            "316": 0,
+            "317": 0,
+            "318": 0,
+            "319": 0,
+            "320": 0,
+            "321": 0,
+            "322": 0,
+            "323": 0,
+            "324": 0,
+            "325": 0,
+            "326": 0,
+            "327": 0,
+            "328": 0,
+            "329": 0,
+            "330": 0,
+            "332": 0,
+            "333": 0,
+            "334": 0,
+            "335": 0,
+            "336": 0,
+            "337": 0,
+            "338": 0,
+            "339": 0,
+            "340": 0,
+            "341": 0,
+            "342": 0,
+            "343": 0,
+            "344": 0,
+            "345": 0,
+            "346": 0,
+            "347": 0,
+            "348": 0,
+            "349": 0,
+            "351": 0,
+            "352": 0,
+            "353": 0,
+            "354": 0,
+            "355": 0,
+            "356": 0,
+            "357": 0,
+            "358": 0,
+            "359": 0,
+            "360": 0,
+            "362": 0,
+            "363": 0,
+            "364": 0,
+            "365": 0,
+            "366": 0,
+            "367": 0,
+            "368": 0,
+            "369": 0,
+            "370": 0,
+            "371": 0,
+            "373": 0,
+            "374": 0,
+            "375": 0,
+            "376": 0,
+            "377": 0,
+            "378": 0,
+            "379": 0,
+            "380": 0,
+            "381": 0,
+            "382": 0,
+            "383": 0,
+            "384": 0,
+            "385": 0,
+            "386": 0,
+            "387": 0,
+            "388": 0,
+            "389": 0,
+            "390": 0,
+            "392": 0,
+            "393": 0,
+            "394": 0,
+            "395": 0,
+            "396": 0,
+            "397": 0,
+            "398": 0,
+            "399": 0,
+            "400": 0,
+            "401": 0,
+            "403": 0,
+            "404": 0,
+            "405": 0,
+            "406": 0,
+            "408": 0,
+            "409": 0,
+            "410": 0,
+            "411": 0,
+            "413": 0,
+            "414": 0,
+            "415": 0,
+            "416": 0,
+            "418": 0,
+            "419": 0,
+            "420": 0,
+            "421": 0,
+            "423": 0,
+            "424": 0,
+            "425": 0,
+            "426": 0,
+            "427": 0,
+            "428": 0,
+            "429": 0,
+            "430": 0,
+            "432": 0,
+            "433": 0,
+            "434": 0,
+            "435": 0,
+            "436": 0,
+            "437": 0,
+            "438": 0,
+            "439": 0,
+            "440": 0,
+            "441": 0,
+            "442": 0,
+            "444": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\infraestructure\\api\\UserController.cs": {
+      "backend.src.User.infraestructure.api.UserController": {
+        "System.Void backend.src.User.infraestructure.api.UserController::.ctor(backend.src.User.domain.repository.UserRepository)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<>c": {
+        "backend.src.User.domain.dto.UserDto backend.src.User.infraestructure.api.UserController/<>c::<GetAll>b__2_0(backend.src.User.domain.entity.UserEntity)": {
+          "Lines": {
+            "45": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<Create>d__4": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<Create>d__4::MoveNext()": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<Delete>d__5": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<Delete>d__5::MoveNext()": {
+          "Lines": {
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<DeleteUsers>d__7": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<DeleteUsers>d__7::MoveNext()": {
+          "Lines": {
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<GetAll>d__2": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<GetAll>d__2::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<GetById>d__3": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<GetById>d__3::MoveNext()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserController/<Update>d__6": {
+        "System.Void backend.src.User.infraestructure.api.UserController/<Update>d__6::MoveNext()": {
+          "Lines": {
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\infraestructure\\api\\UserService.cs": {
+      "backend.src.User.infraestructure.api.UserService": {
+        "System.Void backend.src.User.infraestructure.api.UserService::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<CreateAsync>d__10": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<CreateAsync>d__10::MoveNext()": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<DeleteByIdAsync>d__11": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<DeleteByIdAsync>d__11::MoveNext()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<DeleteUsers>d__14": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<DeleteUsers>d__14::MoveNext()": {
+          "Lines": {
+            "65": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<GetAllAsync>d__8": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<GetAllAsync>d__8::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<GetByEmailAsync>d__13": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<GetByEmailAsync>d__13::MoveNext()": {
+          "Lines": {
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<GetByIdAsync>d__9": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<GetByIdAsync>d__9::MoveNext()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.infraestructure.api.UserService/<UpdateByIdAsync>d__12": {
+        "System.Void backend.src.User.infraestructure.api.UserService/<UpdateByIdAsync>d__12::MoveNext()": {
+          "Lines": {
+            "57": 0,
+            "58": 0,
+            "59": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\domain\\entity\\UserEntity.cs": {
+      "backend.src.User.domain.entity.UserEntity": {
+        "System.Guid backend.src.User.domain.entity.UserEntity::get_Id()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.entity.UserEntity::get_Name()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.entity.UserEntity::get_Email()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.entity.UserEntity::get_UserName()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.entity.UserEntity::get_Password()": {
+          "Lines": {
+            "34": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.enums.UserRole backend.src.User.domain.entity.UserEntity::get_Role()": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "Api.src.User.domain.enums.UserStatus backend.src.User.domain.entity.UserEntity::get_Status()": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime backend.src.User.domain.entity.UserEntity::get_CreatedAt()": {
+          "Lines": {
+            "43": 0
+          },
+          "Branches": []
+        },
+        "Api.src.Session.domain.entity.SessionEntity backend.src.User.domain.entity.UserEntity::get_Session()": {
+          "Lines": {
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Favorite.domain.entity.CartEntity> backend.src.User.domain.entity.UserEntity::get_Carts()": {
+          "Lines": {
+            "46": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Review.domain.entity.ReviewEntity> backend.src.User.domain.entity.UserEntity::get_Reviews()": {
+          "Lines": {
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Api.src.Favorite.domain.entity.FavoriteEntity> backend.src.User.domain.entity.UserEntity::get_Favorites()": {
+          "Lines": {
+            "48": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\domain\\dto\\CreateUserDto.cs": {
+      "backend.src.User.domain.dto.CreateUserDto": {
+        "System.String backend.src.User.domain.dto.CreateUserDto::get_Email()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.CreateUserDto::get_Name()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.CreateUserDto::get_UserName()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.CreateUserDto::get_Password()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.enums.UserRole backend.src.User.domain.dto.CreateUserDto::get_Role()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\domain\\dto\\UpdateUserDto.cs": {
+      "backend.src.User.domain.dto.UpdateUserDto": {
+        "System.String backend.src.User.domain.dto.UpdateUserDto::get_Name()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.UpdateUserDto::get_Email()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.UpdateUserDto::get_UserName()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.UpdateUserDto::get_Password()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.enums.UserRole backend.src.User.domain.dto.UpdateUserDto::get_Role()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Api.src.User.domain.enums.UserStatus backend.src.User.domain.dto.UpdateUserDto::get_Status()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\domain\\dto\\UserDto.cs": {
+      "backend.src.User.domain.dto.UserDto": {
+        "System.String backend.src.User.domain.dto.UserDto::get_Name()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.UserDto::get_Email()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String backend.src.User.domain.dto.UserDto::get_UserName()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.enums.UserRole backend.src.User.domain.dto.UserDto::get_Role()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\CreateUser.cs": {
+      "backend.src.User.application.service.CreateUser": {
+        "System.Void backend.src.User.application.service.CreateUser::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.application.service.CreateUser/<Run>d__2": {
+        "System.Void backend.src.User.application.service.CreateUser/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\DeleteUserById.cs": {
+      "backend.src.User.application.service.DeleteUserById": {
+        "System.Void backend.src.User.application.service.DeleteUserById::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.application.service.DeleteUserById/<Run>d__3": {
+        "System.Void backend.src.User.application.service.DeleteUserById/<Run>d__3::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 217,
+              "EndOffset": 219,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 217,
+              "EndOffset": 235,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 240,
+              "EndOffset": 242,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 240,
+              "EndOffset": 306,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\GetAllUsers.cs": {
+      "backend.src.User.application.service.GetAllUsers": {
+        "System.Void backend.src.User.application.service.GetAllUsers::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.application.service.GetAllUsers/<Run>d__2": {
+        "System.Void backend.src.User.application.service.GetAllUsers/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\GetUserById.cs": {
+      "backend.src.User.application.service.GetUserById": {
+        "System.Void backend.src.User.application.service.GetUserById::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.application.service.GetUserById/<Run>d__2": {
+        "System.Void backend.src.User.application.service.GetUserById/<Run>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 187,
+              "EndOffset": 189,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 187,
+              "EndOffset": 253,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\service\\UpdateUserById.cs": {
+      "backend.src.User.application.service.UpdateUserById": {
+        "System.Void backend.src.User.application.service.UpdateUserById::.ctor(backend.Data.ApplicationDBContext)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "backend.src.User.application.service.UpdateUserById/<Run>d__3": {
+        "System.Void backend.src.User.application.service.UpdateUserById/<Run>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 175,
+              "EndOffset": 241,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\src\\User\\application\\mappers\\UserMappers.cs": {
+      "backend.src.User.application.mappers.UserMappers": {
+        "backend.src.User.domain.dto.UserDto backend.src.User.application.mappers.UserMappers::ToUserDto(backend.src.User.domain.entity.UserEntity)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity backend.src.User.application.mappers.UserMappers::ToUserModelForCreate(backend.src.User.domain.dto.CreateUserDto)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "backend.src.User.domain.entity.UserEntity backend.src.User.application.mappers.UserMappers::ToUserModelForUpdate(backend.src.User.domain.dto.UpdateUserDto)": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Tech-Trend\\Backend\\Api\\Data\\ApplicationDBContext.cs": {
+      "backend.Data.ApplicationDBContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<backend.src.User.domain.entity.UserEntity> backend.Data.ApplicationDBContext::get_User()": {
+          "Lines": {
+            "24": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Session.domain.entity.SessionEntity> backend.Data.ApplicationDBContext::get_Session()": {
+          "Lines": {
+            "25": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Favorite.domain.entity.CartEntity> backend.Data.ApplicationDBContext::get_Cart()": {
+          "Lines": {
+            "26": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Coupon.domain.entity.CouponEntity> backend.Data.ApplicationDBContext::get_Coupon()": {
+          "Lines": {
+            "27": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Favorite.domain.entity.FavoriteEntity> backend.Data.ApplicationDBContext::get_Favorite()": {
+          "Lines": {
+            "28": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Product.domain.entity.ProductEntity> backend.Data.ApplicationDBContext::get_Product()": {
+          "Lines": {
+            "29": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Review.domain.entity.ReviewEntity> backend.Data.ApplicationDBContext::get_Review()": {
+          "Lines": {
+            "30": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Category.domain.entity.CategoryEntity> backend.Data.ApplicationDBContext::get_Category()": {
+          "Lines": {
+            "31": 3
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Price.domain.entity.PriceEntity> backend.Data.ApplicationDBContext::get_Price()": {
+          "Lines": {
+            "32": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> backend.Data.ApplicationDBContext::get_CartToProduct()": {
+          "Lines": {
+            "33": 1
+          },
+          "Branches": []
+        },
+        "System.Void backend.Data.ApplicationDBContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "37": 2,
+            "38": 2,
+            "39": 2,
+            "40": 2,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "54": 2,
+            "55": 2,
+            "56": 2,
+            "57": 2,
+            "58": 2,
+            "59": 2,
+            "60": 2,
+            "61": 2,
+            "62": 2,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "68": 2,
+            "69": 2,
+            "70": 2,
+            "72": 2,
+            "73": 2,
+            "74": 2,
+            "75": 2,
+            "76": 2,
+            "77": 2,
+            "78": 2,
+            "79": 2,
+            "80": 2,
+            "81": 2,
+            "83": 2,
+            "84": 2,
+            "85": 2,
+            "86": 2,
+            "87": 2,
+            "88": 2,
+            "89": 2,
+            "90": 2,
+            "91": 2
+          },
+          "Branches": []
+        },
+        "System.Void backend.Data.ApplicationDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "23": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
