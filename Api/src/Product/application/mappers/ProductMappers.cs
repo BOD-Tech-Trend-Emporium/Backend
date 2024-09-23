@@ -34,7 +34,7 @@ namespace Api.src.Product.application.mappers
         {
             // search category Id
             var category = await _context.Category
-                .FirstOrDefaultAsync(cat => cat.Name == product.Category);
+                .FirstOrDefaultAsync(cat => cat.Id == product.Category);
 
             if (category == null)
             {

@@ -36,9 +36,9 @@ namespace Api.src.Product.application.service
             productEntity.Description = product.Description;
             productEntity.Image = product.Image;
             // update the category
-            if(productEntity.Category.Name != product.Category)
+            if(productEntity.Category.Id != product.Category)
             {
-                var newCategory = await _context.Category.FirstOrDefaultAsync(cat => cat.Name == product.Category);
+                var newCategory = await _context.Category.FirstOrDefaultAsync(cat => cat.Id == product.Category);
                 if (newCategory == null)
                 {
                     throw new NotFoundException($"Category with name {product.Category} NotFound");
