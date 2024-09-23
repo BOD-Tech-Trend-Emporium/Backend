@@ -38,5 +38,13 @@ namespace Api.src.Product.infraestructure.api
             var productId = created.Id;
             return Created($"/api/products/{productId}",productId);
         }
+
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> UpdateById([FromBody]CreateProductDto, [FromRoute] Guid productId)
+        {
+
+            return Ok();
+        }
     }
 }
