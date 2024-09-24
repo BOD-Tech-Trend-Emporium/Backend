@@ -29,6 +29,14 @@ namespace Api.src.Product.infraestructure.api
             return Ok(products);
         }
 
+        [HttpGet("store")]
+        [ProducesResponseType(200, Type =typeof(List<ProductDto>))]
+        public async Task<IActionResult> Search([FromQuery] SearchProductsDto query)
+        {
+            var products = await _productService.SearchAsync(query);
+            return Ok(products);
+        }
+
         [HttpPost]
         [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
         public async Task<IActionResult> Create([FromBody] CreateProductDto product)

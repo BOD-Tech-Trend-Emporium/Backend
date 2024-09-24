@@ -10,12 +10,14 @@ namespace Api.src.Product.infraestructure.api
     public class ProductService : ProductRepository
     {
         private GetAllProducts getAllProductsService;
+        private SearchProducts searchProductsService;
         private CreateProduct createProductService;
         private GetProductById getProductByIdService;
         private UpdateProduct updateProductService;
         public ProductService(ApplicationDBContext context) 
         {
             getAllProductsService = new GetAllProducts(context);
+            searchProductsService = new SearchProducts(context);
             createProductService = new CreateProduct(context);
             getProductByIdService = new GetProductById(context);
             updateProductService = new UpdateProduct(context);
@@ -24,6 +26,11 @@ namespace Api.src.Product.infraestructure.api
         public async Task<List<ProductDto>> GetAllAsync()
         {
             return await getAllProductsService.Run();
+        }
+
+        public async Task<List<ProductDto>> SearchAsync(SearchProductsDto query)
+        {
+            return await searchProductsService.Run(query);
         }
 
         public async Task<ProductEntity> CreateAsync(CreateProductDto givenProduct, UserRole role)
