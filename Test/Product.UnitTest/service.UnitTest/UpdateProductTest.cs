@@ -1,8 +1,10 @@
 ﻿using Api.src.Category.domain.entity;
 using Api.src.Category.domain.enums;
+using Api.src.Common.exceptions;
 using Api.src.Product.application.service;
 using Api.src.Product.domain.dto;
 using Api.src.Product.domain.entity;
+using backend.src.User.domain.enums;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
@@ -83,6 +85,95 @@ namespace Test.Product.UnitTest.service.UnitTest
             act.Prices.Should().NotBeEmpty();
         }
 
-        
+        [Fact]
+        public async void Given_ProductToUpdate_When_ProductsExists_and_CategoryNOTExists_Then_NotFoundException()
+        {
+            // Create new Category
+            var dbContext = Utils.GetDataBaseContext();
+            Guid categoryId = Guid.NewGuid();
+            var categoryName = "Books";
+            CategoryEntity category1 = new()
+            {
+                Id = categoryId,
+                Name = categoryName,
+                Status = CategoryStatus.Created
+            };
+            dbContext.Category.Add(category1);
+
+            // Create products with existing category
+            var description = "Description";
+            var image = "image";
+            var title = "Title";
+            var stock = 30;
+            var prId = Guid.NewGuid();
+            ProductEntity product = new()
+            {
+                Id = prId,
+                Image = image,
+                Title = title,
+                Category = category1,
+                Stock = stock,
+                Description = description,
+                Status = Api.src.Product.domain.enums.ProductStatus.Created,
+            };
+            dbContext.Product.Add(product);
+
+            await dbContext.SaveChangesAsync();
+
+            var nonExistingCategory = Guid.NewGuid();
+
+            CreateProductDto updatedDto = new()
+            {
+                Category = nonExistingCategory,
+                Description = "new",
+                Image = "new",
+                Title = "new",
+                Price = 10f,
+                Stock = 10,
+            };
+
+            UpdateProduct updateProduct = new(dbContext);
+            // ACT
+            Func<Task> act = () => updateProduct.Run(updatedDto, prId);
+
+            // Assert
+            await act.Should().ThrowAsync<NotFoundException>().WithMessage($"Category with name {nonExistingCategory} NotFound");
+        }
+
+        [Fact]
+        public async void Given_ProductToUpdate_When_ProductsNOTExists_Then_NotFoundException()
+        {
+            // Create new Category
+            var dbContext = Utils.GetDataBaseContext();
+            Guid categoryId = Guid.NewGuid();
+            var categoryName = "Books";
+            CategoryEntity category1 = new()
+            {
+                Id = categoryId,
+                Name = categoryName,
+                Status = CategoryStatus.Created
+            };
+            dbContext.Category.Add(category1);
+
+            await dbContext.SaveChangesAsync();
+
+            CreateProductDto updatedDto = new()
+            {
+                Category = categoryId,
+                Description = "new",
+                Image = "new",
+                Title = "new",
+                Price = 10f,
+                Stock = 10,
+            };
+            var nonExistingProduct = Guid.NewGuid();
+
+            UpdateProduct updateProduct = new(dbContext);
+            // ACT
+            Func<Task> act = () => updateProduct.Run(updatedDto, nonExistingProduct);
+
+            // Assert
+            await act.Should().ThrowAsync<NotFoundException>().WithMessage($"Product with Id {nonExistingProduct} not found");
+        }
     }
 }
