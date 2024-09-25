@@ -11,7 +11,6 @@ namespace Api.src.Category.application.mappers
             {
                 Id = category.Id,
                 Name = category.Name,
-
             };
         }
 
