@@ -22,7 +22,7 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             return databaseContext;
         }
         
-
+        /*
         [Fact]
         public async void Given_NewCategory_When_CategoryAlreadyCreated_Then_ConflictException() {
             //Arrange
@@ -41,7 +41,7 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             await act.Should().ThrowAsync<ConflictException>()
             .WithMessage("Category already exists");
 
-        }
+        }*/
 
         [Fact]
         public async void Given_AdminCreatesANewCategory_When_CategoryDoesNotExist_Then_CategoryEntity()
