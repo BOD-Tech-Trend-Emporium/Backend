@@ -17,7 +17,7 @@ namespace Api.src.Coupon.application.service
         public async Task<CouponEntity> Run(string couponCode)
         {
             var couponEntity = await _context.Coupon.FirstOrDefaultAsync(c => c.Code.Equals(couponCode) && c.Status == CouponStatus.Active);
-            if (couponCode != null && couponEntity == null)
+            if (couponCode == null || couponEntity == null)
             {
                 throw new NotFoundException("Coupon does not exist");
             }

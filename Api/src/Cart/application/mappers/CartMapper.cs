@@ -12,8 +12,16 @@ namespace Api.src.Cart.application.mappers
         {
             return new CreateCartResponseDto
             {
-                UserId = cart.User.Id,
+                Id = cart.Id,
                 ShippingCost = cart.ShippingCost,
+            };
+        }
+        public static UpdateCartResponseDto ToUpdateCartResponseDto(this CartEntity cart)
+        {
+            return new UpdateCartResponseDto
+            {
+                UserId = cart.User.Id,
+                CouponId = cart.Coupon.Id,
             };
         }
         public static async Task<CartEntity> ToCartModelForUpdate(this UpdateCartDto cart, ApplicationDBContext context)

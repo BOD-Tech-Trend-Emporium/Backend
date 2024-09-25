@@ -27,7 +27,15 @@ namespace Api.src.Cart.infraestructure.api
         public async Task<IActionResult> Create()
         {
             var result = await _cartRepository.CreateAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
-            return Created($"/api/cart/{result.User.Id}", result.ToCreateCartResponseDto());
+            return Created($"/api/cart/{result.Id}", result.ToCreateCartResponseDto());
+        }
+
+        [HttpPatch]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> Update([FromBody] UpdateCartDto updateCartDto)
+        {
+            var result = await _cartRepository.UpdateAsync(updateCartDto, Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Created($"/api/cart/{result.Id}", result.ToUpdateCartResponseDto());
         }
     }
 }

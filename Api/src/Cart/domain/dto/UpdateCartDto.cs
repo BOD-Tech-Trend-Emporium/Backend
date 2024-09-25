@@ -2,6 +2,6 @@
 {
     public class UpdateCartDto
     {
-        public string? CouponCode { get; set; }
+        public string CouponCode { get; set; }
     }
 }

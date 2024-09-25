@@ -8,5 +8,6 @@ namespace Api.src.Cart.domain.repository
     public interface CartRepository
     {
         Task<CartEntity> CreateAsync(Guid idUser);
+        Task<CartEntity> UpdateAsync(UpdateCartDto entity, Guid userId);
     }
 }

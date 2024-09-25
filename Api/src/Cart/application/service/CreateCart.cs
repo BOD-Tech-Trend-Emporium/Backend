@@ -15,12 +15,10 @@ namespace Api.src.Cart.application.service
     {
         private readonly ApplicationDBContext _context;
         private readonly GetUserById _getUserById;
-        private readonly GetCouponByCode _getCouponByCode;
         public CreateCart(ApplicationDBContext context)
         {
             _context = context;
             _getUserById = new GetUserById(context);
-            _getCouponByCode = new GetCouponByCode(context);
         }
 
         public async Task<CartEntity> Run(Guid idUser)
@@ -29,6 +27,9 @@ namespace Api.src.Cart.application.service
             var cartEntity = new CartEntity();
             //var couponEntity = await _getCouponByCode.Run(cart.CouponCode);
             var user = await _getUserById.Run(idUser);
+            if (await _context.Cart.AnyAsync(c => c.User.Id == idUser && c.State == CartState.Pending)) {
+                throw new ConflictException("The cart already exists");
+            }
 
             cartEntity.User = user;
             cartEntity.ShippingCost = new Random().Next(100, 1000);

@@ -4,7 +4,7 @@ namespace Api.src.Cart.domain.dto
 {
     public class CreateCartResponseDto
     {
-        public Guid UserId { get; set; }
+        public Guid Id { get; set; }
         public float ShippingCost { get; set; }
     }
 }
