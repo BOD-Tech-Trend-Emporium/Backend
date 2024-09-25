@@ -7,8 +7,8 @@ namespace Api.src.Category.domain.repository
     {
         Task<CategoryEntity> CreateAsync(CategoryEntity category, UserRole role);
         Task<List<CategoryEntity>> GetAllApprovedAsync();
-
         Task<DeleteCategoryByIdResponseDto> DeleteCategoryByIdAsync(Guid id, UserRole role);
+        Task<UpdateCategoryByIdResponse> UpdateCategoryByIdAsync(Guid id, CategoryEntity category, UserRole role);
 
     }
 }

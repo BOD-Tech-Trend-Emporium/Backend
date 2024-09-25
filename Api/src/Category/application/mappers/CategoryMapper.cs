@@ -22,5 +22,13 @@ namespace Api.src.Category.application.mappers
             };
         }
 
+        public static CategoryEntity ToCategoryModelForUpdate(this UpdateCategoryDto category)
+        {
+            return new CategoryEntity
+            {
+                Name = category.Name,
+            };
+        }
+
     }
 }

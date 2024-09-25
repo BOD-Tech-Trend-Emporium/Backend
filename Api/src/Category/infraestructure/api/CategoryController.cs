@@ -51,5 +51,15 @@ namespace Api.src.Category.infraestructure.api
             var result = await _categoryService.DeleteCategoryByIdAsync(id, (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
             return Ok(result);
         }
+
+        [HttpPut]
+        [Route("{id}")]
+        [ProducesResponseType(200)]
+        [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateCategoryDto category)
+        {
+            var result = await _categoryService.UpdateCategoryByIdAsync(id, category.ToCategoryModelForUpdate() , (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
+            return Ok(result);
+        }
     }
 }

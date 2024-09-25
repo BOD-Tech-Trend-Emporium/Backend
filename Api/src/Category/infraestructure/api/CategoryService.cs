@@ -12,11 +12,13 @@ namespace Api.src.Category.infraestructure.api
         private GetAllApprovedCategories _getAllApprovedCategories;
         private CreateCategory _createCategory;
         private DeleteCategoryById _deleteCategory;
+        private UpdateCategoryById _updateCategory;
         public CategoryService(ApplicationDBContext context)
         {
             _getAllApprovedCategories = new GetAllApprovedCategories(context);
             _createCategory = new CreateCategory(context);
             _deleteCategory = new DeleteCategoryById(context);
+            _updateCategory = new UpdateCategoryById(context);
         }
 
         public async Task<CategoryEntity> CreateAsync(CategoryEntity category, UserRole role)
@@ -34,5 +36,9 @@ namespace Api.src.Category.infraestructure.api
             return await _getAllApprovedCategories.Run();
         }
 
+        public async Task<UpdateCategoryByIdResponse> UpdateCategoryByIdAsync(Guid id, CategoryEntity category, UserRole role)
+        {
+            return await _updateCategory.Run(id, category, role);
+        }
     }
 }
