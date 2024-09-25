@@ -70,8 +70,8 @@ namespace backend.src.User.infraestructure.api
         [Route("{id}")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateUserDto user)
         {
-            var userModel = await _userService.UpdateByIdAsync(id, user);
-            return Ok(userModel);
+            var updatedUser = await _userService.UpdateByIdAsync(id, user);
+            return Ok(updatedUser);
         }
 
         [HttpDelete]
