@@ -24,9 +24,9 @@ namespace Api.src.Cart.infraestructure.api
 
         [HttpPost]
         [Authorize(Roles = nameof(UserRole.Shopper))]
-        public async Task<IActionResult> Create([FromBody] CreateCartDto cart)
+        public async Task<IActionResult> Create()
         {
-            var result = await _cartRepository.CreateAsync(cart, Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            var result = await _cartRepository.CreateAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
             return Created($"/api/cart/{result.User.Id}", result.ToCreateCartResponseDto());
         }
     }

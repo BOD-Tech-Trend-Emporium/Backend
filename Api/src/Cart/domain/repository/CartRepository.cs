@@ -7,6 +7,6 @@ namespace Api.src.Cart.domain.repository
 {
     public interface CartRepository
     {
-        Task<CartEntity> CreateAsync(CreateCartDto cart, Guid idUser);
+        Task<CartEntity> CreateAsync(Guid idUser);
     }
 }

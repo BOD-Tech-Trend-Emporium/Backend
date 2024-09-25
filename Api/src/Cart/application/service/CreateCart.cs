@@ -7,6 +7,7 @@ using backend.src.User.application.service;
 using Microsoft.EntityFrameworkCore;
 using Api.src.Common.exceptions;
 using Api.src.Coupon.domain.enums;
+using Api.src.Coupon.application.service;
 
 namespace Api.src.Cart.application.service
 {
@@ -14,22 +15,22 @@ namespace Api.src.Cart.application.service
     {
         private readonly ApplicationDBContext _context;
         private readonly GetUserById _getUserById;
+        private readonly GetCouponByCode _getCouponByCode;
         public CreateCart(ApplicationDBContext context)
         {
             _context = context;
             _getUserById = new GetUserById(context);
+            _getCouponByCode = new GetCouponByCode(context);
         }
 
-        public async Task<CartEntity> Run(CreateCartDto cart, Guid idUser)
+        public async Task<CartEntity> Run(Guid idUser)
         {
-            var cartEntity = await CartMapper.ToCartModelForCreate(cart,_context);
-            var couponEntity = await _context.Coupon.FirstOrDefaultAsync(c => c.Code.Equals(cart.CouponCode) && c.Status == CouponStatus.Active);
+            //var cartEntity = await CartMapper.ToCartModelForCreate(cart,_context);
+            var cartEntity = new CartEntity();
+            //var couponEntity = await _getCouponByCode.Run(cart.CouponCode);
             var user = await _getUserById.Run(idUser);
+
             cartEntity.User = user;
-            if (cart.CouponCode != null && couponEntity == null) {
-                throw new NotFoundException("Coupon does not exist");
-            }
-            cartEntity.Coupon = couponEntity;
             cartEntity.ShippingCost = new Random().Next(100, 1000);
             cartEntity.State = CartState.Pending;
             await _context.Cart.AddAsync(cartEntity);

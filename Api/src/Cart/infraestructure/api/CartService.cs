@@ -16,9 +16,9 @@ namespace Api.src.Cart.infraestructure.api
 
         }
 
-        public async Task<CartEntity> CreateAsync(CreateCartDto cart, Guid idUser)
+        public async Task<CartEntity> CreateAsync(Guid idUser)
         {
-            return await _createCart.Run(cart, idUser);
+            return await _createCart.Run(idUser);
         }
     }
 }

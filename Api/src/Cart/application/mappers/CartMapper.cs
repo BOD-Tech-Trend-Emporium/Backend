@@ -16,7 +16,7 @@ namespace Api.src.Cart.application.mappers
                 ShippingCost = cart.ShippingCost,
             };
         }
-        public static async Task<CartEntity> ToCartModelForCreate(this CreateCartDto cart, ApplicationDBContext context)
+        public static async Task<CartEntity> ToCartModelForUpdate(this UpdateCartDto cart, ApplicationDBContext context)
         {
             return new CartEntity
             {
