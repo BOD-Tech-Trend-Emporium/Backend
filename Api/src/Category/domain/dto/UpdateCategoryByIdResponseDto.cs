@@ -1,6 +1,6 @@
 ﻿namespace Api.src.Category.domain.dto
 {
-    public class UpdateCategoryByIdResponse
+    public class UpdateCategoryByIdResponseDto
     {
         public string Message { get; set; }
 

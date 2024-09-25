@@ -36,7 +36,7 @@ namespace Api.src.Category.infraestructure.api
             return await _getAllApprovedCategories.Run();
         }
 
-        public async Task<UpdateCategoryByIdResponse> UpdateCategoryByIdAsync(Guid id, CategoryEntity category, UserRole role)
+        public async Task<UpdateCategoryByIdResponseDto> UpdateCategoryByIdAsync(Guid id, CategoryEntity category, UserRole role)
         {
             return await _updateCategory.Run(id, category, role);
         }

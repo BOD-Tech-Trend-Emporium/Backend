@@ -42,8 +42,6 @@
     <Folder Include="src\Favorite\infraestructure\" />
     <Folder Include="src\Review\application\" />
     <Folder Include="src\Review\infraestructure\" />
-    <Folder Include="src\Cart\application\" />
-    <Folder Include="src\Cart\infraestructure\" />
   </ItemGroup>
 
   <ItemGroup>

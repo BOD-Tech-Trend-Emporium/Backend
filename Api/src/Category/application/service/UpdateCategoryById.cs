@@ -16,7 +16,7 @@ namespace Api.src.Category.application.service
         {
             _context = context;
         }
-        public async Task<UpdateCategoryByIdResponse> Run(Guid id,CategoryEntity category, UserRole role)
+        public async Task<UpdateCategoryByIdResponseDto> Run(Guid id,CategoryEntity category, UserRole role)
         {
             var CategoryToUpdate = await _context.Category.FirstOrDefaultAsync(c => c.Id ==  id &&(c.Status ==CategoryStatus.Created || c.Status ==CategoryStatus.ToRemove));
             if (CategoryToUpdate == null)
@@ -31,7 +31,7 @@ namespace Api.src.Category.application.service
             CategoryToUpdate.Name = category.Name;
             await _context.SaveChangesAsync();
 
-            return new UpdateCategoryByIdResponse() { Message = "Updated successfuly"};
+            return new UpdateCategoryByIdResponseDto() { Message = "Updated successfuly"};
 
         }
     }
