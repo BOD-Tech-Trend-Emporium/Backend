@@ -602,49 +602,49 @@
       "Api.src.Product.domain.entity.ProductEntity": {
         "System.Guid Api.src.Product.domain.entity.ProductEntity::get_Id()": {
           "Lines": {
-            "14": 10
+            "14": 21
           },
           "Branches": []
         },
         "Api.src.Category.domain.entity.CategoryEntity Api.src.Product.domain.entity.ProductEntity::get_Category()": {
           "Lines": {
-            "17": 14
+            "17": 31
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Title()": {
           "Lines": {
-            "20": 14
+            "20": 31
           },
           "Branches": []
         },
         "System.Single Api.src.Product.domain.entity.ProductEntity::get_Price()": {
           "Lines": {
-            "23": 1
+            "23": 23
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Description()": {
           "Lines": {
-            "26": 14
+            "26": 31
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Image()": {
           "Lines": {
-            "29": 14
+            "29": 31
           },
           "Branches": []
         },
         "System.Int32 Api.src.Product.domain.entity.ProductEntity::get_Stock()": {
           "Lines": {
-            "32": 12
+            "32": 23
           },
           "Branches": []
         },
         "Api.src.Product.domain.enums.ProductStatus Api.src.Product.domain.entity.ProductEntity::get_Status()": {
           "Lines": {
-            "35": 10
+            "35": 21
           },
           "Branches": []
         },
@@ -656,7 +656,7 @@
         },
         "System.Collections.Generic.ICollection`1<Api.src.Review.domain.entity.ReviewEntity> Api.src.Product.domain.entity.ProductEntity::get_Reviews()": {
           "Lines": {
-            "40": 4
+            "40": 16
           },
           "Branches": []
         },
@@ -668,7 +668,7 @@
         },
         "System.Collections.Generic.ICollection`1<Api.src.Price.domain.entity.PriceEntity> Api.src.Product.domain.entity.ProductEntity::get_Prices()": {
           "Lines": {
-            "44": 8
+            "44": 36
           },
           "Branches": []
         }
@@ -742,43 +742,43 @@
       "Api.src.Product.domain.dto.ProductDto": {
         "System.Guid Api.src.Product.domain.dto.ProductDto::get_Id()": {
           "Lines": {
-            "5": 6
+            "5": 17
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.dto.ProductDto::get_Title()": {
           "Lines": {
-            "6": 6
+            "6": 12
           },
           "Branches": []
         },
         "System.Single Api.src.Product.domain.dto.ProductDto::get_Price()": {
           "Lines": {
-            "7": 4
+            "7": 10
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.dto.ProductDto::get_Description()": {
           "Lines": {
-            "8": 4
+            "8": 10
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.dto.ProductDto::get_Category()": {
           "Lines": {
-            "9": 6
+            "9": 12
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.dto.ProductDto::get_Image()": {
           "Lines": {
-            "10": 6
+            "10": 12
           },
           "Branches": []
         },
         "Api.src.Product.domain.dto.ProductRatingDto Api.src.Product.domain.dto.ProductDto::get_Rating()": {
           "Lines": {
-            "11": 5
+            "11": 11
           },
           "Branches": []
         }
@@ -786,13 +786,13 @@
       "Api.src.Product.domain.dto.ProductRatingDto": {
         "System.Single Api.src.Product.domain.dto.ProductRatingDto::get_Rate()": {
           "Lines": {
-            "17": 4
+            "17": 10
           },
           "Branches": []
         },
         "System.Int32 Api.src.Product.domain.dto.ProductRatingDto::get_Count()": {
           "Lines": {
-            "18": 4
+            "18": 10
           },
           "Branches": []
         }
@@ -802,37 +802,37 @@
       "Api.src.Product.domain.dto.SearchProductsDto": {
         "System.String Api.src.Product.domain.dto.SearchProductsDto::get_Title()": {
           "Lines": {
-            "10": 0
+            "10": 9
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.dto.SearchProductsDto::get_Category()": {
           "Lines": {
-            "11": 0
+            "11": 9
           },
           "Branches": []
         },
         "System.Single Api.src.Product.domain.dto.SearchProductsDto::get_MinPrice()": {
           "Lines": {
-            "12": 0
+            "12": 9
           },
           "Branches": []
         },
         "System.Single Api.src.Product.domain.dto.SearchProductsDto::get_MaxPrice()": {
           "Lines": {
-            "13": 0
+            "13": 9
           },
           "Branches": []
         },
         "System.Int32 Api.src.Product.domain.dto.SearchProductsDto::get_Page()": {
           "Lines": {
-            "14": 0
+            "14": 9
           },
           "Branches": []
         },
         "System.Int32 Api.src.Product.domain.dto.SearchProductsDto::get_PageSize()": {
           "Lines": {
-            "15": 0
+            "15": 13
           },
           "Branches": []
         }
@@ -1272,10 +1272,10 @@
       "Api.src.Product.application.service.SearchProducts": {
         "System.Void Api.src.Product.application.service.SearchProducts::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "17": 0,
-            "18": 0,
-            "19": 0,
-            "20": 0
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4
           },
           "Branches": []
         }
@@ -1283,18 +1283,18 @@
       "Api.src.Product.application.service.SearchProducts/<>c": {
         "Api.src.Product.domain.dto.ProductDto Api.src.Product.application.service.SearchProducts/<>c::<Run>b__2_0(Api.src.Product.domain.entity.ProductEntity)": {
           "Lines": {
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0
+            "37": 6,
+            "38": 18,
+            "39": 6,
+            "40": 6,
+            "41": 6,
+            "43": 6,
+            "44": 6,
+            "45": 6,
+            "46": 6,
+            "47": 6,
+            "48": 6,
+            "49": 10
           },
           "Branches": [
             {
@@ -1311,7 +1311,7 @@
               "EndOffset": 18,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 6
             },
             {
               "Line": 39,
@@ -1327,7 +1327,7 @@
               "EndOffset": 109,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 6
             },
             {
               "Line": 40,
@@ -1343,7 +1343,7 @@
               "EndOffset": 128,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 6
             },
             {
               "Line": 40,
@@ -1359,7 +1359,7 @@
               "EndOffset": 191,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 6
             },
             {
               "Line": 41,
@@ -1375,7 +1375,7 @@
               "EndOffset": 210,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 0
+              "Hits": 6
             },
             {
               "Line": 41,
@@ -1391,7 +1391,7 @@
               "EndOffset": 224,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 0
+              "Hits": 6
             }
           ]
         }
@@ -1399,21 +1399,21 @@
       "Api.src.Product.application.service.SearchProducts/<Run>d__2": {
         "System.Void Api.src.Product.application.service.SearchProducts/<Run>d__2::MoveNext()": {
           "Lines": {
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "36": 0,
-            "42": 0,
-            "52": 0,
-            "53": 0
+            "23": 4,
+            "24": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4,
+            "31": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4,
+            "36": 4,
+            "42": 4,
+            "52": 4,
+            "53": 4
           },
           "Branches": []
         }
@@ -1596,22 +1596,22 @@
       "Api.src.Product.application.mappers.ProductMappers": {
         "Api.src.Product.domain.dto.ProductDto Api.src.Product.application.mappers.ProductMappers::ToProductDto(Api.src.Product.domain.entity.ProductEntity,System.Single,System.Int32,System.Single,System.String)": {
           "Lines": {
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 2,
-            "24": 2,
-            "25": 2,
-            "26": 2,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2,
-            "31": 2,
-            "32": 2
+            "17": 8,
+            "18": 8,
+            "19": 8,
+            "20": 8,
+            "21": 8,
+            "22": 8,
+            "23": 8,
+            "24": 8,
+            "25": 8,
+            "26": 8,
+            "27": 8,
+            "28": 8,
+            "29": 8,
+            "30": 8,
+            "31": 8,
+            "32": 8
           },
           "Branches": []
         },
@@ -1720,19 +1720,19 @@
         },
         "Api.src.Product.domain.entity.ProductEntity Api.src.Price.domain.entity.PriceEntity::get_Product()": {
           "Lines": {
-            "14": 2
+            "14": 13
           },
           "Branches": []
         },
         "System.Single Api.src.Price.domain.entity.PriceEntity::get_Price()": {
           "Lines": {
-            "17": 2
+            "17": 19
           },
           "Branches": []
         },
         "System.Boolean Api.src.Price.domain.entity.PriceEntity::get_Current()": {
           "Lines": {
-            "20": 2
+            "20": 19
           },
           "Branches": []
         },
@@ -2208,7 +2208,7 @@
         },
         "System.String Api.src.Category.domain.entity.CategoryEntity::get_Name()": {
           "Lines": {
-            "14": 31
+            "14": 46
           },
           "Branches": []
         },
@@ -3610,19 +3610,19 @@
       "Api.src.Auth.domain.dto.LoggedUserDto": {
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Token()": {
           "Lines": {
-            "10": 1
+            "10": 5
           },
           "Branches": []
         },
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Email()": {
           "Lines": {
-            "11": 2
+            "11": 6
           },
           "Branches": []
         },
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_UserName()": {
           "Lines": {
-            "12": 1
+            "12": 5
           },
           "Branches": []
         }
@@ -4187,14 +4187,14 @@
       "Api.src.Auth.application.mappers.AuthMappers": {
         "Api.src.Auth.domain.dto.LoggedUserDto Api.src.Auth.application.mappers.AuthMappers::ToLoggedUser(backend.src.User.domain.entity.UserEntity,System.String)": {
           "Lines": {
-            "13": 1,
-            "14": 1,
-            "15": 1,
-            "16": 1,
-            "17": 1,
-            "18": 1,
-            "19": 1,
-            "20": 1
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2
           },
           "Branches": []
         }
@@ -5484,37 +5484,37 @@
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Name()": {
           "Lines": {
-            "24": 44
+            "24": 45
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Email()": {
           "Lines": {
-            "29": 68
+            "29": 70
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_UserName()": {
           "Lines": {
-            "32": 54
+            "32": 56
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Password()": {
           "Lines": {
-            "35": 43
+            "35": 44
           },
           "Branches": []
         },
         "backend.src.User.domain.enums.UserRole backend.src.User.domain.entity.UserEntity::get_Role()": {
           "Lines": {
-            "38": 51
+            "38": 52
           },
           "Branches": []
         },
         "Api.src.User.domain.enums.UserStatus backend.src.User.domain.entity.UserEntity::get_Status()": {
           "Lines": {
-            "41": 49
+            "41": 50
           },
           "Branches": []
         },
@@ -6091,61 +6091,61 @@
       "backend.Data.ApplicationDBContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<backend.src.User.domain.entity.UserEntity> backend.Data.ApplicationDBContext::get_User()": {
           "Lines": {
-            "25": 99
+            "25": 103
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Session.domain.entity.SessionEntity> backend.Data.ApplicationDBContext::get_Session()": {
           "Lines": {
-            "26": 48
+            "26": 52
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Cart.domain.entity.CartEntity> backend.Data.ApplicationDBContext::get_Cart()": {
           "Lines": {
-            "27": 35
+            "27": 39
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Coupon.domain.entity.CouponEntity> backend.Data.ApplicationDBContext::get_Coupon()": {
           "Lines": {
-            "28": 35
+            "28": 39
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Favorite.domain.entity.FavoriteEntity> backend.Data.ApplicationDBContext::get_Favorite()": {
           "Lines": {
-            "29": 35
+            "29": 39
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Product.domain.entity.ProductEntity> backend.Data.ApplicationDBContext::get_Product()": {
           "Lines": {
-            "30": 48
+            "30": 67
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Review.domain.entity.ReviewEntity> backend.Data.ApplicationDBContext::get_Review()": {
           "Lines": {
-            "31": 35
+            "31": 39
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Category.domain.entity.CategoryEntity> backend.Data.ApplicationDBContext::get_Category()": {
           "Lines": {
-            "32": 55
+            "32": 67
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Price.domain.entity.PriceEntity> backend.Data.ApplicationDBContext::get_Price()": {
           "Lines": {
-            "33": 35
+            "33": 47
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> backend.Data.ApplicationDBContext::get_CartToProduct()": {
           "Lines": {
-            "34": 35
+            "34": 39
           },
           "Branches": []
         },
@@ -6204,9 +6204,9 @@
         },
         "System.Void backend.Data.ApplicationDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
           "Lines": {
-            "21": 35,
-            "22": 35,
-            "24": 35
+            "21": 39,
+            "22": 39,
+            "24": 39
           },
           "Branches": []
         }
