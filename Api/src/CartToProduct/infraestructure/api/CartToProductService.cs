@@ -10,11 +10,13 @@ namespace Api.src.CartToProduct.infraestructure.api
     {
         private CreateCartToProduct _createCartToProduct;
         private DeleteCartToProductByProductId _deleteCartToProductByProductId;
+        private UpdateCartToProduct _updateCartToProduct;
 
         public CartToProductService(ApplicationDBContext context)
         {
             _createCartToProduct = new CreateCartToProduct(context);
             _deleteCartToProductByProductId = new DeleteCartToProductByProductId(context);
+            _updateCartToProduct = new UpdateCartToProduct(context);
 
         }
         public Task<CartToProductEntity> CreateAsync(CreateCartToProductDto createCartToProductDto, Guid userId)
@@ -22,9 +24,14 @@ namespace Api.src.CartToProduct.infraestructure.api
             return _createCartToProduct.Run(createCartToProductDto, userId);
         }
 
-        public Task<DeleteCartToProductByProductIdDtoResponse> DeleteByIdProductAsync(Guid productId, Guid userId)
+        public Task<DeleteCartToProductByProductIdResponseDto> DeleteByIdProductAsync(Guid productId, Guid userId)
         {
             return _deleteCartToProductByProductId.Run(productId, userId);
+        }
+
+        public Task<UpdateCartToProductResponseDto> UpdateAsync(UpdateCartToProductDto updateCartToProduct, Guid userId)
+        {
+            return _updateCartToProduct.Run(updateCartToProduct, userId);
         }
     }
 }

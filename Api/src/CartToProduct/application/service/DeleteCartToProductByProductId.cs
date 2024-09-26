@@ -16,7 +16,7 @@ namespace Api.src.CartToProduct.application.service
             _context = context;
         }
 
-        public async Task<DeleteCartToProductByProductIdDtoResponse> Run(Guid productId, Guid userIde)
+        public async Task<DeleteCartToProductByProductIdResponseDto> Run(Guid productId, Guid userIde)
         {
             var cartEntity = await _context.Cart.FirstOrDefaultAsync(c => c.User.Id == userIde && c.State == CartState.Pending) ?? throw new NotFoundException("User does not have a cart");
             var productEntity = await _context.Product.FirstOrDefaultAsync(p => p.Id == productId) ?? throw new NotFoundException("Product does not exist");
@@ -28,7 +28,7 @@ namespace Api.src.CartToProduct.application.service
             await _context.SaveChangesAsync();
 
 
-            return new DeleteCartToProductByProductIdDtoResponse() { Message = "The product was deleted successfully"};
+            return new DeleteCartToProductByProductIdResponseDto() { Message = "The product was deleted successfully"};
         }
     }
 }

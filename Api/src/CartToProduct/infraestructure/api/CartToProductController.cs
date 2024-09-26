@@ -42,5 +42,15 @@ namespace Api.src.CartToProduct.infraestructure.api
                 Guid.Parse(Token.GetTokenPayload(Request).UserId));
             return Ok(result);
         }
+
+        [HttpPut]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> Update([FromBody] UpdateCartToProductDto updateCartToProductDto)
+        {
+            var result = await _cartToProductService.UpdateAsync(
+                updateCartToProductDto,
+                Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Ok(result);
+        }
     }
 }
