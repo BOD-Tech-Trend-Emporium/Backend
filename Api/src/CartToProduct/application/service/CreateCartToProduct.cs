@@ -2,6 +2,7 @@
 using Api.src.CartToProduct.domain.dto;
 using Api.src.CartToProduct.domain.entity;
 using Api.src.Common.exceptions;
+using Api.src.Product.domain.enums;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,7 @@ namespace Api.src.CartToProduct.application.service
         public async Task<CartToProductEntity> Run(CreateCartToProductDto createCartToProductDto, Guid userIde)
         {
             var cartEntity = await _context.Cart.FirstOrDefaultAsync(c => c.User.Id == userIde && c.State == CartState.Pending) ?? throw new NotFoundException("User does not have a cart");
-            var productEntity = await _context.Product.FirstOrDefaultAsync(p => p.Id == createCartToProductDto.ProductId) ?? throw new NotFoundException("Product does not exist");
+            var productEntity = await _context.Product.FirstOrDefaultAsync(p => p.Id == createCartToProductDto.ProductId && (p.Status ==ProductStatus.Created || p.Status ==ProductStatus.ToRemove)) ?? throw new NotFoundException("Product does not exist");
             var priceEntity = await _context.Price.FirstOrDefaultAsync(p => p.Product.Id == productEntity.Id && p.Current == true) ?? throw new NotFoundException("Price of product does not exist");
             if (await _context.CartToProduct.AnyAsync(c => c.PriceId == priceEntity.Id && c.CartId == cartEntity.Id)) {
                 throw new ConflictException("The product is already in the cart");
