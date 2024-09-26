@@ -23,16 +23,14 @@ namespace Api.src.Cart.application.service
 
         public async Task<CartEntity> Run(Guid idUser)
         {
-            //var cartEntity = await CartMapper.ToCartModelForCreate(cart,_context);
             var cartEntity = new CartEntity();
-            //var couponEntity = await _getCouponByCode.Run(cart.CouponCode);
             var user = await _getUserById.Run(idUser);
             if (await _context.Cart.AnyAsync(c => c.User.Id == idUser && c.State == CartState.Pending)) {
                 throw new ConflictException("The cart already exists");
             }
 
             cartEntity.User = user;
-            cartEntity.ShippingCost = new Random().Next(100, 1000);
+            cartEntity.ShippingCost = 0;
             cartEntity.State = CartState.Pending;
             await _context.Cart.AddAsync(cartEntity);
             await _context.SaveChangesAsync();
