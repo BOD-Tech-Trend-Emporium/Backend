@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Api.src.Auth.application.service;
@@ -13,11 +12,10 @@ using backend.src.User.domain.entity;
 using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
-namespace Test.Auth.UnitTests.application.UnitTests.service.UnitTests
+namespace Test.src.Auth.UnitTests.application.UnitTests.service.UnitTests
 {
-    public class LoginUserTests
+    public class Logout
     {
         private async Task<ApplicationDBContext> GetDataBaseContext()
         {
@@ -29,42 +27,11 @@ namespace Test.Auth.UnitTests.application.UnitTests.service.UnitTests
             return databaseContext;
         }
 
-        private async Task<IConfiguration> GetConfiguration()
-        {
-            var inMemorySettings = new Dictionary<string, string> {
-                {"AppSettings:TokenKey", "fakeTokenKeyfakeTokenKeyfakeTokenKeyfakeTokenKey"}
-            };
-
-            IConfiguration configuration = new ConfigurationBuilder()
-                .AddInMemoryCollection(inMemorySettings)
-                .Build();
-            return configuration;
-        }
-
         [Fact]
-        public async void Given_WrongEmailOrPassword_When_UserTriesToLogIn_Then_BadRequestException() 
+        public async void Given_NotLoggedUser_When_UserTriesToLogout_Then_ConflictException()
         {
             //Arrange
             var dbContext = await GetDataBaseContext();
-            var configuration = await GetConfiguration();
-            UserLoginDto user = new() { Email = "user@gmail.com", Password = "user"};
-            LoginUser loginUser = new(dbContext, configuration);
-
-            //Act
-            Func<Task> result = () => loginUser.Run(user);
-
-            //Assert
-            await result.Should().ThrowAsync<BadRequestException>()
-            .WithMessage("Wrong email or password");
-        }
-    
-        [Fact]
-        public async void Given_UserToLogin_When_UserAlreadyLogged_Then_ConflictException()
-         {
-            //Arrange
-            var dbContext = await GetDataBaseContext();
-            var configuration = await GetConfiguration();
-
             string passwordHash = BCrypt.Net.BCrypt.HashPassword("user");
             UserLoginDto userToLogin = new() { Email = "user@gmail.com", Password = "user"};
             UserEntity user = new(){
@@ -78,52 +45,50 @@ namespace Test.Auth.UnitTests.application.UnitTests.service.UnitTests
             dbContext.User.Add(user);
             await dbContext.SaveChangesAsync();
             var userModel = await dbContext.User.FirstOrDefaultAsync(x => x.Email == "user@gmail.com" && x.Status == UserStatus.Created);
-            SessionEntity session = new(){UserId = userModel!.Id, IsActive = true};
-            dbContext.Session.Add(session);
-            await dbContext.SaveChangesAsync();
-
-            LoginUser loginUser = new(dbContext, configuration);
-
-            //Act
-            Func<Task> result = () => loginUser.Run(userToLogin);
-
-            //Assert
-            await result.Should().ThrowAsync<ConflictException>()
-            .WithMessage("User already logged in");
-         }
-    
-        [Fact]
-        public async void Given_UserToLogin_When_ValidParamsAndUserNotLoggedIn_Then_SuccessfulLogin()
-        {
-            //Arrange
-            var dbContext = await GetDataBaseContext();
-            var configuration = await GetConfiguration();
-
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword("user");
-            UserLoginDto userToLogin = new() { Email = "user@gmail.com", Password = "user"};
-            UserEntity user = new(){
-                Name = "user",
-                Email = "user@gmail.com",
-                UserName = "user",
-                Password = passwordHash,
-                Role = UserRole.Shopper,
-                Status = UserStatus.Created,
-            };
-
-            dbContext.User.Add(user);
-            await dbContext.SaveChangesAsync();
-            var userModel = await dbContext.User.FirstOrDefaultAsync(x => x.Email == "user@gmail.com" && x.Status == UserStatus.Created);
+            string userId = userModel!.Id.ToString();
             SessionEntity session = new(){UserId = userModel!.Id, IsActive = false};
             dbContext.Session.Add(session);
             await dbContext.SaveChangesAsync();
 
-            LoginUser loginUser = new(dbContext, configuration);
+            LogoutUser logoutUser = new(dbContext);
 
             //Act
-            LoggedUserDto? result = await loginUser.Run(userToLogin);
+            Func<Task> result = () => logoutUser.Run(userId);
 
             //Assert
-            result!.Email.Should().Be(user.Email);
+            await result.Should().ThrowAsync<ConflictException>()
+            .WithMessage("User doesn't have an active session");
         }
+    
+        [Fact]
+        public async void Given_LoggedUser_When_UserTriesToLogout_Then_SessionClosed()
+        {//Arrange
+            var dbContext = await GetDataBaseContext();
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword("user");
+            UserLoginDto userToLogin = new() { Email = "user@gmail.com", Password = "user"};
+            UserEntity user = new(){
+                Name = "user",
+                Email = "user@gmail.com",
+                UserName = "user",
+                Password = passwordHash,
+                Role = UserRole.Shopper,
+                Status = UserStatus.Created,
+            };
+            dbContext.User.Add(user);
+            await dbContext.SaveChangesAsync();
+            var userModel = await dbContext.User.FirstOrDefaultAsync(x => x.Email == "user@gmail.com" && x.Status == UserStatus.Created);
+            string userId = userModel!.Id.ToString();
+            SessionEntity session = new(){UserId = userModel!.Id, IsActive = true};
+            dbContext.Session.Add(session);
+            await dbContext.SaveChangesAsync();
+
+            LogoutUser logoutUser = new(dbContext);
+
+            //Act
+            SessionEntity? result = await logoutUser.Run(userId);
+
+            //Assert
+            result!.IsActive.Should().Be(false);
+        }   
     }
 }
