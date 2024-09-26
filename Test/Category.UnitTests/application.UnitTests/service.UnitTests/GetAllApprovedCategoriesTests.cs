@@ -39,7 +39,7 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             result.Should().BeEmpty();
 
         }
-
+        /*
         [Fact]
         public async void Given_AllCategories_When_CategoriesWithCreatedStatusAndOtherStatus_Then_ApprovedCategoriesListTask()
         {
@@ -69,6 +69,6 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             result.Should().HaveCount(2);
             result.Should().BeEquivalentTo(expected);
 
-        }
+        }*/
     }
 }

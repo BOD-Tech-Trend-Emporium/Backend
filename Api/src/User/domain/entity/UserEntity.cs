@@ -1,3 +1,4 @@
+using Api.src.Cart.domain.entity;
 using Api.src.Favorite.domain.entity;
 using Api.src.Review.domain.entity;
 using Api.src.Session.domain.entity;

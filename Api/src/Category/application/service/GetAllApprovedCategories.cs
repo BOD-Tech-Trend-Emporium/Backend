@@ -15,7 +15,7 @@ namespace Api.src.Category.application.service
         }
         public async Task<List<CategoryEntity>> Run()
         {
-            var approvedCategories = await _context.Category.Where(category => category.Status == CategoryStatus.Created).ToListAsync();
+            var approvedCategories = await _context.Category.Where(category => category.Status == CategoryStatus.Created || category.Status == CategoryStatus.ToRemove).ToListAsync();
             return approvedCategories;
         }
 
