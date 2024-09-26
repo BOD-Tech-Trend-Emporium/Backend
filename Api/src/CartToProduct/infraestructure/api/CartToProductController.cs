@@ -1,10 +1,7 @@
 ﻿using Api.src.Auth.application.Utils;
 using Api.src.CartToProduct.application.mappers;
-using Api.src.CartToProduct.application.service;
 using Api.src.CartToProduct.domain.dto;
 using Api.src.CartToProduct.domain.repository;
-using Api.src.Category.domain.dto;
-using Api.src.Category.domain.repository;
 using backend.src.User.domain.enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
