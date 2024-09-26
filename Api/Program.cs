@@ -5,6 +5,8 @@ using Api.src.Auth.domain.repository;
 using Api.src.Auth.infraestructure;
 using Api.src.Cart.domain.repository;
 using Api.src.Cart.infraestructure.api;
+using Api.src.CartToProduct.domain.repository;
+using Api.src.CartToProduct.infraestructure.api;
 using Api.src.Category.domain.repository;
 using Api.src.Category.infraestructure.api;
 using Api.src.Common.middleware;
@@ -60,6 +62,7 @@ builder.Services.AddScoped<AuthRepository, AuthService>();
 builder.Services.AddScoped<CategoryRepository, CategoryService>();
 builder.Services.AddScoped<ProductRepository, ProductService>();
 builder.Services.AddScoped<CartRepository, CartService>();
+builder.Services.AddScoped<CartToProductRepository, CartToProductService>();
 
 var app = builder.Build();
 
