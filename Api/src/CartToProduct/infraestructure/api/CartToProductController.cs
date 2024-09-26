@@ -31,5 +31,16 @@ namespace Api.src.CartToProduct.infraestructure.api
                 Guid.Parse(Token.GetTokenPayload(Request).UserId));
             return Created($"/api/cart/product/", result.ToCartProductDto());
         }
+
+        [HttpDelete]
+        [Route("{productId}")]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> Delete([FromRoute] Guid productId)
+        {
+            var result = await _cartToProductService.DeleteByIdProductAsync(
+                productId,
+                Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Ok(result);
+        }
     }
 }
