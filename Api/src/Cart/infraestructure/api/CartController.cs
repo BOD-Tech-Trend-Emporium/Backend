@@ -37,5 +37,14 @@ namespace Api.src.Cart.infraestructure.api
             var result = await _cartRepository.GetPendingCartAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route("purchase")]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> CreatePurchase()
+        {
+            var result = await _cartRepository.CreatePurchaseAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Ok(result);
+        }
     }
 }

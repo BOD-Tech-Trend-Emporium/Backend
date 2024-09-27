@@ -44,7 +44,7 @@ namespace Api.src.Cart.application.service
 
             var couponEntity = await _getCouponByCode.Run(cartEntity.Coupon.Code);
 
-            CartWithCouponDtoResponse cartWithCouponDtoResponse = CartMapper.ToCartWithCouponDtoResponse(cartEntity);
+            CartWithCouponResponseDto cartWithCouponDtoResponse = CartMapper.ToCartWithCouponDtoResponse(cartEntity);
             cartWithCouponDtoResponse.ShoppingCart = shoppingCart;
             cartWithCouponDtoResponse.TotalBeforeDiscount = totalBeforeDiscount;
             cartWithCouponDtoResponse.TotalAfterDiscount = cartWithCouponDtoResponse.TotalBeforeDiscount - (cartWithCouponDtoResponse.TotalBeforeDiscount * cartWithCouponDtoResponse.CouponApplied.Discount_percentage) / 100;

@@ -1,6 +1,6 @@
 ﻿namespace Api.src.Cart.domain.dto
 {
-    public class CartWithCouponDtoResponse : CartResponse
+    public class CartWithCouponResponseDto : CartResponse
     {
         public CouponDto CouponApplied { get; set; }
         public float TotalBeforeDiscount { get; set; }

@@ -19,8 +19,8 @@ namespace Api.src.Cart.application.mappers
             };
         }
 
-        public static CartWithCouponDtoResponse ToCartWithCouponDtoResponse( CartEntity cart) {
-            return new CartWithCouponDtoResponse
+        public static CartWithCouponResponseDto ToCartWithCouponDtoResponse( CartEntity cart) {
+            return new CartWithCouponResponseDto
             {
                 UserId = cart.User.Id,
                 CouponApplied = ToCouponDto(cart.Coupon),
