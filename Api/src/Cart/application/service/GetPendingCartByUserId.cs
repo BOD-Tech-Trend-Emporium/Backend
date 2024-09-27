@@ -26,9 +26,6 @@ namespace Api.src.Cart.application.service
         {
             var user = await _getUserById.Run(idUser);
             var cartEntity = await _context.Cart.Include(c => c.Coupon).FirstOrDefaultAsync(c => c.User.Id == user.Id && c.State == CartState.Pending);
-            /*await _context.Entry(cartEntity)
-                .Reference(c => c.Coupon)
-                .LoadAsync();*/
 
             if (cartEntity == null)
             {

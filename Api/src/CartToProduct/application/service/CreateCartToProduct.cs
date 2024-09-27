@@ -3,6 +3,7 @@ using Api.src.Cart.domain.enums;
 using Api.src.CartToProduct.domain.dto;
 using Api.src.CartToProduct.domain.entity;
 using Api.src.Common.exceptions;
+using Api.src.Product.application.service;
 using Api.src.Product.domain.enums;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +14,13 @@ namespace Api.src.CartToProduct.application.service
     {
         private readonly ApplicationDBContext _context;
         private readonly CreateCart _createCart;
+        private readonly GetProductById _getProductById;
 
         public CreateCartToProduct(ApplicationDBContext context)
         {
             _context = context;
             _createCart = new CreateCart(context);
+            _getProductById = new GetProductById(context);
         }
         public async Task<CartToProductEntity> Run(CreateCartToProductDto createCartToProductDto, Guid userIde)
         {
@@ -30,6 +33,7 @@ namespace Api.src.CartToProduct.application.service
             if (await _context.CartToProduct.AnyAsync(c => c.PriceId == priceEntity.Id && c.CartId == cartEntity.Id)) {
                 throw new ConflictException("The product is already in the cart");
             }
+
             if (createCartToProductDto.Quantity < 1) {
                 throw new ConflictException("Invalid quantity");
             }
