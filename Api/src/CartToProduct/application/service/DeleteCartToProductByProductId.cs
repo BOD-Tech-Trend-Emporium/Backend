@@ -28,6 +28,12 @@ namespace Api.src.CartToProduct.application.service
             _context.CartToProduct.Remove(cartToProducEntity);
             await _context.SaveChangesAsync();
 
+            if (!await _context.CartToProduct.AnyAsync(c => c.CartId == cartEntity.Id)) { 
+                cartEntity.Coupon = null;
+                _context.Cart.Remove(cartEntity);
+                await _context.SaveChangesAsync();
+
+            }
 
             return new DeleteCartToProductByProductIdResponseDto() { Message = "The product was deleted successfully"};
         }

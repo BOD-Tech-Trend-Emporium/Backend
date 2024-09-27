@@ -15,13 +15,16 @@ namespace Api.src.Cart.application.service
     {
         private readonly ApplicationDBContext _context;
         private readonly GetUserById _getUserById;
+        private readonly GetPendingCartByUserId _getPendingCartByUserId;
+
         public CreateCart(ApplicationDBContext context)
         {
             _context = context;
             _getUserById = new GetUserById(context);
+            _getPendingCartByUserId = new GetPendingCartByUserId(context);
         }
 
-        public async Task<CartEntity> Run(Guid idUser)
+        public async Task<CartResponse> Run(Guid idUser)
         {
             var cartEntity = new CartEntity();
             var user = await _getUserById.Run(idUser);
@@ -34,7 +37,7 @@ namespace Api.src.Cart.application.service
             cartEntity.State = CartState.Pending;
             await _context.Cart.AddAsync(cartEntity);
             await _context.SaveChangesAsync();
-            return cartEntity;
+            return await _getPendingCartByUserId.Run(idUser);
         }
     }
 }

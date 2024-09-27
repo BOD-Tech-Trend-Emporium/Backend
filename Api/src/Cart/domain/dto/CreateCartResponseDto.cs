@@ -1,6 +1,4 @@
-﻿using backend.src.User.domain.entity;
-
-namespace Api.src.Cart.domain.dto
+﻿namespace Api.src.Cart.domain.dto
 {
     public class CreateCartResponseDto
     {

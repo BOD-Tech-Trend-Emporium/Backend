@@ -1,13 +1,11 @@
 ﻿using Api.src.Cart.domain.dto;
-using Api.src.Category.domain.entity;
-using Api.src.Cart.domain.entity;
-using backend.src.User.domain.enums;
 
 namespace Api.src.Cart.domain.repository
 {
     public interface CartRepository
     {
-        Task<CartEntity> CreateAsync(Guid idUser);
-        Task<CartEntity> UpdateAsync(UpdateCartDto entity, Guid userId);
+        Task<CartResponse> CreateAsync(Guid idUser);
+        Task<CartResponse> UpdateAsync(UpdateCartDto entity, Guid userId);
+        Task<CartResponse> GetPendingCartAsync(Guid userId);
     }
 }
