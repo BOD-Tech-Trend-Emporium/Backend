@@ -2,9 +2,9 @@
 {
     public class CartWithCouponDtoResponse : CartResponse
     {
-        public CouponDto Coupon_applied { get; set; }
-        public float Total_before_discount { get; set; }
-        public float Total_after_discount { get; set; }
+        public CouponDto CouponApplied { get; set; }
+        public float TotalBeforeDiscount { get; set; }
+        public float TotalAfterDiscount { get; set; }
 
 
     }

@@ -36,8 +36,8 @@ namespace Api.src.Cart.application.service
 
             if (cartEntity.Coupon== null) {
                 CartResponse cartResponse = CartMapper.ToCartResponse(cartEntity);
-                cartResponse.Shopping_cart = shoppingCart;
-                cartResponse.Final_total = totalBeforeDiscount + cartResponse.Shipping_cost;
+                cartResponse.ShoppingCart = shoppingCart;
+                cartResponse.FinalTotal = totalBeforeDiscount + cartResponse.ShippingCost;
 
                 return cartResponse;
             }
@@ -45,10 +45,10 @@ namespace Api.src.Cart.application.service
             var couponEntity = await _getCouponByCode.Run(cartEntity.Coupon.Code);
 
             CartWithCouponDtoResponse cartWithCouponDtoResponse = CartMapper.ToCartWithCouponDtoResponse(cartEntity);
-            cartWithCouponDtoResponse.Shopping_cart = shoppingCart;
-            cartWithCouponDtoResponse.Total_before_discount = totalBeforeDiscount;
-            cartWithCouponDtoResponse.Total_after_discount = cartWithCouponDtoResponse.Total_before_discount - (cartWithCouponDtoResponse.Total_before_discount * cartWithCouponDtoResponse.Coupon_applied.Discount_percentage) / 100;
-            cartWithCouponDtoResponse.Final_total = cartWithCouponDtoResponse.Total_after_discount + cartWithCouponDtoResponse.Shipping_cost;
+            cartWithCouponDtoResponse.ShoppingCart = shoppingCart;
+            cartWithCouponDtoResponse.TotalBeforeDiscount = totalBeforeDiscount;
+            cartWithCouponDtoResponse.TotalAfterDiscount = cartWithCouponDtoResponse.TotalBeforeDiscount - (cartWithCouponDtoResponse.TotalBeforeDiscount * cartWithCouponDtoResponse.CouponApplied.Discount_percentage) / 100;
+            cartWithCouponDtoResponse.FinalTotal = cartWithCouponDtoResponse.TotalAfterDiscount + cartWithCouponDtoResponse.ShippingCost;
             return cartWithCouponDtoResponse;
         }
 

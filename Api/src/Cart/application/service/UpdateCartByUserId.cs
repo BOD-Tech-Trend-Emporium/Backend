@@ -37,12 +37,7 @@ namespace Api.src.Cart.application.service
             await _context.SaveChangesAsync();
 
             return await _getPendingCartByUserId.Run(idUser);
-            /*CartWithCouponDtoResponse cartWithCouponDtoResponse = CartMapper.ToCartWithCouponDtoResponse(cartEntity);
-            cartWithCouponDtoResponse.Shopping_cart = await _context.CartToProduct.Where(cp => cp.CartId == cartEntity.Id).Select(cp => cp.Price.Product.Id).ToListAsync();
-            cartWithCouponDtoResponse.Total_before_discount = await _context.CartToProduct.Where(cp => cp.CartId == cartEntity.Id).Select(cp => cp.Quantity * cp.Price.Price).SumAsync();
-            cartWithCouponDtoResponse.Total_after_discount = cartWithCouponDtoResponse.Total_before_discount - (cartWithCouponDtoResponse.Total_before_discount * cartWithCouponDtoResponse.Coupon_applied.Discount_percentage)/100;
-            cartWithCouponDtoResponse.Final_total = cartWithCouponDtoResponse.Total_after_discount + cartWithCouponDtoResponse.Shipping_cost;
-            return cartWithCouponDtoResponse;*/
+
         }
     }
 }

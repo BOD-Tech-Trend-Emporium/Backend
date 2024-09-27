@@ -4,6 +4,7 @@ using Api.src.CartToProduct.domain.dto;
 using Api.src.CartToProduct.domain.entity;
 using Api.src.Common.exceptions;
 using Api.src.Product.application.service;
+using Api.src.Product.domain.dto;
 using Api.src.Product.domain.enums;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,10 @@ namespace Api.src.CartToProduct.application.service
         }
         public async Task<CartToProductEntity> Run(CreateCartToProductDto createCartToProductDto, Guid userIde)
         {
+            if (createCartToProductDto.Quantity < 1)
+            {
+                throw new ConflictException("Invalid quantity");
+            }
             if (!await _context.Cart.AnyAsync(c => c.User.Id == userIde && c.State == CartState.Pending)) {
                 await _createCart.Run(userIde);
             }
@@ -34,9 +39,12 @@ namespace Api.src.CartToProduct.application.service
                 throw new ConflictException("The product is already in the cart");
             }
 
-            if (createCartToProductDto.Quantity < 1) {
-                throw new ConflictException("Invalid quantity");
+            var productResult = await _getProductById.Run(productEntity.Id);
+            var available = productResult.Inventory.Available;
+            if (createCartToProductDto.Quantity > available) {
+                throw new ConflictException("Insufficient product in inventory");
             }
+
             var cartToProduct = new CartToProductEntity() { Price = priceEntity, Cart = cartEntity, Quantity=createCartToProductDto.Quantity };
 
             await _context.CartToProduct.AddAsync(cartToProduct);

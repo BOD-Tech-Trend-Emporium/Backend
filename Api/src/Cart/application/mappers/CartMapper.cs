@@ -18,20 +18,13 @@ namespace Api.src.Cart.application.mappers
                 ShippingCost = cart.ShippingCost,
             };
         }
-        public static UpdateCartResponseDto ToUpdateCartResponseDto(this CartEntity cart)
-        {
-            return new UpdateCartResponseDto
-            {
-                UserId = cart.User.Id,
-                CouponId = cart.Coupon.Id,
-            };
-        }
+
         public static CartWithCouponDtoResponse ToCartWithCouponDtoResponse( CartEntity cart) {
             return new CartWithCouponDtoResponse
             {
                 UserId = cart.User.Id,
-                Coupon_applied = ToCouponDto(cart.Coupon),
-                Shipping_cost = cart.ShippingCost,
+                CouponApplied = ToCouponDto(cart.Coupon),
+                ShippingCost = cart.ShippingCost,
 
             };
         }
@@ -41,7 +34,7 @@ namespace Api.src.Cart.application.mappers
             return new CartResponse
             {
                 UserId = cart.User.Id,
-                Shipping_cost = cart.ShippingCost,
+                ShippingCost = cart.ShippingCost,
 
             };
         }
