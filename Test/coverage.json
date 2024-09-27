@@ -126,19 +126,19 @@
       "Api.src.User.domain.dto.UpdateUserResultDto": {
         "System.String Api.src.User.domain.dto.UpdateUserResultDto::get_Name()": {
           "Lines": {
-            "10": 0
+            "10": 5
           },
           "Branches": []
         },
         "System.String Api.src.User.domain.dto.UpdateUserResultDto::get_Email()": {
           "Lines": {
-            "11": 0
+            "11": 5
           },
           "Branches": []
         },
         "System.String Api.src.User.domain.dto.UpdateUserResultDto::get_UserName()": {
           "Lines": {
-            "12": 0
+            "12": 5
           },
           "Branches": []
         }
@@ -243,10 +243,10 @@
       "Api.src.User.application.service.GetUserByEmail": {
         "System.Void Api.src.User.application.service.GetUserByEmail::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "16": 3,
-            "17": 3,
-            "18": 3,
-            "19": 3
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4
           },
           "Branches": []
         }
@@ -254,9 +254,9 @@
       "Api.src.User.application.service.GetUserByEmail/<Run>d__2": {
         "System.Void Api.src.User.application.service.GetUserByEmail/<Run>d__2::MoveNext()": {
           "Lines": {
-            "22": 3,
-            "23": 3,
-            "24": 3
+            "22": 4,
+            "23": 4,
+            "24": 4
           },
           "Branches": []
         }
@@ -266,13 +266,13 @@
       "Api.src.Session.domain.entity.SessionEntity": {
         "System.Guid Api.src.Session.domain.entity.SessionEntity::get_UserId()": {
           "Lines": {
-            "13": 4
+            "13": 5
           },
           "Branches": []
         },
         "System.Boolean Api.src.Session.domain.entity.SessionEntity::get_IsActive()": {
           "Lines": {
-            "15": 9
+            "15": 11
           },
           "Branches": []
         },
@@ -284,7 +284,7 @@
         },
         "System.DateTime Api.src.Session.domain.entity.SessionEntity::get_CreatedAt()": {
           "Lines": {
-            "21": 3
+            "21": 4
           },
           "Branches": []
         }
@@ -310,9 +310,9 @@
       "Api.src.Session.application.validations.SessionValidations": {
         "System.Void Api.src.Session.application.validations.SessionValidations::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "13": 16,
-            "14": 8,
-            "15": 8
+            "13": 18,
+            "14": 9,
+            "15": 9
           },
           "Branches": []
         }
@@ -320,9 +320,9 @@
       "Api.src.Session.application.validations.SessionValidations/<IsUserLoggedIn>d__2": {
         "System.Void Api.src.Session.application.validations.SessionValidations/<IsUserLoggedIn>d__2::MoveNext()": {
           "Lines": {
-            "18": 5,
-            "19": 5,
-            "20": 5
+            "18": 6,
+            "19": 6,
+            "20": 6
           },
           "Branches": []
         }
@@ -357,10 +357,10 @@
       "Api.src.Session.application.service.UpdateSession": {
         "System.Void Api.src.Session.application.service.UpdateSession::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "15": 8,
-            "16": 8,
-            "17": 8,
-            "18": 8
+            "15": 9,
+            "16": 9,
+            "17": 9,
+            "18": 9
           },
           "Branches": []
         }
@@ -368,16 +368,16 @@
       "Api.src.Session.application.service.UpdateSession/<Run>d__2": {
         "System.Void Api.src.Session.application.service.UpdateSession/<Run>d__2::MoveNext()": {
           "Lines": {
-            "21": 3,
-            "22": 3,
-            "24": 3,
+            "21": 4,
+            "22": 4,
+            "24": 4,
             "25": 0,
             "26": 0,
-            "29": 3,
-            "30": 3,
-            "32": 3,
-            "33": 3,
-            "34": 3
+            "29": 4,
+            "30": 4,
+            "32": 4,
+            "33": 4,
+            "34": 4
           },
           "Branches": [
             {
@@ -394,7 +394,7 @@
               "EndOffset": 264,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 3
+              "Hits": 4
             }
           ]
         }
@@ -2003,9 +2003,9 @@
         },
         "System.Void Api.src.Common.exceptions.BadRequestException::.ctor(System.String)": {
           "Lines": {
-            "11": 4,
-            "12": 4,
-            "14": 4
+            "11": 5,
+            "12": 5,
+            "14": 5
           },
           "Branches": []
         },
@@ -2031,9 +2031,9 @@
         },
         "System.Void Api.src.Common.exceptions.ConflictException::.ctor(System.String)": {
           "Lines": {
-            "16": 6,
-            "17": 6,
-            "19": 6
+            "16": 8,
+            "17": 8,
+            "19": 8
           },
           "Branches": []
         },
@@ -2059,9 +2059,9 @@
         },
         "System.Void Api.src.Common.exceptions.NotFoundException::.ctor(System.String)": {
           "Lines": {
-            "10": 7,
-            "11": 7,
-            "13": 7
+            "10": 8,
+            "11": 8,
+            "13": 8
           },
           "Branches": []
         },
@@ -3610,19 +3610,19 @@
       "Api.src.Auth.domain.dto.LoggedUserDto": {
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Token()": {
           "Lines": {
-            "10": 5
+            "10": 6
           },
           "Branches": []
         },
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_Email()": {
           "Lines": {
-            "11": 6
+            "11": 8
           },
           "Branches": []
         },
         "System.String Api.src.Auth.domain.dto.LoggedUserDto::get_UserName()": {
           "Lines": {
-            "12": 5
+            "12": 6
           },
           "Branches": []
         }
@@ -3654,13 +3654,13 @@
       "Api.src.Auth.domain.dto.UserLoginDto": {
         "System.String Api.src.Auth.domain.dto.UserLoginDto::get_Email()": {
           "Lines": {
-            "10": 8
+            "10": 10
           },
           "Branches": []
         },
         "System.String Api.src.Auth.domain.dto.UserLoginDto::get_Password()": {
           "Lines": {
-            "11": 7
+            "11": 9
           },
           "Branches": []
         }
@@ -3670,10 +3670,10 @@
       "Api.src.Auth.application.validations.AuthValidations": {
         "System.Boolean Api.src.Auth.application.validations.AuthValidations::IsEmailValid(System.String)": {
           "Lines": {
-            "31": 7,
-            "32": 7,
-            "33": 7,
-            "34": 7
+            "31": 10,
+            "32": 10,
+            "33": 10,
+            "34": 10
           },
           "Branches": []
         },
@@ -3687,9 +3687,9 @@
         },
         "System.Void Api.src.Auth.application.validations.AuthValidations::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "17": 14,
-            "18": 7,
-            "19": 7
+            "17": 30,
+            "18": 15,
+            "19": 15
           },
           "Branches": []
         }
@@ -3697,9 +3697,9 @@
       "Api.src.Auth.application.validations.AuthValidations/<EmailExists>d__2": {
         "System.Void Api.src.Auth.application.validations.AuthValidations/<EmailExists>d__2::MoveNext()": {
           "Lines": {
-            "21": 7,
-            "22": 7,
-            "23": 7
+            "21": 9,
+            "22": 9,
+            "23": 9
           },
           "Branches": []
         }
@@ -3707,9 +3707,9 @@
       "Api.src.Auth.application.validations.AuthValidations/<UserNameExists>d__3": {
         "System.Void Api.src.Auth.application.validations.AuthValidations/<UserNameExists>d__3::MoveNext()": {
           "Lines": {
-            "26": 7,
-            "27": 7,
-            "28": 7
+            "26": 9,
+            "27": 9,
+            "28": 9
           },
           "Branches": []
         }
@@ -3719,22 +3719,22 @@
       "Api.src.Auth.application.Utils.Token": {
         "System.String Api.src.Auth.application.Utils.Token::CreateToken(backend.src.User.domain.entity.UserEntity,System.String)": {
           "Lines": {
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1,
-            "22": 1,
-            "23": 1,
-            "25": 1,
-            "26": 1,
-            "28": 1,
-            "29": 1,
-            "30": 1,
-            "31": 1,
-            "32": 1,
-            "34": 1,
-            "35": 1,
-            "36": 1
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "25": 2,
+            "26": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "34": 2,
+            "35": 2,
+            "36": 2
           },
           "Branches": []
         },
@@ -3828,14 +3828,14 @@
       "Api.src.Auth.application.service.LoginUser": {
         "System.Void Api.src.Auth.application.service.LoginUser::.ctor(backend.Data.ApplicationDBContext,Microsoft.Extensions.Configuration.IConfiguration)": {
           "Lines": {
-            "25": 3,
-            "26": 3,
-            "27": 3,
-            "28": 3,
-            "29": 3,
-            "30": 3,
-            "31": 3,
-            "32": 3
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4,
+            "30": 4,
+            "31": 4,
+            "32": 4
           },
           "Branches": []
         }
@@ -3843,26 +3843,26 @@
       "Api.src.Auth.application.service.LoginUser/<Run>d__6": {
         "System.Void Api.src.Auth.application.service.LoginUser/<Run>d__6::MoveNext()": {
           "Lines": {
-            "35": 3,
-            "36": 3,
-            "37": 3,
-            "39": 3,
-            "40": 2,
-            "41": 2,
-            "42": 2,
-            "44": 3,
+            "35": 4,
+            "36": 4,
+            "37": 4,
+            "39": 4,
+            "40": 3,
+            "41": 3,
+            "42": 3,
+            "44": 4,
             "45": 1,
             "46": 1,
-            "49": 2,
-            "51": 2,
+            "49": 3,
+            "51": 3,
             "52": 1,
             "53": 1,
-            "56": 1,
-            "57": 1,
-            "59": 1,
-            "60": 1,
-            "62": 1,
-            "63": 1
+            "56": 2,
+            "57": 2,
+            "59": 2,
+            "60": 2,
+            "62": 2,
+            "63": 2
           },
           "Branches": [
             {
@@ -3871,7 +3871,7 @@
               "EndOffset": 203,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 39,
@@ -3879,7 +3879,7 @@
               "EndOffset": 240,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 3
+              "Hits": 4
             },
             {
               "Line": 44,
@@ -3887,7 +3887,7 @@
               "EndOffset": 248,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 44,
@@ -3911,7 +3911,7 @@
               "EndOffset": 278,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 2
+              "Hits": 3
             },
             {
               "Line": 51,
@@ -3927,7 +3927,7 @@
               "EndOffset": 439,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 1
+              "Hits": 2
             }
           ]
         }
@@ -4187,14 +4187,14 @@
       "Api.src.Auth.application.mappers.AuthMappers": {
         "Api.src.Auth.domain.dto.LoggedUserDto Api.src.Auth.application.mappers.AuthMappers::ToLoggedUser(backend.src.User.domain.entity.UserEntity,System.String)": {
           "Lines": {
-            "13": 2,
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 2,
-            "18": 2,
-            "19": 2,
-            "20": 2
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3
           },
           "Branches": []
         }
@@ -5478,43 +5478,43 @@
       "backend.src.User.domain.entity.UserEntity": {
         "System.Guid backend.src.User.domain.entity.UserEntity::get_Id()": {
           "Lines": {
-            "21": 15
+            "21": 26
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Name()": {
           "Lines": {
-            "24": 45
+            "24": 59
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Email()": {
           "Lines": {
-            "29": 70
+            "29": 89
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_UserName()": {
           "Lines": {
-            "32": 56
+            "32": 73
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Password()": {
           "Lines": {
-            "35": 44
+            "35": 55
           },
           "Branches": []
         },
         "backend.src.User.domain.enums.UserRole backend.src.User.domain.entity.UserEntity::get_Role()": {
           "Lines": {
-            "38": 52
+            "38": 62
           },
           "Branches": []
         },
         "Api.src.User.domain.enums.UserStatus backend.src.User.domain.entity.UserEntity::get_Status()": {
           "Lines": {
-            "41": 50
+            "41": 59
           },
           "Branches": []
         },
@@ -5588,25 +5588,25 @@
       "backend.src.User.domain.dto.UpdateUserDto": {
         "System.String backend.src.User.domain.dto.UpdateUserDto::get_Name()": {
           "Lines": {
-            "12": 0
+            "12": 10
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.dto.UpdateUserDto::get_Email()": {
           "Lines": {
-            "13": 0
+            "13": 19
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.dto.UpdateUserDto::get_UserName()": {
           "Lines": {
-            "14": 0
+            "14": 13
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.dto.UpdateUserDto::get_Password()": {
           "Lines": {
-            "15": 0
+            "15": 7
           },
           "Branches": []
         }
@@ -5757,10 +5757,10 @@
       "backend.src.User.application.service.GetUserById": {
         "System.Void backend.src.User.application.service.GetUserById::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "18": 0,
-            "19": 0,
-            "20": 0,
-            "21": 0
+            "18": 8,
+            "19": 8,
+            "20": 8,
+            "21": 8
           },
           "Branches": []
         }
@@ -5768,13 +5768,13 @@
       "backend.src.User.application.service.GetUserById/<Run>d__2": {
         "System.Void backend.src.User.application.service.GetUserById/<Run>d__2::MoveNext()": {
           "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "29": 0,
-            "30": 0
+            "23": 8,
+            "24": 8,
+            "25": 8,
+            "26": 1,
+            "27": 1,
+            "29": 7,
+            "30": 7
           },
           "Branches": [
             {
@@ -5783,7 +5783,7 @@
               "EndOffset": 189,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 25,
@@ -5791,7 +5791,7 @@
               "EndOffset": 253,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 7
             }
           ]
         }
@@ -5801,12 +5801,12 @@
       "backend.src.User.application.service.UpdateUserById": {
         "System.Void backend.src.User.application.service.UpdateUserById::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0
+            "24": 8,
+            "25": 8,
+            "26": 8,
+            "27": 8,
+            "28": 8,
+            "29": 8
           },
           "Branches": []
         }
@@ -5814,50 +5814,50 @@
       "backend.src.User.application.service.UpdateUserById/<Run>d__4": {
         "System.Void backend.src.User.application.service.UpdateUserById/<Run>d__4::MoveNext()": {
           "Lines": {
-            "31": 0,
-            "32": 0,
-            "34": 0,
+            "31": 8,
+            "32": 8,
+            "34": 7,
             "35": 0,
             "36": 0,
-            "39": 0,
-            "40": 0,
-            "41": 0,
-            "42": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "48": 0,
-            "49": 0,
-            "52": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "64": 0,
-            "65": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "81": 0,
-            "82": 0,
-            "84": 0,
-            "85": 0,
-            "86": 0,
-            "88": 0,
-            "89": 0,
-            "91": 0,
-            "93": 0,
-            "94": 0
+            "39": 7,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "44": 7,
+            "45": 3,
+            "46": 3,
+            "48": 4,
+            "49": 1,
+            "52": 2,
+            "54": 2,
+            "55": 2,
+            "56": 2,
+            "57": 2,
+            "59": 2,
+            "60": 1,
+            "61": 1,
+            "64": 1,
+            "65": 1,
+            "67": 5,
+            "68": 2,
+            "69": 2,
+            "71": 2,
+            "72": 2,
+            "73": 2,
+            "74": 2,
+            "76": 2,
+            "77": 1,
+            "78": 1,
+            "81": 1,
+            "82": 1,
+            "84": 4,
+            "85": 1,
+            "86": 1,
+            "88": 1,
+            "89": 1,
+            "91": 4,
+            "93": 4,
+            "94": 4
           },
           "Branches": [
             {
@@ -5874,7 +5874,7 @@
               "EndOffset": 264,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 7
             },
             {
               "Line": 39,
@@ -5882,7 +5882,7 @@
               "EndOffset": 289,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 39,
@@ -5890,7 +5890,7 @@
               "EndOffset": 314,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 7
             },
             {
               "Line": 44,
@@ -5898,7 +5898,7 @@
               "EndOffset": 342,
               "Path": 0,
               "Ordinal": 4,
-              "Hits": 0
+              "Hits": 3
             },
             {
               "Line": 48,
@@ -5906,7 +5906,7 @@
               "EndOffset": 391,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 48,
@@ -5914,7 +5914,7 @@
               "EndOffset": 403,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 54,
@@ -5922,7 +5922,7 @@
               "EndOffset": 446,
               "Path": 0,
               "Ordinal": 8,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 54,
@@ -5930,7 +5930,7 @@
               "EndOffset": 585,
               "Path": 1,
               "Ordinal": 9,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 59,
@@ -5938,7 +5938,7 @@
               "EndOffset": 597,
               "Path": 0,
               "Ordinal": 10,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 59,
@@ -5946,7 +5946,7 @@
               "EndOffset": 609,
               "Path": 1,
               "Ordinal": 11,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 44,
@@ -5954,7 +5954,7 @@
               "EndOffset": 633,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 5
             },
             {
               "Line": 67,
@@ -5962,7 +5962,7 @@
               "EndOffset": 661,
               "Path": 0,
               "Ordinal": 12,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 71,
@@ -5970,7 +5970,7 @@
               "EndOffset": 705,
               "Path": 0,
               "Ordinal": 14,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 71,
@@ -5978,7 +5978,7 @@
               "EndOffset": 844,
               "Path": 1,
               "Ordinal": 15,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 76,
@@ -5986,7 +5986,7 @@
               "EndOffset": 856,
               "Path": 0,
               "Ordinal": 16,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 76,
@@ -5994,7 +5994,7 @@
               "EndOffset": 868,
               "Path": 1,
               "Ordinal": 17,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 67,
@@ -6002,7 +6002,7 @@
               "EndOffset": 892,
               "Path": 1,
               "Ordinal": 13,
-              "Hits": 0
+              "Hits": 4
             },
             {
               "Line": 84,
@@ -6010,7 +6010,7 @@
               "EndOffset": 917,
               "Path": 0,
               "Ordinal": 18,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 84,
@@ -6018,7 +6018,7 @@
               "EndOffset": 966,
               "Path": 1,
               "Ordinal": 19,
-              "Hits": 0
+              "Hits": 4
             }
           ]
         }
@@ -6074,14 +6074,14 @@
         },
         "Api.src.User.domain.dto.UpdateUserResultDto backend.src.User.application.mappers.UserMappers::ToUserUpdateResultFromModel(backend.src.User.domain.entity.UserEntity)": {
           "Lines": {
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0
+            "53": 4,
+            "54": 4,
+            "55": 4,
+            "56": 4,
+            "57": 4,
+            "58": 4,
+            "59": 4,
+            "60": 4
           },
           "Branches": []
         }
@@ -6091,61 +6091,61 @@
       "backend.Data.ApplicationDBContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<backend.src.User.domain.entity.UserEntity> backend.Data.ApplicationDBContext::get_User()": {
           "Lines": {
-            "25": 103
+            "25": 133
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Session.domain.entity.SessionEntity> backend.Data.ApplicationDBContext::get_Session()": {
           "Lines": {
-            "26": 52
+            "26": 63
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Cart.domain.entity.CartEntity> backend.Data.ApplicationDBContext::get_Cart()": {
           "Lines": {
-            "27": 39
+            "27": 47
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Coupon.domain.entity.CouponEntity> backend.Data.ApplicationDBContext::get_Coupon()": {
           "Lines": {
-            "28": 39
+            "28": 47
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Favorite.domain.entity.FavoriteEntity> backend.Data.ApplicationDBContext::get_Favorite()": {
           "Lines": {
-            "29": 39
+            "29": 47
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Product.domain.entity.ProductEntity> backend.Data.ApplicationDBContext::get_Product()": {
           "Lines": {
-            "30": 67
+            "30": 75
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Review.domain.entity.ReviewEntity> backend.Data.ApplicationDBContext::get_Review()": {
           "Lines": {
-            "31": 39
+            "31": 47
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Category.domain.entity.CategoryEntity> backend.Data.ApplicationDBContext::get_Category()": {
           "Lines": {
-            "32": 67
+            "32": 75
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Price.domain.entity.PriceEntity> backend.Data.ApplicationDBContext::get_Price()": {
           "Lines": {
-            "33": 47
+            "33": 55
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> backend.Data.ApplicationDBContext::get_CartToProduct()": {
           "Lines": {
-            "34": 39
+            "34": 47
           },
           "Branches": []
         },
@@ -6204,9 +6204,9 @@
         },
         "System.Void backend.Data.ApplicationDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
           "Lines": {
-            "21": 39,
-            "22": 39,
-            "24": 39
+            "21": 47,
+            "22": 47,
+            "24": 47
           },
           "Branches": []
         }
