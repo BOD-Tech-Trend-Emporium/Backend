@@ -11,11 +11,18 @@ namespace Api.src.Category.application.mappers
             {
                 Id = category.Id,
                 Name = category.Name,
-
             };
         }
 
         public static CategoryEntity ToCategoryModelForCreate(this CreateCategoryDto category)
+        {
+            return new CategoryEntity
+            {
+                Name = category.Name,
+            };
+        }
+
+        public static CategoryEntity ToCategoryModelForUpdate(this UpdateCategoryDto category)
         {
             return new CategoryEntity
             {

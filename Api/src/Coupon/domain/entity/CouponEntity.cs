@@ -1,4 +1,5 @@
-﻿using Api.src.Coupon.domain.enums;
+﻿using Api.src.Cart.domain.entity;
+using Api.src.Coupon.domain.enums;
 using Api.src.Favorite.domain.entity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
