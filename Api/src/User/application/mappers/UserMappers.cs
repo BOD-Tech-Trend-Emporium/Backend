@@ -49,15 +49,13 @@ namespace backend.src.User.application.mappers
             };
         }
 
-        public static UserEntity ToUserModelForUpdate (this UpdateUserDto user)
+        public static UpdateUserResultDto ToUserUpdateResultFromModel (this UserEntity user)
         {
-            return new UserEntity
+            return new UpdateUserResultDto
             {
                 Name = user.Name,
                 Email = user.Email,
                 UserName = user.UserName,
-                Role = user.Role,
-                Status = user.Status,
             };
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Api.src.User.application.service;
+using Api.src.User.domain.dto;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.dto;
@@ -53,7 +54,7 @@ namespace backend.src.User.infraestructure.api
             return await deleteUserByIdService.Run(id);
         }
 
-        public async Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user)
+        public async Task<UpdateUserResultDto> UpdateByIdAsync(Guid id, UpdateUserDto user)
         {
             return await updateUserByIdService.Run(id, user);
         }
