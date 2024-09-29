@@ -34,7 +34,7 @@ namespace Api.src.Favorite.infraestructure.api
 
         [HttpPost]
         [Route("add/{productId}")]
-        [Authorize(Roles = nameof(UserRole.Admin))]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
         public async Task<IActionResult> Create([FromRoute] Guid productId)
         {
             Guid userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
