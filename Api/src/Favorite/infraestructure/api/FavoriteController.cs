@@ -6,6 +6,7 @@ using Api.src.Auth.application.Utils;
 using Api.src.Favorite.application.mappers;
 using Api.src.Favorite.domain.dto;
 using Api.src.Favorite.domain.repository;
+using backend.src.User.domain.enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,7 @@ namespace Api.src.Favorite.infraestructure.api
 
         [HttpPost]
         [Route("add/{productId}")]
-        [Authorize]
+        [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> Create([FromRoute] Guid productId)
         {
             Guid userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
