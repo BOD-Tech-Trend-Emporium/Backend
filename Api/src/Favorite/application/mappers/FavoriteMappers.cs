@@ -27,5 +27,14 @@ namespace Api.src.Favorite.application.mappers
                 ProductId = favorite.ProductId
             };
         }
+
+        public static DeletedFavoriteDto ToDeletedFavoriteDto(this FavoriteEntity favorite)
+        {
+            return new DeletedFavoriteDto
+            {
+                UserId = favorite.UserId,
+                ProductId = favorite.ProductId
+            };
+        }
     }
 }

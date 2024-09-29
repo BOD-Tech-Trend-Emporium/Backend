@@ -41,5 +41,15 @@ namespace Api.src.Favorite.infraestructure.api
             CreatedFavoriteDto createdFavorite = await _favoriteService.CreateAsync(favoriteModel);
             return Created($"/api/user/wishlist/{favoriteModel.ProductId}", createdFavorite);
         }
+
+        [HttpDelete]
+        [Route("remove/{productId}")]
+        [Authorize]
+        public async Task<IActionResult> Delete([FromRoute] Guid productId)
+        {
+            Guid userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
+            var deletedFavorite = await _favoriteService.DeleteByProductIdAsync(productId, userId);
+            return Ok(deletedFavorite);
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace Api.src.Product.domain.dto
 {
     public class AddedToFavoriteProductDto
     {
+        public required Guid productId { get; set; }
         public required string Title { get; set; }
         public float Price { get; set; }
         public required string Description { get; set; }

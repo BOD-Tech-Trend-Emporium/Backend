@@ -35,11 +35,12 @@ namespace Api.src.Favorite.application.service
                 UserId = userId,
                 Products = favorites.Select(x => new AddedToFavoriteProductDto
                 {
-                   Title = x.Product.Title,
-                   Price = x.Product.Price,
-                   Description = x.Product.Description,
-                   Category = x.Product.Category.Name,
-                   Image = x.Product.Image 
+                    productId = x.Product.Id,
+                    Title = x.Product.Title,
+                    Price = x.Product.Price,
+                    Description = x.Product.Description,
+                    Category = x.Product.Category.Name,
+                    Image = x.Product.Image 
                 }).ToList()
             };
             return favoritesList;

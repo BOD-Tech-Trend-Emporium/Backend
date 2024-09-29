@@ -11,5 +11,6 @@ namespace Api.src.Favorite.domain.repository
     {
         Task<FavoriteDto> GetAllAsync(Guid userId);
         Task<CreatedFavoriteDto> CreateAsync(FavoriteEntity favorite);
+        Task<DeletedFavoriteDto?> DeleteByProductIdAsync(Guid productId, Guid userId);
     }
 }

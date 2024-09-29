@@ -14,11 +14,13 @@ namespace Api.src.Favorite.infraestructure.api
     {
         private GetAllFavorites getAllFavoritesService;
         private CreateFavorite createFavoriteService;
+        private DeleteByProductId deleteByProductIdService;
         
         public FavoriteService(ApplicationDBContext context)
         {
             getAllFavoritesService = new GetAllFavorites(context);
             createFavoriteService = new CreateFavorite(context);
+            deleteByProductIdService = new DeleteByProductId(context);
         }
 
         public async Task<FavoriteDto> GetAllAsync(Guid userId)
@@ -28,6 +30,11 @@ namespace Api.src.Favorite.infraestructure.api
         public async Task<CreatedFavoriteDto> CreateAsync(FavoriteEntity favorite)
         {
             return await createFavoriteService.Run(favorite);
+        }
+
+        public async Task<DeletedFavoriteDto?> DeleteByProductIdAsync(Guid productId, Guid userId)
+        {
+            return await deleteByProductIdService.Run(productId, userId);
         }
     }
 }
