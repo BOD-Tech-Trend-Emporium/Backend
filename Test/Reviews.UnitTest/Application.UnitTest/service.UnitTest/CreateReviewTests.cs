@@ -183,5 +183,30 @@ namespace Test.Reviews.UnitTest.Application.UnitTest.service.UnitTest
             await act.Should().ThrowAsync<BadRequestException>()
                 .WithMessage($"user with Id {userId} or product with id {fakeProductId} doesn't exist");
         }
+
+        [Fact]
+        public async void GivenNewReview_When_ratingNosValid_Then_ThrowError()
+        {
+            //configuring base 
+            var dbContext = await GetDataBaseContext();
+            
+            var comment = "comment";
+            var rating = 10.0f;
+            // test service
+            CreateReviewDto newReview = new CreateReviewDto
+            {
+                productId = Guid.NewGuid(),
+                comment = comment,
+                rating = rating
+            };
+
+            CreateReview createReview = new CreateReview(dbContext);
+            //ACT
+            Func<Task> act = () => createReview.Run(newReview, Guid.NewGuid());
+
+            //Assert
+            await act.Should().ThrowAsync<BadRequestException>()
+                .WithMessage($"rating must be between 0 and 5, given: {rating}");
+        }
     }
 }
