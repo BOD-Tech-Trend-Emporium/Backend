@@ -10,12 +10,14 @@ namespace Api.src.Review.infraestructure.api
     public class reviewService : ReviewRepository
     {
         private CreateReview createReviewService;
-        private SearchByProduct searchByProductService;
+        private SearchReviewByProduct searchReviewByProductService;
+        private UpdateReview updateReviewService;
 
         public reviewService(ApplicationDBContext context) 
         {
             createReviewService = new CreateReview(context);
-            searchByProductService = new SearchByProduct(context);
+            searchReviewByProductService = new SearchReviewByProduct(context);
+            updateReviewService = new UpdateReview(context);
         }
         public async Task<ReviewEntity> CreateAsync(CreateReviewDto review, Guid userId)
         {
@@ -29,7 +31,7 @@ namespace Api.src.Review.infraestructure.api
 
         public async Task<List<ReviewEntity>> GetAllByProductAsync(Guid id)
         {
-            return await searchByProductService.Run(id);
+            return await searchReviewByProductService.Run(id);
         }
 
         public async Task<List<ReviewEntity>> GetAllByUserAsync(Guid id)
@@ -37,9 +39,9 @@ namespace Api.src.Review.infraestructure.api
             throw new NotImplementedException();
         }
 
-        public async Task<ReviewEntity> UpdateAsync(ReviewEntity entity)
+        public async Task<ReviewEntity> UpdateAsync(UpdateReviewDto review, Guid userId, Guid reviewId)
         {
-            throw new NotImplementedException();
+            return await updateReviewService.Run(review, userId, reviewId);
         }
     }
 }

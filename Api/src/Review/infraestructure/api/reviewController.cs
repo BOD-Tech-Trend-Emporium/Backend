@@ -53,10 +53,12 @@ namespace Api.src.Review.infraestructure.api
 
         [HttpPut]
         [Route("/{id}")]
-        public async Task<IActionResult> updateReview([FromRoute] Guid id)
+        public async Task<IActionResult> updateReview([FromRoute] Guid id, [FromBody] UpdateReviewDto review)
         {
-            var created = await _reviewService.UpdateAsync(new ReviewEntity { });
-            return Ok();
+            // var userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
+            var userId = review.userId;
+            var created = await _reviewService.UpdateAsync(review,userId,id);
+            return Ok(created.ToReviewDto());
         }
 
         [HttpDelete]

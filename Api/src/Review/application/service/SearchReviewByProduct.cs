@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api.src.Review.application.service
 {
-    public class SearchByProduct
+    public class SearchReviewByProduct
     {
         private readonly ApplicationDBContext _context;
 
-        public SearchByProduct(ApplicationDBContext context)
+        public SearchReviewByProduct(ApplicationDBContext context)
         {
             _context = context;
         }
