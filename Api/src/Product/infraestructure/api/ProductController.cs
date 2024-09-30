@@ -1,4 +1,5 @@
-﻿using Api.src.Product.application.mappers;
+﻿using Api.src.Auth.application.Utils;
+using Api.src.Product.application.mappers;
 using Api.src.Product.domain.dto;
 using Api.src.Product.domain.repository;
 using backend.src.User.domain.enums;
@@ -41,8 +42,8 @@ namespace Api.src.Product.infraestructure.api
         [Authorize(Roles = $"{nameof(UserRole.Admin)},{nameof(UserRole.Employee)}")]
         public async Task<IActionResult> Create([FromBody] CreateProductDto product)
         {   
-            // TODO CHANGE DEFAULT ADMIN ROLE TO JWT ROLE
-            var created = await _productService.CreateAsync(product, UserRole.Admin);
+            UserRole userRole = (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role);
+            var created = await _productService.CreateAsync(product, userRole);
             var productId = created.Id;
             return Created($"/api/products/{productId}",productId);
         }

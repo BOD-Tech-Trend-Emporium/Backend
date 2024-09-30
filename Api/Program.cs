@@ -14,6 +14,8 @@ using Api.src.Favorite.domain.repository;
 using Api.src.Favorite.infraestructure.api;
 using Api.src.Product.domain.repository;
 using Api.src.Product.infraestructure.api;
+using Api.src.Review.domain.repository;
+using Api.src.Review.infraestructure.api;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.repository;
@@ -66,6 +68,7 @@ builder.Services.AddScoped<ProductRepository, ProductService>();
 builder.Services.AddScoped<CartRepository, CartService>();
 builder.Services.AddScoped<CartToProductRepository, CartToProductService>();
 builder.Services.AddScoped<FavoriteRepository, FavoriteService>();
+builder.Services.AddScoped<ReviewRepository, reviewService>();
 
 var app = builder.Build();
 
