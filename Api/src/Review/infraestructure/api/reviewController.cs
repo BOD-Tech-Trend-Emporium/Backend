@@ -1,5 +1,11 @@
-﻿using Api.src.Review.domain.entity;
+﻿using Api.src.Auth.application.Utils;
+using Api.src.Review.application.mappers;
+using Api.src.Review.domain.dto;
+using Api.src.Review.domain.entity;
 using Api.src.Review.domain.repository;
+using backend.src.User.domain.dto;
+using backend.src.User.domain.enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.src.Review.infraestructure.api
@@ -33,10 +39,14 @@ namespace Api.src.Review.infraestructure.api
 
         [HttpPost]
         [Route("")]
-        public async Task<IActionResult> CreateReview()
+        [ProducesResponseType(201, Type = typeof(ReviewDto))]
+        // [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> Create([FromBody] CreateReviewDto review)
         {
-            var created = await _reviewService.CreateAsync(new ReviewEntity { });
-            return Ok();
+            // var userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
+            var userId = review.userId;
+            var created = await _reviewService.CreateAsync(review, userId);
+            return Created($"api/Review", created.ToReviewDto());
         }
 
         [HttpPut]
