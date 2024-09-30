@@ -22,11 +22,13 @@ namespace Api.src.Review.infraestructure.api
         }
 
         [HttpGet]
+        [ProducesResponseType(200, Type = typeof(List<ReviewDto>))]
         [Route("product/{id}")]
         public async Task<IActionResult> GetByProductId([FromRoute] Guid id) 
         {
             var reviews = await _reviewService.GetAllByProductAsync(id);
-            return Ok();
+            var reviewsDto = reviews.Select<ReviewEntity,ReviewDto>(rev => rev.ToReviewDto());
+            return Ok(reviewsDto);
         }
 
         [HttpGet]

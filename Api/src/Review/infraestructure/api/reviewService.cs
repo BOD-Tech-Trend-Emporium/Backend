@@ -3,15 +3,19 @@ using Api.src.Review.domain.dto;
 using Api.src.Review.domain.entity;
 using Api.src.Review.domain.repository;
 using backend.Data;
+using Microsoft.Identity.Client;
 
 namespace Api.src.Review.infraestructure.api
 {
     public class reviewService : ReviewRepository
     {
         private CreateReview createReviewService;
+        private SearchByProduct searchByProductService;
+
         public reviewService(ApplicationDBContext context) 
         {
             createReviewService = new CreateReview(context);
+            searchByProductService = new SearchByProduct(context);
         }
         public async Task<ReviewEntity> CreateAsync(CreateReviewDto review, Guid userId)
         {
@@ -25,7 +29,7 @@ namespace Api.src.Review.infraestructure.api
 
         public async Task<List<ReviewEntity>> GetAllByProductAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await searchByProductService.Run(id);
         }
 
         public async Task<List<ReviewEntity>> GetAllByUserAsync(Guid id)
