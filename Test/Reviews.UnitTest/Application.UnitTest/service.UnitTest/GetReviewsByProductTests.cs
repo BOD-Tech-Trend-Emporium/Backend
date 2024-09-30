@@ -32,6 +32,7 @@ namespace Test.Reviews.UnitTest.Application.UnitTest.service.UnitTest
             databaseContext.Database.EnsureCreated();
             return databaseContext;
         }
+
         [Fact]
         public async void GivenAlreadyReviews_When_GetReviews_Then_ReviewListEntity()
         {
@@ -98,5 +99,59 @@ namespace Test.Reviews.UnitTest.Application.UnitTest.service.UnitTest
             result[0].User.Id.Should().Be(userId);
         }
 
+        [Fact]
+        public async void GivenNoReviews_When_GetReviews_Then_ReviewListEntityEmpty()
+        {
+            //configuring base 
+            var dbContext = await GetDataBaseContext();
+
+            // Create Category
+            CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Created };
+            UserRole role = UserRole.Employee;
+            CategoryStatus categoryStatus = CategoryStatus.ToCreate;
+            // Create Product
+            var productId = Guid.NewGuid();
+            ProductEntity product = new()
+            {
+                Category = category,
+                Description = "asd",
+                Image = "asd",
+                Id = productId,
+                Status = ProductStatus.Created,
+                Stock = 4,
+                Title = "Title",
+            };
+            
+            dbContext.Product.Add(product);
+            dbContext.Category.Add(category);
+            await dbContext.SaveChangesAsync();
+
+            //ACT
+            SearchReviewByProduct searchReviewByProduct = new SearchReviewByProduct(dbContext);
+            List<ReviewEntity> result = await searchReviewByProduct.Run(productId);
+
+
+            //Assert
+            result.Count.Should().Be(0);
+        }
+
+        [Fact]
+        public async void GivenGetReviews_When_NoProduct_Then_ThrowError()
+        {
+            //configuring base 
+            var dbContext = await GetDataBaseContext();
+
+            var productId = Guid.NewGuid();
+
+            //ACT
+            SearchReviewByProduct searchReviewByProduct = new SearchReviewByProduct(dbContext);
+
+            Func<Task> act = () => searchReviewByProduct.Run(productId);
+
+
+            //Assert
+            await act.Should().ThrowAsync<BadRequestException>()
+                .WithMessage($"product with id {productId} doesn't exist");
+        }
     }
 }
