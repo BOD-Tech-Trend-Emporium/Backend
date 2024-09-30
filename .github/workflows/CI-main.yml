@@ -23,7 +23,7 @@ jobs:
         run: |
           sed -i 's/{DB_USER_PROD}/${{ secrets.DB_USER_PROD }}/g' appsettings.Production.json
           sed -i 's/{DB_PASSWORD_PROD}/${{ secrets.DB_PASSWORD_PROD }}/g' appsettings.Production.json
-          sed -i 's/{TOKEN_KEY_PROD}/${{ secrets.TOKEN_KEY_PROD }}/g' appsettings.Development.json
+          sed -i 's/{TOKEN_KEY_PROD}/${{ secrets.TOKEN_KEY_PROD }}/g' appsettings.Production.json
         working-directory: ./Api
       - name: Tests
         id: testMain
