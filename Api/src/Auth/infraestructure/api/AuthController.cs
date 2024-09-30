@@ -38,7 +38,7 @@ namespace Api.src.Auth.infraestructure.api
         }
 
         [HttpPost("admin/auth")]
-        [Authorize(Roles = nameof(UserRole.Admin))]
+        // [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> SignUpUser([FromBody] CreateUserDto user)
         {   
             var userModel = user.ToUserModelForCreate();
