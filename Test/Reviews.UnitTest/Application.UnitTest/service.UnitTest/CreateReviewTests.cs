@@ -138,5 +138,50 @@ namespace Test.Reviews.UnitTest.Application.UnitTest.service.UnitTest
             await act.Should().ThrowAsync<BadRequestException>()
                 .WithMessage($"user with Id {fakeUserId} or product with id {productId} doesn't exist");
         }
+
+        [Fact]
+        public async void GivenNewReview_When_ProductDontExist_Then_ThrowError()
+        {
+            //configuring base 
+            var dbContext = await GetDataBaseContext();
+
+            
+            // Create Product
+            var fakeProductId = Guid.NewGuid();
+
+            // Create user
+            var userId = Guid.NewGuid();
+            var username = "username";
+            UserEntity user = new()
+            {
+                Id = userId,
+                Password = "asd",
+                UserName = username,
+                Name = "asd",
+                Role = UserRole.Employee,
+                Status = UserStatus.Created,
+                Email = "asd"
+            };
+            dbContext.User.Add(user);
+
+            await dbContext.SaveChangesAsync();
+            var comment = "comment";
+            var rating = 5.0f;
+            // test service
+            CreateReviewDto newReview = new CreateReviewDto
+            {
+                productId = fakeProductId,
+                comment = comment,
+                rating = rating
+            };
+
+            CreateReview createReview = new CreateReview(dbContext);
+            //ACT
+            Func<Task> act = () => createReview.Run(newReview, userId);
+
+            //Assert
+            await act.Should().ThrowAsync<BadRequestException>()
+                .WithMessage($"user with Id {userId} or product with id {fakeProductId} doesn't exist");
+        }
     }
 }
