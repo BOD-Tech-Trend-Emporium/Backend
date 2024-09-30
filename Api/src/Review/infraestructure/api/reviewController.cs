@@ -40,11 +40,11 @@ namespace Api.src.Review.infraestructure.api
         [HttpPost]
         [Route("")]
         [ProducesResponseType(201, Type = typeof(ReviewDto))]
-        // [Authorize(Roles = nameof(UserRole.Shopper))]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
         public async Task<IActionResult> Create([FromBody] CreateReviewDto review)
         {
-            // var userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
-            var userId = review.userId;
+            var userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
+            // var userId = review.userId;
             var created = await _reviewService.CreateAsync(review, userId);
             return Created($"api/Review", created.ToReviewDto());
         }

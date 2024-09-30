@@ -4,6 +4,7 @@ using Api.src.Review.domain.dto;
 using Api.src.Review.domain.entity;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Api.src.Review.application.service
 {
@@ -18,6 +19,15 @@ namespace Api.src.Review.application.service
 
         public async Task<ReviewEntity> Run(CreateReviewDto review, Guid userId) 
         {
+            // check review
+            if (review.rating < 0 || review.rating>5)
+            {
+                throw new BadRequestException(
+                    $"rating must be between 0 and 5, given: {review.rating}"
+                    );
+            }
+
+            // Check if the product and the user exists
             var product = await _context.Product
                 .FirstOrDefaultAsync(product => product.Id == review.productId);
 
@@ -31,6 +41,19 @@ namespace Api.src.Review.application.service
                     );
             }
 
+            // Check if the user has already make a review on this product
+
+            var existingReview = await _context.Review
+                .FirstOrDefaultAsync(r => r.User.Id == userId && r.Product.Id == review.productId);
+
+            if (existingReview != null)
+            {
+                throw new BadRequestException(
+                    $"User with Id {userId} has already reviewed the Product with Id {review.productId}. User should update instead of create review"
+                );
+            }
+
+            // Create the review
             ReviewEntity entity = new ReviewEntity {
                 Comment = review.comment,
                 Product = product,
