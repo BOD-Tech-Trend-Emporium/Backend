@@ -1,4 +1,4 @@
-﻿using Api.src.Favorite.domain.entity;
+﻿using Api.src.Cart.domain.entity;
 using Api.src.Price.domain.entity;
 using System.ComponentModel.DataAnnotations;
 

@@ -33,15 +33,15 @@
   <ItemGroup>
     <Folder Include="src\Price\application\" />
     <Folder Include="src\Price\infraestructure\" />
-    <Folder Include="src\Coupon\application\" />
     <Folder Include="src\Coupon\infraestructure\" />
-    <Folder Include="src\CartToProduct\application\" />
-    <Folder Include="src\CartToProduct\infraestructure\" />
     <Folder Include="src\Product\infraestructure\" />
     <Folder Include="src\Favorite\application\" />
     <Folder Include="src\Favorite\infraestructure\" />
     <Folder Include="src\Review\application\" />
     <Folder Include="src\Review\infraestructure\" />
+    <Folder Include="src\Review\application\mappers\" />
+    <Folder Include="src\Review\application\service\" />
+    <Folder Include="src\Review\domain\dto\" />
     <Folder Include="src\Cart\application\" />
     <Folder Include="src\Cart\infraestructure\" />
   </ItemGroup>

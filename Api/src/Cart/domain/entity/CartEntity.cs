@@ -1,12 +1,11 @@
-﻿using backend.src.User.domain.enums;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Api.src.Cart.domain.enums;
 using backend.src.User.domain.entity;
 using Api.src.Coupon.domain.entity;
 using Api.src.CartToProduct.domain.entity;
 
-namespace Api.src.Favorite.domain.entity
+namespace Api.src.Cart.domain.entity
 {
     public class CartEntity
     {
