@@ -12,25 +12,16 @@ using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using Test.Common;
 namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
 {
     public class DeleteUserByIdTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
-
         [Fact]
         public async void Given_UserIdDoesNotExist_When_ThereAreUsersToDelete_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
 
@@ -53,7 +44,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_UserId_When_TheUserHasARemovedStatus_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Removed };
 
@@ -76,7 +67,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_UserId_When_TheUsersHaveCreatedStatus_Then_UserEntityTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             SessionEntity sesion = new SessionEntity() { IsActive = true };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created,Session= sesion };

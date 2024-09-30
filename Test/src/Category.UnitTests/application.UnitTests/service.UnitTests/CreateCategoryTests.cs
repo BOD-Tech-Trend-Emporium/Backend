@@ -6,27 +6,18 @@ using backend.Data;
 using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Test.Common;
 
 
 namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
 {
     public class CreateCategoryTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
-        
-        /*
+     
         [Fact]
         public async void Given_NewCategory_When_CategoryAlreadyCreated_Then_ConflictException() {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             CategoryEntity category = new() { Name = "Books", Status = Api.src.Category.domain.enums.CategoryStatus.Created};
             UserRole role = UserRole.Admin;
             dbContext.Category.Add(category);
@@ -39,15 +30,15 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
            
             //Assert
             await act.Should().ThrowAsync<ConflictException>()
-            .WithMessage("Category already exists");
+            .WithMessage("Category already exists or is pending to be created");
 
-        }*/
+        }
 
         [Fact]
         public async void Given_AdminCreatesANewCategory_When_CategoryDoesNotExist_Then_CategoryEntity()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Created };
             UserRole role = UserRole.Admin;
             CategoryStatus categoryStatus = CategoryStatus.Created;
@@ -66,7 +57,7 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_EmployeeCreatesANewCategory_When_CategoryDoesNotExist_Then_CategoryEntity()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Created };
             UserRole role = UserRole.Employee;
             CategoryStatus categoryStatus = CategoryStatus.ToCreate;

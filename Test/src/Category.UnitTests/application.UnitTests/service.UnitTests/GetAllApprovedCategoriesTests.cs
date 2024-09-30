@@ -4,26 +4,18 @@ using Api.src.Category.domain.enums;
 using backend.Data;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Test.Common;
 
 namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
 {
     public class GetAllApprovedCategoriesTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
 
         [Fact]
         public async void Given_AllCategories_When_CategoriesWithNoCreatedStatus_Then_EmptyListTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             GetAllApprovedCategories getAllApprovedCategories = new GetAllApprovedCategories(dbContext);
             CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Removed };
             CategoryEntity category2 = new() { Name = "Videogames", Status = CategoryStatus.Removed };
@@ -39,12 +31,12 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
             result.Should().BeEmpty();
 
         }
-        /*
+        
         [Fact]
         public async void Given_AllCategories_When_CategoriesWithCreatedStatusAndOtherStatus_Then_ApprovedCategoriesListTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             GetAllApprovedCategories getAllApprovedCategories = new GetAllApprovedCategories(dbContext);
             CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Removed };
             CategoryEntity category2 = new() { Name = "Videogames", Status = CategoryStatus.ToCreate };
@@ -62,13 +54,13 @@ namespace Test.Category.UnitTests.application.UnitTests.service.UnitTests
 
             //ACT
             var result = await getAllApprovedCategories.Run();
-            var expected = new List<CategoryEntity>() { category3, category4 };
+            var expected = new List<CategoryEntity>() { category3, category4,category5 };
 
             //Assert
             result.Should().NotBeEmpty();
-            result.Should().HaveCount(2);
+            result.Should().HaveCount(3);
             result.Should().BeEquivalentTo(expected);
 
-        }*/
+        }
     }
 }

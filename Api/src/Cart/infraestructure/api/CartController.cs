@@ -27,7 +27,24 @@ namespace Api.src.Cart.infraestructure.api
         public async Task<IActionResult> Update([FromBody] UpdateCartDto updateCartDto)
         {
             var result = await _cartRepository.UpdateAsync(updateCartDto, Guid.Parse(Token.GetTokenPayload(Request).UserId));
-            return Created($"/api/cart/{result.Id}", result.ToUpdateCartResponseDto());
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> GetCart()
+        {
+            var result = await _cartRepository.GetPendingCartAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("purchase")]
+        [Authorize(Roles = nameof(UserRole.Shopper))]
+        public async Task<IActionResult> CreatePurchase()
+        {
+            var result = await _cartRepository.CreatePurchaseAsync(Guid.Parse(Token.GetTokenPayload(Request).UserId));
+            return Ok(result);
         }
     }
 }

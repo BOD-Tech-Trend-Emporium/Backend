@@ -5,26 +5,18 @@ using backend.src.User.domain.entity;
 using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Test.Common;
 
 namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
 {
     public class GetAllUsersTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
 
         [Fact]
         public async void Given_AllUsers_When_AllUsersWithCreatedStatusAndNotAdminRole_Then_UsersListTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
 
@@ -47,7 +39,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_AllUsers_When_AllUsersAreAdmin_Then_EmptyListTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Admin, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Admin, Status = UserStatus.Created };
 
@@ -68,7 +60,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_AllUsers_When_UsersHaveCreatedStatusAndRemovedStatusAndOneAdmin_Then_UsersListTask()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
             UserEntity user3 = new() { Name = "Fizz", Email = "Fizz@gmail.com", UserName = "XxFizzxX", Password = "fizzTheBest", Role = UserRole.Admin, Status = UserStatus.Created };
