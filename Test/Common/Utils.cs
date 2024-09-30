@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Test.Common
 {
-    public class Utils
+    public static class Utils
     {
         public static ApplicationDBContext GetDataBaseContext()
         {
