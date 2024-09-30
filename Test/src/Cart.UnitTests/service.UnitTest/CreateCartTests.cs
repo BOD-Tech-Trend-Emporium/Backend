@@ -11,27 +11,19 @@ using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Test.Common;
 
 
 namespace Test.src.Cart.UnitTests.service.UnitTest
 {
     public class CreateCartTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
 
         [Fact]
         public async void Given_ANewCart_When_UserHasOneWithPendingStatus_Then_ConflictException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Shopper, Status = UserStatus.Created };
             CartEntity cart = new() { User = user, State = CartState.Pending};
             dbContext.User.Add(user);
@@ -50,16 +42,16 @@ namespace Test.src.Cart.UnitTests.service.UnitTest
         }
 
         [Fact]
-        public async void Given_ANewCart_When_UserDoesNotHaveOneOrApprovedStatus_Then_CartResponse()
+        public async void Given_ANewCart_When_UserDoesNotHaveOneOrApprovedStatus_Then_CartResponseDto()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Shopper, Status = UserStatus.Created };
             CartEntity cart = new() { User = user, State = CartState.Approved };
             dbContext.User.Add(user);
             dbContext.Cart.Add(cart);
             await dbContext.SaveChangesAsync();
-            CartResponse cartResponse = new CartResponse() { UserId = user.Id, ShoppingCart = new List<Guid>(), ShippingCost = 0, FinalTotal = 0 };
+            CartResponseDto cartResponse = new CartResponseDto() { UserId = user.Id, ShoppingCart = new List<Guid>(), ShippingCost = 0, FinalTotal = 0 };
 
             CreateCart createCart = new CreateCart(dbContext);
 
