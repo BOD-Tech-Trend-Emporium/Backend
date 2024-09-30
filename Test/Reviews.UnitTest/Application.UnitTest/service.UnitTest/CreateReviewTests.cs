@@ -1,6 +1,7 @@
 ﻿using Api.src.Category.application.service;
 using Api.src.Category.domain.entity;
 using Api.src.Category.domain.enums;
+using Api.src.Common.exceptions;
 using Api.src.Product.domain.entity;
 using Api.src.Product.domain.enums;
 using Api.src.Review.application.service;
@@ -92,5 +93,50 @@ namespace Test.Reviews.UnitTest.Application.UnitTest.service.UnitTest
             result.User.Id.Should().Be(userId);
         }
 
+        [Fact]
+        public async void GivenNewReview_When_NewUserDontExist_Then_ThrowError()
+        {
+            //configuring base 
+            var dbContext = await GetDataBaseContext();
+
+            // Create Category
+            CategoryEntity category = new() { Name = "Books", Status = CategoryStatus.Created };
+            UserRole role = UserRole.Employee;
+            CategoryStatus categoryStatus = CategoryStatus.ToCreate;
+            // Create Product
+            var productId = Guid.NewGuid();
+            ProductEntity product = new()
+            {
+                Category = category,
+                Description = "asd",
+                Image = "asd",
+                Id = productId,
+                Status = ProductStatus.Created,
+                Stock = 4,
+                Title = "Title",
+            };
+            
+            dbContext.Product.Add(product);
+            dbContext.Category.Add(category);
+            await dbContext.SaveChangesAsync();
+            var comment = "comment";
+            var rating = 5.0f;
+            // test service
+            CreateReviewDto newReview = new CreateReviewDto
+            {
+                productId = productId,
+                comment = comment,
+                rating = rating
+            };
+
+            CreateReview createReview = new CreateReview(dbContext);
+            var fakeUserId = Guid.NewGuid();
+            //ACT
+            Func<Task> act = () => createReview.Run(newReview,fakeUserId );
+
+            //Assert
+            await act.Should().ThrowAsync<BadRequestException>()
+                .WithMessage($"user with Id {fakeUserId} or product with id {productId} doesn't exist");
+        }
     }
 }
