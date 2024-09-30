@@ -23,7 +23,7 @@ namespace Api.src.Cart.application.service
             _getCouponByCode = new GetCouponByCode(context);
             _getPendingCartByUserId = new GetPendingCartByUserId(context);
         }
-        public async Task<CartResponse> Run(UpdateCartDto cart, Guid idUser)
+        public async Task<CartResponseDto> Run(UpdateCartDto cart, Guid idUser)
         {
             var user = await _getUserById.Run(idUser);
 

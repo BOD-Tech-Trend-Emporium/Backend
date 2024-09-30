@@ -29,9 +29,9 @@ namespace Api.src.Cart.application.mappers
             };
         }
 
-        public static CartResponse ToCartResponse(CartEntity cart)
+        public static CartResponseDto ToCartResponse(CartEntity cart)
         {
-            return new CartResponse
+            return new CartResponseDto
             {
                 UserId = cart.User.Id,
                 ShippingCost = cart.ShippingCost,

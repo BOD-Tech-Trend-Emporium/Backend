@@ -24,7 +24,7 @@ namespace Api.src.Cart.application.service
             _getPendingCartByUserId = new GetPendingCartByUserId(context);
         }
 
-        public async Task<CartResponse> Run(Guid idUser)
+        public async Task<CartResponseDto> Run(Guid idUser)
         {
             var cartEntity = new CartEntity();
             var user = await _getUserById.Run(idUser);

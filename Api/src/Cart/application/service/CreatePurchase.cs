@@ -23,7 +23,7 @@ namespace Api.src.Cart.application.service
             _getProductById = new GetProductById(context);
         }
 
-        public async Task<PurchaseResponse> Run(Guid idUser)
+        public async Task<PurchaseResponseDto> Run(Guid idUser)
         {
             var user = await _getUserById.Run(idUser);
 
@@ -48,7 +48,7 @@ namespace Api.src.Cart.application.service
             cartEntity.State = CartState.Approved;
             await _context.SaveChangesAsync();
 
-            return new PurchaseResponse() { Message = "Successful purchase" };
+            return new PurchaseResponseDto() { Message = "Successful purchase" };
 
         }
 

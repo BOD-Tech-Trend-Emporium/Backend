@@ -20,22 +20,22 @@ namespace Api.src.Cart.infraestructure.api
 
         }
 
-        public async Task<CartResponse> CreateAsync(Guid idUser)
+        public async Task<CartResponseDto> CreateAsync(Guid idUser)
         {
             return await _createCart.Run(idUser);
         }
 
-        public Task<PurchaseResponse> CreatePurchaseAsync(Guid userId)
+        public Task<PurchaseResponseDto> CreatePurchaseAsync(Guid userId)
         {
             return _createPurchase.Run(userId);
         }
 
-        public async Task<CartResponse> GetPendingCartAsync(Guid userId)
+        public async Task<CartResponseDto> GetPendingCartAsync(Guid userId)
         {
             return await _getPendingCartByUserId.Run(userId);
         }
 
-        public async Task<CartResponse> UpdateAsync(UpdateCartDto entity, Guid userId)
+        public async Task<CartResponseDto> UpdateAsync(UpdateCartDto entity, Guid userId)
         {
             return await _updateCartByUserId.Run(entity, userId);
         }
