@@ -68,9 +68,20 @@ namespace backend.src.User.infraestructure.api
 
         [HttpPut]
         [Route("{id}")]
+        [Authorize(Roles = nameof(UserRole.Admin))]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateUserDto user)
         {
             var updatedUser = await _userService.UpdateByIdAsync(id, user);
+            return Ok(updatedUser);
+        }
+
+        [HttpPut]
+        [Route("update")]
+        [Authorize]
+        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto user)
+        {
+            var userId = Guid.Parse(Token.GetTokenPayload(Request).UserId);
+            var updatedUser = await _userService.UpdateByIdAsync(userId, user);
             return Ok(updatedUser);
         }
 
