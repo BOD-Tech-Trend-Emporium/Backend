@@ -20,26 +20,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test.Common;
 
 namespace Test.src.Cart.UnitTests.service.UnitTest
 {
     public class CreatePurchaseTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
-
         [Fact]
         public async void Given_APurchase_When_TheCartDoesNotExist_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Shopper, Status = UserStatus.Created };
             dbContext.User.Add(user);
             await dbContext.SaveChangesAsync();
@@ -59,7 +50,7 @@ namespace Test.src.Cart.UnitTests.service.UnitTest
         public async void Given_APurchase_When_InsufficientProductInInventory_Then_ConflictException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Shopper, Status = UserStatus.Created };
             CartEntity cart = new() { User = user, State = CartState.Pending };
             CategoryEntity categoryEntity = new CategoryEntity() { Name = "Music", Status = CategoryStatus.Created};
@@ -86,11 +77,11 @@ namespace Test.src.Cart.UnitTests.service.UnitTest
 
         }
         [Fact]
-        public async void Given_APurchase_When_TheProductIsEnough_Then_PurchaseResponse()
+        public async void Given_APurchase_When_TheProductIsEnough_Then_PurchaseResponseDto()
         {
             //Arrange
 
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Shopper, Status = UserStatus.Created };
             CartEntity cart = new() { User = user, State = CartState.Pending };
             CategoryEntity categoryEntity = new CategoryEntity() { Name = "Music", Status = CategoryStatus.Created };
@@ -104,7 +95,7 @@ namespace Test.src.Cart.UnitTests.service.UnitTest
             dbContext.CartToProduct.Add(cartToProduct);
             dbContext.Product.Add(product);
             await dbContext.SaveChangesAsync();
-            var expected = new PurchaseResponse() { Message = "Successful purchase" };
+            var expected = new PurchaseResponseDto() { Message = "Successful purchase" };
             //ACT
             CreatePurchase createPurchase = new CreatePurchase(dbContext);
             var result =await createPurchase.Run(user.Id);
