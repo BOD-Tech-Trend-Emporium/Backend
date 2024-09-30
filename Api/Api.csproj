@@ -40,8 +40,9 @@
     <Folder Include="src\Product\infraestructure\" />
     <Folder Include="src\Favorite\application\" />
     <Folder Include="src\Favorite\infraestructure\" />
-    <Folder Include="src\Review\application\" />
-    <Folder Include="src\Review\infraestructure\" />
+    <Folder Include="src\Review\application\mappers\" />
+    <Folder Include="src\Review\application\service\" />
+    <Folder Include="src\Review\domain\dto\" />
     <Folder Include="src\Cart\application\" />
     <Folder Include="src\Cart\infraestructure\" />
   </ItemGroup>

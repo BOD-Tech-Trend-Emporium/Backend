@@ -8,6 +8,8 @@ using Api.src.Category.infraestructure.api;
 using Api.src.Common.middleware;
 using Api.src.Product.domain.repository;
 using Api.src.Product.infraestructure.api;
+using Api.src.Review.domain.repository;
+using Api.src.Review.infraestructure.api;
 using backend.Data;
 using backend.src.User.application.service;
 using backend.src.User.domain.repository;
@@ -57,6 +59,7 @@ builder.Services.AddScoped<UserRepository, UserService>();
 builder.Services.AddScoped<AuthRepository, AuthService>();
 builder.Services.AddScoped<CategoryRepository, CategoryService>();
 builder.Services.AddScoped<ProductRepository, ProductService>();
+builder.Services.AddScoped<ReviewRepository, reviewService>();
 
 var app = builder.Build();
 
