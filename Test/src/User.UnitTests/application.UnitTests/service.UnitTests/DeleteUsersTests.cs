@@ -6,27 +6,19 @@ using backend.src.User.domain.entity;
 using backend.src.User.domain.enums;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
+using Test.Common;
 
 
 namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
 {
     public class DeleteUsersTests
     {
-        private async Task<ApplicationDBContext> GetDataBaseContext()
-        {
-            var options = new DbContextOptionsBuilder<ApplicationDBContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var databaseContext = new ApplicationDBContext(options);
-            databaseContext.Database.EnsureCreated();
-            return databaseContext;
-        }
 
         [Fact]
         public async void Given_AListOfEmails_When_NoEmailMatches_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
 
@@ -50,7 +42,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_AEmpyEmails_When_NoEmailMatches_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
 
@@ -73,7 +65,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_AEmpyEmails_When_NoEmailExists_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
 
             List<string> userEmails = new List<string>();
             DeleteUsers deleteUsers = new DeleteUsers(dbContext);
@@ -91,7 +83,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_AEmpyEmails_When_UsersWithCreatedStatusAndRemoveStatus_Then_NotFoundException()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
             UserEntity user3 = new() { Name = "Yone", Email = "Yone@gmail.com", UserName = "Yone", Password = "Yone12343", Role = UserRole.Shopper, Status = UserStatus.Removed };
@@ -117,7 +109,7 @@ namespace Test.User.UnitTests.application.UnitTests.service.UnitTests
         public async void Given_UserEmails_When_UsersWithCreatedStatusAndRemoveStatus_Then_SeccessfullyRemove()
         {
             //Arrange
-            var dbContext = await GetDataBaseContext();
+            var dbContext = Utils.GetDataBaseContext();
             UserEntity user = new() { Name = "Sir Isaac Netwon", Email = "Isaac@gmail.com", UserName = "Isaac21", Password = "contrasena", Role = UserRole.Employee, Status = UserStatus.Created };
             UserEntity user2 = new() { Name = "Yasuo", Email = "Yauso@gmail.com", UserName = "XxYausoxX", Password = "ggjgskfns", Role = UserRole.Shopper, Status = UserStatus.Created };
             UserEntity user3 = new() { Name = "Yone", Email = "Yone@gmail.com", UserName = "Yone", Password = "Yone12343", Role = UserRole.Shopper, Status = UserStatus.Created };
