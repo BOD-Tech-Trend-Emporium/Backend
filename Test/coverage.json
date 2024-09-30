@@ -602,19 +602,19 @@
       "Api.src.Product.domain.entity.ProductEntity": {
         "System.Guid Api.src.Product.domain.entity.ProductEntity::get_Id()": {
           "Lines": {
-            "14": 25
+            "14": 28
           },
           "Branches": []
         },
         "Api.src.Category.domain.entity.CategoryEntity Api.src.Product.domain.entity.ProductEntity::get_Category()": {
           "Lines": {
-            "17": 35
+            "17": 38
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Title()": {
           "Lines": {
-            "20": 35
+            "20": 38
           },
           "Branches": []
         },
@@ -626,25 +626,25 @@
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Description()": {
           "Lines": {
-            "26": 35
+            "26": 38
           },
           "Branches": []
         },
         "System.String Api.src.Product.domain.entity.ProductEntity::get_Image()": {
           "Lines": {
-            "29": 35
+            "29": 38
           },
           "Branches": []
         },
         "System.Int32 Api.src.Product.domain.entity.ProductEntity::get_Stock()": {
           "Lines": {
-            "32": 27
+            "32": 30
           },
           "Branches": []
         },
         "Api.src.Product.domain.enums.ProductStatus Api.src.Product.domain.entity.ProductEntity::get_Status()": {
           "Lines": {
-            "35": 27
+            "35": 30
           },
           "Branches": []
         },
@@ -1720,19 +1720,19 @@
         },
         "Api.src.Product.domain.entity.ProductEntity Api.src.Price.domain.entity.PriceEntity::get_Product()": {
           "Lines": {
-            "14": 17
+            "14": 20
           },
           "Branches": []
         },
         "System.Single Api.src.Price.domain.entity.PriceEntity::get_Price()": {
           "Lines": {
-            "17": 23
+            "17": 29
           },
           "Branches": []
         },
         "System.Boolean Api.src.Price.domain.entity.PriceEntity::get_Current()": {
           "Lines": {
-            "20": 23
+            "20": 26
           },
           "Branches": []
         },
@@ -1794,19 +1794,19 @@
         },
         "System.String Api.src.Coupon.domain.entity.CouponEntity::get_Code()": {
           "Lines": {
-            "15": 0
+            "15": 11
           },
           "Branches": []
         },
         "System.Single Api.src.Coupon.domain.entity.CouponEntity::get_Discount()": {
           "Lines": {
-            "18": 0
+            "18": 11
           },
           "Branches": []
         },
         "Api.src.Coupon.domain.enums.CouponStatus Api.src.Coupon.domain.entity.CouponEntity::get_Status()": {
           "Lines": {
-            "21": 0
+            "21": 3
           },
           "Branches": []
         },
@@ -1844,10 +1844,10 @@
       "Api.src.Coupon.application.service.GetCouponByCode": {
         "System.Void Api.src.Coupon.application.service.GetCouponByCode::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "13": 5,
-            "14": 5,
-            "15": 5,
-            "16": 5
+            "13": 12,
+            "14": 12,
+            "15": 12,
+            "16": 12
           },
           "Branches": []
         }
@@ -1855,13 +1855,13 @@
       "Api.src.Coupon.application.service.GetCouponByCode/<Run>d__2": {
         "System.Void Api.src.Coupon.application.service.GetCouponByCode/<Run>d__2::MoveNext()": {
           "Lines": {
-            "18": 0,
-            "19": 0,
-            "20": 0,
+            "18": 3,
+            "19": 3,
+            "20": 3,
             "21": 0,
             "22": 0,
-            "25": 0,
-            "27": 0
+            "25": 3,
+            "27": 3
           },
           "Branches": [
             {
@@ -1870,7 +1870,7 @@
               "EndOffset": 394,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 3
             },
             {
               "Line": 20,
@@ -1894,7 +1894,7 @@
               "EndOffset": 424,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 3
             }
           ]
         }
@@ -2031,9 +2031,9 @@
         },
         "System.Void Api.src.Common.exceptions.ConflictException::.ctor(System.String)": {
           "Lines": {
-            "16": 10,
-            "17": 10,
-            "19": 10
+            "16": 12,
+            "17": 12,
+            "19": 12
           },
           "Branches": []
         },
@@ -2059,9 +2059,9 @@
         },
         "System.Void Api.src.Common.exceptions.NotFoundException::.ctor(System.String)": {
           "Lines": {
-            "10": 9,
-            "11": 9,
-            "13": 9
+            "10": 13,
+            "11": 13,
+            "13": 13
           },
           "Branches": []
         },
@@ -2202,19 +2202,19 @@
       "Api.src.Category.domain.entity.CategoryEntity": {
         "System.Guid Api.src.Category.domain.entity.CategoryEntity::get_Id()": {
           "Lines": {
-            "11": 24
+            "11": 31
           },
           "Branches": []
         },
         "System.String Api.src.Category.domain.entity.CategoryEntity::get_Name()": {
           "Lines": {
-            "14": 50
+            "14": 72
           },
           "Branches": []
         },
         "Api.src.Category.domain.enums.CategoryStatus Api.src.Category.domain.entity.CategoryEntity::get_Status()": {
           "Lines": {
-            "17": 25
+            "17": 43
           },
           "Branches": []
         },
@@ -2256,7 +2256,7 @@
       "Api.src.Category.domain.dto.DeleteCategoryByIdResponseDto": {
         "System.String Api.src.Category.domain.dto.DeleteCategoryByIdResponseDto::get_Message()": {
           "Lines": {
-            "5": 0
+            "5": 6
           },
           "Branches": []
         }
@@ -2266,7 +2266,7 @@
       "Api.src.Category.domain.dto.UpdateCategoryByIdResponseDto": {
         "System.String Api.src.Category.domain.dto.UpdateCategoryByIdResponseDto::get_Message()": {
           "Lines": {
-            "5": 0
+            "5": 4
           },
           "Branches": []
         }
@@ -2286,10 +2286,10 @@
       "Api.src.Category.application.service.CreateCategory": {
         "System.Void Api.src.Category.application.service.CreateCategory::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 2
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
           },
           "Branches": []
         }
@@ -2297,12 +2297,12 @@
       "Api.src.Category.application.service.CreateCategory/<Run>d__2": {
         "System.Void Api.src.Category.application.service.CreateCategory/<Run>d__2::MoveNext()": {
           "Lines": {
-            "20": 2,
-            "21": 2,
-            "22": 2,
-            "23": 2,
-            "24": 0,
-            "25": 0,
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 3,
+            "24": 1,
+            "25": 1,
             "27": 2,
             "28": 0,
             "29": 0,
@@ -2329,7 +2329,7 @@
               "EndOffset": 356,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 23,
@@ -2337,7 +2337,7 @@
               "EndOffset": 370,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 23,
@@ -2353,7 +2353,7 @@
               "EndOffset": 400,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 23,
@@ -2369,7 +2369,7 @@
               "EndOffset": 410,
               "Path": 0,
               "Ordinal": 6,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 23,
@@ -2435,10 +2435,10 @@
       "Api.src.Category.application.service.DeleteCategoryById": {
         "System.Void Api.src.Category.application.service.DeleteCategoryById::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "14": 0,
-            "15": 0,
-            "16": 0,
-            "17": 0
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 2
           },
           "Branches": []
         }
@@ -2446,16 +2446,16 @@
       "Api.src.Category.application.service.DeleteCategoryById/<Run>d__2": {
         "System.Void Api.src.Category.application.service.DeleteCategoryById/<Run>d__2::MoveNext()": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "29": 0,
-            "31": 0,
-            "32": 0
+            "20": 2,
+            "21": 2,
+            "22": 3,
+            "23": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1
           },
           "Branches": [
             {
@@ -2464,7 +2464,7 @@
               "EndOffset": 73,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 22,
@@ -2480,7 +2480,7 @@
               "EndOffset": 94,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 22,
@@ -2488,7 +2488,7 @@
               "EndOffset": 157,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 25,
@@ -2504,7 +2504,7 @@
               "EndOffset": 169,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 29,
@@ -2520,7 +2520,7 @@
               "EndOffset": 329,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -2530,10 +2530,10 @@
       "Api.src.Category.application.service.GetAllApprovedCategories": {
         "System.Void Api.src.Category.application.service.GetAllApprovedCategories::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "12": 1,
-            "13": 1,
-            "14": 1,
-            "15": 1
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2
           },
           "Branches": []
         }
@@ -2541,10 +2541,10 @@
       "Api.src.Category.application.service.GetAllApprovedCategories/<Run>d__2": {
         "System.Void Api.src.Category.application.service.GetAllApprovedCategories/<Run>d__2::MoveNext()": {
           "Lines": {
-            "17": 1,
-            "18": 1,
-            "19": 1,
-            "20": 1
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2
           },
           "Branches": []
         }
@@ -2554,10 +2554,10 @@
       "Api.src.Category.application.service.UpdateCategoryById": {
         "System.Void Api.src.Category.application.service.UpdateCategoryById::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "15": 0,
-            "16": 0,
-            "17": 0,
-            "18": 0
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3
           },
           "Branches": []
         }
@@ -2565,18 +2565,18 @@
       "Api.src.Category.application.service.UpdateCategoryById/<Run>d__2": {
         "System.Void Api.src.Category.application.service.UpdateCategoryById/<Run>d__2::MoveNext()": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "36": 0
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 1,
+            "24": 1,
+            "26": 2,
+            "27": 1,
+            "28": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "36": 1
           },
           "Branches": [
             {
@@ -2585,7 +2585,7 @@
               "EndOffset": 497,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 22,
@@ -2593,7 +2593,7 @@
               "EndOffset": 553,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 26,
@@ -2601,7 +2601,7 @@
               "EndOffset": 813,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 26,
@@ -2609,7 +2609,7 @@
               "EndOffset": 825,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -2701,7 +2701,7 @@
     },
     "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Back-final\\Backend\\Api\\src\\Cart\\infraestructure\\api\\CartService.cs": {
       "Api.src.Cart.infraestructure.api.CartService": {
-        "System.Threading.Tasks.Task`1<Api.src.Cart.domain.dto.PurchaseResponse> Api.src.Cart.infraestructure.api.CartService::CreatePurchaseAsync(System.Guid)": {
+        "System.Threading.Tasks.Task`1<Api.src.Cart.domain.dto.PurchaseResponseDto> Api.src.Cart.infraestructure.api.CartService::CreatePurchaseAsync(System.Guid)": {
           "Lines": {
             "29": 0,
             "30": 0,
@@ -2757,31 +2757,31 @@
       "Api.src.Cart.domain.entity.CartEntity": {
         "System.Guid Api.src.Cart.domain.entity.CartEntity::get_Id()": {
           "Lines": {
-            "13": 4
+            "13": 10
           },
           "Branches": []
         },
         "backend.src.User.domain.entity.UserEntity Api.src.Cart.domain.entity.CartEntity::get_User()": {
           "Lines": {
-            "16": 6
+            "16": 12
           },
           "Branches": []
         },
         "Api.src.Coupon.domain.entity.CouponEntity Api.src.Cart.domain.entity.CartEntity::get_Coupon()": {
           "Lines": {
-            "18": 1
+            "18": 11
           },
           "Branches": []
         },
         "System.Single Api.src.Cart.domain.entity.CartEntity::get_ShippingCost()": {
           "Lines": {
-            "21": 2
+            "21": 7
           },
           "Branches": []
         },
         "Api.src.Cart.domain.enums.CartState Api.src.Cart.domain.entity.CartEntity::get_State()": {
           "Lines": {
-            "24": 8
+            "24": 11
           },
           "Branches": []
         },
@@ -2799,29 +2799,29 @@
         }
       }
     },
-    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Back-final\\Backend\\Api\\src\\Cart\\domain\\dto\\CartResponse.cs": {
-      "Api.src.Cart.domain.dto.CartResponse": {
-        "System.Guid Api.src.Cart.domain.dto.CartResponse::get_UserId()": {
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Back-final\\Backend\\Api\\src\\Cart\\domain\\dto\\CartResponseDto.cs": {
+      "Api.src.Cart.domain.dto.CartResponseDto": {
+        "System.Guid Api.src.Cart.domain.dto.CartResponseDto::get_UserId()": {
           "Lines": {
-            "5": 3
+            "5": 15
           },
           "Branches": []
         },
-        "System.Collections.Generic.List`1<System.Guid> Api.src.Cart.domain.dto.CartResponse::get_ShoppingCart()": {
+        "System.Collections.Generic.List`1<System.Guid> Api.src.Cart.domain.dto.CartResponseDto::get_ShoppingCart()": {
           "Lines": {
-            "6": 3
+            "6": 17
           },
           "Branches": []
         },
-        "System.Single Api.src.Cart.domain.dto.CartResponse::get_ShippingCost()": {
+        "System.Single Api.src.Cart.domain.dto.CartResponseDto::get_ShippingCost()": {
           "Lines": {
-            "7": 3
+            "7": 14
           },
           "Branches": []
         },
-        "System.Single Api.src.Cart.domain.dto.CartResponse::get_FinalTotal()": {
+        "System.Single Api.src.Cart.domain.dto.CartResponseDto::get_FinalTotal()": {
           "Lines": {
-            "8": 4
+            "8": 16
           },
           "Branches": []
         }
@@ -2831,19 +2831,19 @@
       "Api.src.Cart.domain.dto.CartWithCouponResponseDto": {
         "Api.src.Cart.domain.dto.CouponDto Api.src.Cart.domain.dto.CartWithCouponResponseDto::get_CouponApplied()": {
           "Lines": {
-            "5": 0
+            "5": 8
           },
           "Branches": []
         },
         "System.Single Api.src.Cart.domain.dto.CartWithCouponResponseDto::get_TotalBeforeDiscount()": {
           "Lines": {
-            "6": 0
+            "6": 10
           },
           "Branches": []
         },
         "System.Single Api.src.Cart.domain.dto.CartWithCouponResponseDto::get_TotalAfterDiscount()": {
           "Lines": {
-            "7": 0
+            "7": 8
           },
           "Branches": []
         }
@@ -2853,13 +2853,13 @@
       "Api.src.Cart.domain.dto.CouponDto": {
         "System.String Api.src.Cart.domain.dto.CouponDto::get_Coupon_code()": {
           "Lines": {
-            "5": 0
+            "5": 6
           },
           "Branches": []
         },
         "System.Single Api.src.Cart.domain.dto.CouponDto::get_Discount_percentage()": {
           "Lines": {
-            "6": 0
+            "6": 8
           },
           "Branches": []
         }
@@ -2881,9 +2881,9 @@
         }
       }
     },
-    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Back-final\\Backend\\Api\\src\\Cart\\domain\\dto\\PurchaseResponse.cs": {
-      "Api.src.Cart.domain.dto.PurchaseResponse": {
-        "System.String Api.src.Cart.domain.dto.PurchaseResponse::get_Message()": {
+    "C:\\Users\\jome\\OneDrive - ENDAVA\\Escritorio\\Back-final\\Backend\\Api\\src\\Cart\\domain\\dto\\PurchaseResponseDto.cs": {
+      "Api.src.Cart.domain.dto.PurchaseResponseDto": {
+        "System.String Api.src.Cart.domain.dto.PurchaseResponseDto::get_Message()": {
           "Lines": {
             "5": 4
           },
@@ -2895,7 +2895,7 @@
       "Api.src.Cart.domain.dto.UpdateCartDto": {
         "System.String Api.src.Cart.domain.dto.UpdateCartDto::get_CouponCode()": {
           "Lines": {
-            "5": 0
+            "5": 3
           },
           "Branches": []
         }
@@ -3040,12 +3040,12 @@
       "Api.src.Cart.application.service.GetPendingCartByUserId": {
         "System.Void Api.src.Cart.application.service.GetPendingCartByUserId::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "18": 5,
-            "19": 5,
-            "20": 5,
-            "21": 5,
-            "22": 5,
-            "23": 5
+            "18": 10,
+            "19": 10,
+            "20": 10,
+            "21": 10,
+            "22": 10,
+            "23": 10
           },
           "Branches": []
         }
@@ -3053,27 +3053,27 @@
       "Api.src.Cart.application.service.GetPendingCartByUserId/<Run>d__4": {
         "System.Void Api.src.Cart.application.service.GetPendingCartByUserId/<Run>d__4::MoveNext()": {
           "Lines": {
-            "26": 1,
-            "27": 1,
-            "28": 1,
-            "30": 1,
-            "31": 0,
-            "32": 0,
-            "34": 1,
-            "35": 1,
-            "37": 2,
-            "38": 1,
-            "39": 1,
-            "40": 1,
-            "42": 1,
-            "45": 0,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 1
+            "26": 5,
+            "27": 5,
+            "28": 5,
+            "30": 5,
+            "31": 1,
+            "32": 1,
+            "34": 4,
+            "35": 4,
+            "37": 6,
+            "38": 2,
+            "39": 2,
+            "40": 2,
+            "42": 2,
+            "45": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "53": 4
           },
           "Branches": [
             {
@@ -3082,7 +3082,7 @@
               "EndOffset": 673,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 30,
@@ -3090,7 +3090,7 @@
               "EndOffset": 685,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 1
+              "Hits": 4
             },
             {
               "Line": 37,
@@ -3098,7 +3098,7 @@
               "EndOffset": 1515,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 37,
@@ -3106,7 +3106,7 @@
               "EndOffset": 1598,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -3116,13 +3116,13 @@
       "Api.src.Cart.application.service.UpdateCartByUserId": {
         "System.Void Api.src.Cart.application.service.UpdateCartByUserId::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "19": 0,
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2
           },
           "Branches": []
         }
@@ -3130,16 +3130,16 @@
       "Api.src.Cart.application.service.UpdateCartByUserId/<Run>d__5": {
         "System.Void Api.src.Cart.application.service.UpdateCartByUserId/<Run>d__5::MoveNext()": {
           "Lines": {
-            "27": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "36": 0,
-            "37": 0,
-            "39": 0,
-            "41": 0
+            "27": 2,
+            "28": 2,
+            "30": 2,
+            "31": 3,
+            "32": 1,
+            "34": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "41": 1
           },
           "Branches": [
             {
@@ -3148,7 +3148,7 @@
               "EndOffset": 598,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 31,
@@ -3156,7 +3156,7 @@
               "EndOffset": 610,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             }
           ]
         }
@@ -3178,40 +3178,40 @@
         },
         "Api.src.Cart.domain.dto.CartWithCouponResponseDto Api.src.Cart.application.mappers.CartMapper::ToCartWithCouponDtoResponse(Api.src.Cart.domain.entity.CartEntity)": {
           "Lines": {
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2
           },
           "Branches": []
         },
-        "Api.src.Cart.domain.dto.CartResponse Api.src.Cart.application.mappers.CartMapper::ToCartResponse(Api.src.Cart.domain.entity.CartEntity)": {
+        "Api.src.Cart.domain.dto.CartResponseDto Api.src.Cart.application.mappers.CartMapper::ToCartResponse(Api.src.Cart.domain.entity.CartEntity)": {
           "Lines": {
-            "33": 1,
-            "34": 1,
-            "35": 1,
-            "36": 1,
-            "37": 1,
-            "38": 1,
-            "39": 1,
-            "40": 1
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2,
+            "40": 2
           },
           "Branches": []
         },
         "Api.src.Cart.domain.dto.CouponDto Api.src.Cart.application.mappers.CartMapper::ToCouponDto(Api.src.Coupon.domain.entity.CouponEntity)": {
           "Lines": {
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "47": 0,
-            "48": 0
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2
           },
           "Branches": []
         }
@@ -3337,19 +3337,19 @@
         },
         "Api.src.Price.domain.entity.PriceEntity Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Price()": {
           "Lines": {
-            "13": 4
+            "13": 7
           },
           "Branches": []
         },
         "Api.src.Cart.domain.entity.CartEntity Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Cart()": {
           "Lines": {
-            "16": 6
+            "16": 9
           },
           "Branches": []
         },
         "System.Int32 Api.src.CartToProduct.domain.entity.CartToProductEntity::get_Quantity()": {
           "Lines": {
-            "19": 4
+            "19": 10
           },
           "Branches": []
         }
@@ -4721,43 +4721,43 @@
       "backend.src.User.domain.entity.UserEntity": {
         "System.Guid backend.src.User.domain.entity.UserEntity::get_Id()": {
           "Lines": {
-            "21": 38
+            "21": 55
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Name()": {
           "Lines": {
-            "24": 64
+            "24": 74
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Email()": {
           "Lines": {
-            "29": 94
+            "29": 104
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_UserName()": {
           "Lines": {
-            "32": 78
+            "32": 88
           },
           "Branches": []
         },
         "System.String backend.src.User.domain.entity.UserEntity::get_Password()": {
           "Lines": {
-            "35": 60
+            "35": 70
           },
           "Branches": []
         },
         "backend.src.User.domain.enums.UserRole backend.src.User.domain.entity.UserEntity::get_Role()": {
           "Lines": {
-            "38": 67
+            "38": 82
           },
           "Branches": []
         },
         "Api.src.User.domain.enums.UserStatus backend.src.User.domain.entity.UserEntity::get_Status()": {
           "Lines": {
-            "41": 64
+            "41": 74
           },
           "Branches": []
         },
@@ -5000,10 +5000,10 @@
       "backend.src.User.application.service.GetUserById": {
         "System.Void backend.src.User.application.service.GetUserById::.ctor(backend.Data.ApplicationDBContext)": {
           "Lines": {
-            "18": 18,
-            "19": 18,
-            "20": 18,
-            "21": 18
+            "18": 25,
+            "19": 25,
+            "20": 25,
+            "21": 25
           },
           "Branches": []
         }
@@ -5011,13 +5011,13 @@
       "backend.src.User.application.service.GetUserById/<Run>d__2": {
         "System.Void backend.src.User.application.service.GetUserById/<Run>d__2::MoveNext()": {
           "Lines": {
-            "23": 14,
-            "24": 14,
-            "25": 14,
+            "23": 20,
+            "24": 20,
+            "25": 20,
             "26": 1,
             "27": 1,
-            "29": 13,
-            "30": 13
+            "29": 19,
+            "30": 19
           },
           "Branches": [
             {
@@ -5034,7 +5034,7 @@
               "EndOffset": 253,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 13
+              "Hits": 19
             }
           ]
         }
@@ -5334,61 +5334,61 @@
       "backend.Data.ApplicationDBContext": {
         "Microsoft.EntityFrameworkCore.DbSet`1<backend.src.User.domain.entity.UserEntity> backend.Data.ApplicationDBContext::get_User()": {
           "Lines": {
-            "25": 149
+            "25": 170
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Session.domain.entity.SessionEntity> backend.Data.ApplicationDBContext::get_Session()": {
           "Lines": {
-            "26": 68
+            "26": 80
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Cart.domain.entity.CartEntity> backend.Data.ApplicationDBContext::get_Cart()": {
           "Lines": {
-            "27": 63
+            "27": 84
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Coupon.domain.entity.CouponEntity> backend.Data.ApplicationDBContext::get_Coupon()": {
           "Lines": {
-            "28": 52
+            "28": 69
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Favorite.domain.entity.FavoriteEntity> backend.Data.ApplicationDBContext::get_Favorite()": {
           "Lines": {
-            "29": 52
+            "29": 64
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Product.domain.entity.ProductEntity> backend.Data.ApplicationDBContext::get_Product()": {
           "Lines": {
-            "30": 84
+            "30": 99
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Review.domain.entity.ReviewEntity> backend.Data.ApplicationDBContext::get_Review()": {
           "Lines": {
-            "31": 52
+            "31": 64
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Category.domain.entity.CategoryEntity> backend.Data.ApplicationDBContext::get_Category()": {
           "Lines": {
-            "32": 82
+            "32": 112
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.Price.domain.entity.PriceEntity> backend.Data.ApplicationDBContext::get_Price()": {
           "Lines": {
-            "33": 62
+            "33": 77
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<Api.src.CartToProduct.domain.entity.CartToProductEntity> backend.Data.ApplicationDBContext::get_CartToProduct()": {
           "Lines": {
-            "34": 58
+            "34": 79
           },
           "Branches": []
         },
@@ -5447,9 +5447,9 @@
         },
         "System.Void backend.Data.ApplicationDBContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
           "Lines": {
-            "21": 52,
-            "22": 52,
-            "24": 52
+            "21": 64,
+            "22": 64,
+            "24": 64
           },
           "Branches": []
         }
