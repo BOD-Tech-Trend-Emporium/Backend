@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.src.Cart.domain.entity;
 using Api.src.CartToProduct.domain.entity;
 using Api.src.Category.domain.entity;
 using Api.src.Coupon.domain.entity;

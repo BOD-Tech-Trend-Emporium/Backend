@@ -20,7 +20,5 @@ namespace Api.src.Favorite.domain.entity
 
         [Required, Column(TypeName = "datetime2(7)")]
         public DateTime CreatedAt { get; set; }
-
-
     }
 }

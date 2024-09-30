@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api.src.User.domain.dto;
 using backend.src.User.domain.dto;
 using backend.src.User.domain.entity;
 
@@ -14,7 +15,7 @@ namespace backend.src.User.domain.repository
         Task<UserEntity?> GetByEmailAsync(string email);
         Task<UserEntity> CreateAsync(UserEntity user);
         Task<UserEntity?> DeleteByIdAsync(Guid id);
-        Task<UserEntity?> UpdateByIdAsync(Guid id, UpdateUserDto user);
+        Task<UpdateUserResultDto> UpdateByIdAsync(Guid id, UpdateUserDto user);
         Task DeleteUsers(List<string> userEmails);
     }
 }
