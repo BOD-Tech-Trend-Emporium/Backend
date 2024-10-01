@@ -1,4 +1,7 @@
 {
+  "AppSettings": {
+    "TokenKey": "YourKeyHere"
+  },
   "ConnectionStrings": {
     "server": "Data Source=<Server Address>;Initial Catalog=<Database name>; Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
   },
