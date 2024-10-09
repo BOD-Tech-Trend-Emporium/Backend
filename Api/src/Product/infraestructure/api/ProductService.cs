@@ -14,6 +14,7 @@ namespace Api.src.Product.infraestructure.api
         private CreateProduct createProductService;
         private GetProductById getProductByIdService;
         private UpdateProduct updateProductService;
+        private GetThreeLatestProducts getThreeLatestProductsService;
         public ProductService(ApplicationDBContext context) 
         {
             getAllProductsService = new GetAllProducts(context);
@@ -21,6 +22,7 @@ namespace Api.src.Product.infraestructure.api
             createProductService = new CreateProduct(context);
             getProductByIdService = new GetProductById(context);
             updateProductService = new UpdateProduct(context);
+            getThreeLatestProductsService = new GetThreeLatestProducts(context);
         }
 
         public async Task<List<ProductDto>> GetAllAsync()
@@ -51,6 +53,11 @@ namespace Api.src.Product.infraestructure.api
         public async Task<ProductEntity> UpdateByIdAsync(CreateProductDto product, Guid id)
         {
             return await updateProductService.Run(product, id);
+        }
+
+        public async Task<List<ProductDto>> GetThreeLatestAsync()
+        {
+            return await getThreeLatestProductsService.Run();
         }
     }
 }

@@ -65,5 +65,14 @@ namespace Api.src.Product.infraestructure.api
             var updatedEntity = await _productService.UpdateByIdAsync(updatedDto, id);
             return Ok(updatedEntity.Id);
         }
+
+        [HttpGet]
+        [Route("/three/latest")]
+        [ProducesResponseType(200, Type = typeof(List<ProductDto>))]
+        public async Task<IActionResult> GetThreeLatest()
+        {
+            var products = await _productService.GetThreeLatestAsync();
+            return Ok(products);
+        }
     }
 }

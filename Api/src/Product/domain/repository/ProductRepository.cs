@@ -12,5 +12,6 @@ namespace Api.src.Product.domain.repository
         Task<ProductEntity> CreateAsync(CreateProductDto entity, UserRole role);
         Task<ProductEntity> DeleteByIdAsync(Guid id);
         Task<ProductEntity> UpdateByIdAsync(CreateProductDto entity, Guid id);
+        Task<List<ProductDto>> GetThreeLatestAsync();
     }
 }
