@@ -67,7 +67,7 @@ namespace Api.src.Product.infraestructure.api
         }
 
         [HttpGet]
-        [Route("/three/latest")]
+        [Route("three/latest")]
         [ProducesResponseType(200, Type = typeof(List<ProductDto>))]
         public async Task<IActionResult> GetThreeLatest()
         {
@@ -76,7 +76,7 @@ namespace Api.src.Product.infraestructure.api
         }
 
         [HttpGet]
-        [Route("/best/selling")]
+        [Route("best/selling")]
         [ProducesResponseType(200, Type = typeof(List<ProductDto>))]
         public async Task<IActionResult> GetBestSelling()
         {
