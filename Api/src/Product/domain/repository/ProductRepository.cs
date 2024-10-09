@@ -13,5 +13,6 @@ namespace Api.src.Product.domain.repository
         Task<ProductEntity> DeleteByIdAsync(Guid id);
         Task<ProductEntity> UpdateByIdAsync(CreateProductDto entity, Guid id);
         Task<List<ProductDto>> GetThreeLatestAsync();
+        Task<List<ProductDto>> GetBestSellingAsync();
     }
 }

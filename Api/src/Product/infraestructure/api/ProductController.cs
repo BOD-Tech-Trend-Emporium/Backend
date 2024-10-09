@@ -74,5 +74,14 @@ namespace Api.src.Product.infraestructure.api
             var products = await _productService.GetThreeLatestAsync();
             return Ok(products);
         }
+
+        [HttpGet]
+        [Route("/best/selling")]
+        [ProducesResponseType(200, Type = typeof(List<ProductDto>))]
+        public async Task<IActionResult> GetBestSelling()
+        {
+            var products = await _productService.GetBestSellingAsync();
+            return Ok(products);
+        }
     }
 }
