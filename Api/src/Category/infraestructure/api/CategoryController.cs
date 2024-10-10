@@ -61,5 +61,15 @@ namespace Api.src.Category.infraestructure.api
             var result = await _categoryService.UpdateCategoryByIdAsync(id, category.ToCategoryModelForUpdate() , (UserRole)Enum.Parse(typeof(UserRole), Token.GetTokenPayload(Request).Role));
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("most/products")]
+        [ProducesResponseType(200, Type = typeof(List<CategoryDto>))]
+        public async Task<IActionResult> GetCategoriesWithMostProducts()
+        {
+            var categories = await _categoryService.GetCategoriesWithMostProductsAsync();
+            var categoriesList = categories.Select(i => i.ToCategoryDto());
+            return Ok(categoriesList);
+        }
     }
 }

@@ -13,12 +13,14 @@ namespace Api.src.Category.infraestructure.api
         private CreateCategory _createCategory;
         private DeleteCategoryById _deleteCategory;
         private UpdateCategoryById _updateCategory;
+        private GetCategoriesWithMostProducts _getCategoriesWithMostProducts;
         public CategoryService(ApplicationDBContext context)
         {
             _getAllApprovedCategories = new GetAllApprovedCategories(context);
             _createCategory = new CreateCategory(context);
             _deleteCategory = new DeleteCategoryById(context);
             _updateCategory = new UpdateCategoryById(context);
+            _getCategoriesWithMostProducts = new GetCategoriesWithMostProducts(context);
         }
 
         public async Task<CategoryEntity> CreateAsync(CategoryEntity category, UserRole role)
@@ -34,6 +36,11 @@ namespace Api.src.Category.infraestructure.api
         public async Task<List<CategoryEntity>> GetAllApprovedAsync()
         {
             return await _getAllApprovedCategories.Run();
+        }
+
+        public Task<List<CategoryEntity>> GetCategoriesWithMostProductsAsync()
+        {
+            return _getCategoriesWithMostProducts.Run();
         }
 
         public async Task<UpdateCategoryByIdResponseDto> UpdateCategoryByIdAsync(Guid id, CategoryEntity category, UserRole role)
