@@ -23,6 +23,7 @@ namespace Api.src.Product.application.mappers
                 Category = category,
                 Image = product.Image,
                 Price = price,
+                Stock = product.Stock,
                 Rating = new ProductRatingDto
                 {
                     Count = count,
