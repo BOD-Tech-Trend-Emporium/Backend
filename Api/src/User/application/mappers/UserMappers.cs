@@ -20,6 +20,7 @@ namespace backend.src.User.application.mappers
                 Name = user.Name,
                 Email = user.Email,
                 UserName = user.UserName,
+                CreatedAt = user.CreatedAt.ToString(),
                 Role = user.Role,
             };
         }
