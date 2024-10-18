@@ -14,5 +14,6 @@ namespace Api.src.Auth.domain.repository
         Task<UserEntity?> SignUpShopper(UserEntity user);
         Task<LoggedUserDto?> LoginUser(UserLoginDto user);
         Task<SessionEntity?> LogoutUser(string id);
+        Task<UserEntity> ChangePassword(ChangePasswordDto toUpdate);
     }
 }
