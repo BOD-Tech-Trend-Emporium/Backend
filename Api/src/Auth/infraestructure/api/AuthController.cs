@@ -10,6 +10,7 @@ using Api.src.Auth.domain.repository;
 using Api.src.User.domain.dto;
 using backend.src.User.application.mappers;
 using backend.src.User.domain.dto;
+using backend.src.User.domain.entity;
 using backend.src.User.domain.enums;
 using backend.src.User.domain.repository;
 using BCrypt.Net;
@@ -61,6 +62,15 @@ namespace Api.src.Auth.infraestructure.api
             string userId = tokenPayload.UserId;
             var sessionModel = await _authService.LogoutUser(userId);
             return Ok(sessionModel);
+        }
+
+        [HttpPut]
+        [Route("auth/changePassword")]
+        [ProducesResponseType(200, Type = typeof(UserDto))]
+        public async Task<IActionResult> ChangePassword(ChangePasswordDto toUpdate)
+        {
+            UserEntity user = await _authService.ChangePassword(toUpdate);
+            return Ok(user.ToUserDto());
         }
     }
 }
