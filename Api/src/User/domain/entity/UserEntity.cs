@@ -34,6 +34,13 @@ namespace backend.src.User.domain.entity
         [Required]
         public string Password { get; set; }
 
+
+        [AllowNull]
+        public SecurityQuestion SecurityQuestion { get; set; }
+        
+        [StringLength(50, ErrorMessage = "SecurityQuestionAnswer cannot be longer than 50 characters"), Column(TypeName = "VARCHAR"), AllowNull]
+        public string SecurityQuestionAnswer { get; set; }
+
         [Required]
         public UserRole Role { get; set; }
 

@@ -12,5 +12,7 @@ namespace Api.src.User.domain.dto
         public string Name {get; set;}
         public string UserName { get; set; }
         public string Password { get; set; }
+        public int SecurityQuestion { get; set; }
+        public string SecurityQuestionAnswer { get; set; }
     }
 }
