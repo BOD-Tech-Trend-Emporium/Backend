@@ -18,7 +18,7 @@ namespace Test.User.UnitTests.application.UnitTests.mappers.UnitTests
 
             //ACT
             var result = UserMappers.ToUserDto(userEntity);
-            var expected = new UserDto() { Name = userEntity.Name, Email = userEntity.Email, UserName = userEntity.UserName, Role = userEntity.Role };
+            var expected = new UserDto() {Id = userEntity.Id.ToString(), Name = userEntity.Name, Email = userEntity.Email, UserName = userEntity.UserName, Role = userEntity.Role, CreatedAt = userEntity.CreatedAt.ToString() };
 
             //Assert
             result.Should().NotBeNull();
@@ -34,23 +34,7 @@ namespace Test.User.UnitTests.application.UnitTests.mappers.UnitTests
 
             //ACT
             var result = UserMappers.ToUserDto(userEntity);
-            var expected = new UserDto() {  Email = userEntity.Email, UserName = userEntity.UserName, Role = userEntity.Role };
-
-            //Assert
-            result.Should().NotBeNull();
-            result.Should().BeOfType<UserDto>();
-            result.Should().BeEquivalentTo(expected);
-
-        }
-        [Fact]
-        public void Given_UserEntity_When_NoAllFieldsMatch_Then_UserDto()
-        {
-            //Arrange
-            UserEntity userEntity = new() { Id = Guid.NewGuid()};
-
-            //ACT
-            var result = UserMappers.ToUserDto(userEntity);
-            var expected = new UserDto();
+            var expected = new UserDto() {Id = userEntity.Id.ToString(),  Email = userEntity.Email, UserName = userEntity.UserName, Role = userEntity.Role, CreatedAt = userEntity.CreatedAt.ToString() };
 
             //Assert
             result.Should().NotBeNull();

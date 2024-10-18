@@ -17,9 +17,11 @@ namespace backend.src.User.application.mappers
         {
             return new UserDto
             {
+                Id = user.Id.ToString(),
                 Name = user.Name,
                 Email = user.Email,
                 UserName = user.UserName,
+                CreatedAt = user.CreatedAt.ToString(),
                 Role = user.Role,
                 SecurityCuestion = user.SecurityQuestion.GetSecurityCuestionString(),
             };
