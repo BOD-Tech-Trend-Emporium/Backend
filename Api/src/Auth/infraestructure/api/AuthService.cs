@@ -22,6 +22,7 @@ namespace Api.src.Auth.infraestructure
         private LoginUser loginUserService;
         private LogoutUser logoutUserService;
         private SignUpShopper signUpShopperService;
+        private ChangePassword changePasswordService;
 
         public AuthService(ApplicationDBContext context, IConfiguration configuration)
         {
@@ -29,6 +30,7 @@ namespace Api.src.Auth.infraestructure
             loginUserService = new LoginUser(context, configuration);
             logoutUserService = new LogoutUser(context);
             signUpShopperService = new SignUpShopper(context);
+            changePasswordService = new ChangePassword(context,configuration);
         }
 
         public async Task<UserEntity?> SignUpUser(UserEntity user)
@@ -49,6 +51,11 @@ namespace Api.src.Auth.infraestructure
         public async Task<SessionEntity?> LogoutUser(string id)
         {
             return await logoutUserService.Run(id);
+        }
+
+        public async Task<UserEntity> ChangePassword(ChangePasswordDto toUpdate)
+        {
+            return await changePasswordService.Run(toUpdate);
         }
     }
 }

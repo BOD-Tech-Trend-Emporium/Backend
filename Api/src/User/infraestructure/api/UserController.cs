@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Api.src.Auth.application.Utils;
 using Api.src.Auth.domain.dto;
+using Api.src.User.domain.dto;
 using backend.Data;
 using backend.src.User.application.mappers;
 using backend.src.User.application.service;
@@ -20,11 +21,11 @@ namespace backend.src.User.infraestructure.api
 {
     [Route("api/user")]
     [ApiController]
-    public class UserController: ControllerBase
+    public class UserController : ControllerBase
     {
         private UserRepository _userService;
 
-        
+
         public UserController(UserRepository userRepository)
         {
             _userService = userRepository;
@@ -92,6 +93,14 @@ namespace backend.src.User.infraestructure.api
         {
             await _userService.DeleteUsers(userEmails);
             return StatusCode(204);
+        }
+
+        [HttpGet]
+        [Route("GetSecurityQuestions")]
+        [ProducesResponseType(200, Type = typeof(List<SecurityQuestionDto>))]
+        public IActionResult GetSecurityQuestions() 
+        { 
+            return Ok(_userService.GetSecurityQuestions()); 
         }
     }
 }

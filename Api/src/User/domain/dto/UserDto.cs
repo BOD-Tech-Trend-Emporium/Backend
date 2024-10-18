@@ -15,5 +15,6 @@ namespace backend.src.User.domain.dto
         public string UserName { get; set; }
         public string CreatedAt { get; set; }
         public UserRole Role { get; set; }
+        public string SecurityCuestion { get; set; }
     }
 }

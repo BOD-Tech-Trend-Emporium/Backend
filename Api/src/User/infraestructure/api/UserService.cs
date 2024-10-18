@@ -10,6 +10,8 @@ using backend.src.User.domain.dto;
 using backend.src.User.domain.entity;
 using backend.src.User.domain.repository;
 using Microsoft.EntityFrameworkCore;
+using Api.src.User.domain.enums;
+using backend.src.User.application.mappers;
 
 namespace backend.src.User.infraestructure.api
 {
@@ -66,5 +68,22 @@ namespace backend.src.User.infraestructure.api
         public async Task DeleteUsers(List<string> userEmails) { 
             await deleteUsers.Run(userEmails);
         }
+
+        public List<SecurityQuestionDto> GetSecurityQuestions()
+        {
+            List<SecurityQuestionDto> securityQuestions = [];
+            foreach (SecurityQuestion item in Enum.GetValues(typeof(SecurityQuestion)))
+            {
+                securityQuestions.Add(
+                    new SecurityQuestionDto 
+                    {
+                        Id = (int)item,
+                        Question = item.GetSecurityCuestionString(),
+                    }
+                );
+            };
+            return securityQuestions;
+        }
+
     }
 }
